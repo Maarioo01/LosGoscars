@@ -1,0 +1,662 @@
+# Oscars source data. One block per ceremony. Winner = trailing *
+# Categories: PIC DIR ACTOR ACTRESS SUPACTOR SUPACTRESS SCORE SONG
+# Items separated by ;   Person=Film   Song=Film=Songwriters
+# After the ceremonies: #DIRECTORS (Title | Director) for films without a Best Director nomination
+
+@2000|72nd|1999
+PIC: American Beauty*; The Cider House Rules; The Green Mile; The Insider; The Sixth Sense
+DIR: Sam Mendes=American Beauty*; Lasse Hallström=The Cider House Rules; Spike Jonze=Being John Malkovich; Michael Mann=The Insider; M. Night Shyamalan=The Sixth Sense
+ACTOR: Kevin Spacey=American Beauty*; Russell Crowe=The Insider; Richard Farnsworth=The Straight Story; Sean Penn=Sweet and Lowdown; Denzel Washington=The Hurricane
+ACTRESS: Hilary Swank=Boys Don't Cry*; Annette Bening=American Beauty; Janet McTeer=Tumbleweeds; Julianne Moore=The End of the Affair; Meryl Streep=Music of the Heart
+SUPACTOR: Michael Caine=The Cider House Rules*; Tom Cruise=Magnolia; Michael Clarke Duncan=The Green Mile; Jude Law=The Talented Mr. Ripley; Haley Joel Osment=The Sixth Sense
+SUPACTRESS: Angelina Jolie=Girl, Interrupted*; Toni Collette=The Sixth Sense; Catherine Keener=Being John Malkovich; Samantha Morton=Sweet and Lowdown; Chloë Sevigny=Boys Don't Cry
+SCORE: John Corigliano=The Red Violin*; Thomas Newman=American Beauty; John Williams=Angela's Ashes; Rachel Portman=The Cider House Rules; Gabriel Yared=The Talented Mr. Ripley
+SONG: You'll Be in My Heart=Tarzan=Phil Collins*; Blame Canada=South Park: Bigger, Longer & Uncut=Trey Parker & Marc Shaiman; Music of My Heart=Music of the Heart=Diane Warren; Save Me=Magnolia=Aimee Mann; When She Loved Me=Toy Story 2=Randy Newman
+
+@2001|73rd|2000
+PIC: Gladiator*; Chocolat; Crouching Tiger, Hidden Dragon; Erin Brockovich; Traffic
+DIR: Steven Soderbergh=Traffic*; Stephen Daldry=Billy Elliot; Ang Lee=Crouching Tiger, Hidden Dragon; Ridley Scott=Gladiator; Steven Soderbergh=Erin Brockovich
+ACTOR: Russell Crowe=Gladiator*; Javier Bardem=Before Night Falls; Tom Hanks=Cast Away; Ed Harris=Pollock; Geoffrey Rush=Quills
+ACTRESS: Julia Roberts=Erin Brockovich*; Joan Allen=The Contender; Juliette Binoche=Chocolat; Ellen Burstyn=Requiem for a Dream; Laura Linney=You Can Count on Me
+SUPACTOR: Benicio del Toro=Traffic*; Jeff Bridges=The Contender; Willem Dafoe=Shadow of the Vampire; Albert Finney=Erin Brockovich; Joaquin Phoenix=Gladiator
+SUPACTRESS: Marcia Gay Harden=Pollock*; Judi Dench=Chocolat; Kate Hudson=Almost Famous; Frances McDormand=Almost Famous; Julie Walters=Billy Elliot
+SCORE: Tan Dun=Crouching Tiger, Hidden Dragon*; Rachel Portman=Chocolat; Hans Zimmer=Gladiator; Ennio Morricone=Malèna; John Williams=The Patriot
+SONG: Things Have Changed=Wonder Boys=Bob Dylan*; A Love Before Time=Crouching Tiger, Hidden Dragon=Jorge Calandrelli & Tan Dun; I've Seen It All=Dancer in the Dark=Björk, Sjón & Lars von Trier; My Funny Friend and Me=The Emperor's New Groove=Dave Hartley & Sting; A Fool in Love=Meet the Parents=Randy Newman
+
+@2002|74th|2001
+PIC: A Beautiful Mind*; Gosford Park; In the Bedroom; The Lord of the Rings: The Fellowship of the Ring; Moulin Rouge!
+DIR: Ron Howard=A Beautiful Mind*; Robert Altman=Gosford Park; Peter Jackson=The Lord of the Rings: The Fellowship of the Ring; David Lynch=Mulholland Drive; Ridley Scott=Black Hawk Down
+ACTOR: Denzel Washington=Training Day*; Russell Crowe=A Beautiful Mind; Sean Penn=I Am Sam; Will Smith=Ali; Tom Wilkinson=In the Bedroom
+ACTRESS: Halle Berry=Monster's Ball*; Judi Dench=Iris; Nicole Kidman=Moulin Rouge!; Sissy Spacek=In the Bedroom; Renée Zellweger=Bridget Jones's Diary
+SUPACTOR: Jim Broadbent=Iris*; Ethan Hawke=Training Day; Ben Kingsley=Sexy Beast; Ian McKellen=The Lord of the Rings: The Fellowship of the Ring; Jon Voight=Ali
+SUPACTRESS: Jennifer Connelly=A Beautiful Mind*; Helen Mirren=Gosford Park; Maggie Smith=Gosford Park; Marisa Tomei=In the Bedroom; Kate Winslet=Iris
+SCORE: Howard Shore=The Lord of the Rings: The Fellowship of the Ring*; John Williams=A.I. Artificial Intelligence; James Horner=A Beautiful Mind; John Williams=Harry Potter and the Sorcerer's Stone; Randy Newman=Monsters, Inc.
+SONG: If I Didn't Have You=Monsters, Inc.=Randy Newman*; Until...=Kate & Leopold=Sting; May It Be=The Lord of the Rings: The Fellowship of the Ring=Enya, Nicky & Roma Ryan; There You'll Be=Pearl Harbor=Diane Warren; Vanilla Sky=Vanilla Sky=Paul McCartney
+
+@2003|75th|2002
+PIC: Chicago*; Gangs of New York; The Hours; The Lord of the Rings: The Two Towers; The Pianist
+DIR: Roman Polanski=The Pianist*; Pedro Almodóvar=Talk to Her; Stephen Daldry=The Hours; Rob Marshall=Chicago; Martin Scorsese=Gangs of New York
+ACTOR: Adrien Brody=The Pianist*; Nicolas Cage=Adaptation; Michael Caine=The Quiet American; Daniel Day-Lewis=Gangs of New York; Jack Nicholson=About Schmidt
+ACTRESS: Nicole Kidman=The Hours*; Salma Hayek=Frida; Diane Lane=Unfaithful; Julianne Moore=Far from Heaven; Renée Zellweger=Chicago
+SUPACTOR: Chris Cooper=Adaptation*; Ed Harris=The Hours; Paul Newman=Road to Perdition; John C. Reilly=Chicago; Christopher Walken=Catch Me If You Can
+SUPACTRESS: Catherine Zeta-Jones=Chicago*; Kathy Bates=About Schmidt; Julianne Moore=The Hours; Queen Latifah=Chicago; Meryl Streep=Adaptation
+SCORE: Elliot Goldenthal=Frida*; John Williams=Catch Me If You Can; Elmer Bernstein=Far from Heaven; Philip Glass=The Hours; Thomas Newman=Road to Perdition
+SONG: Lose Yourself=8 Mile=Jeff Bass, Eminem & Luis Resto*; I Move On=Chicago=John Kander & Fred Ebb; Burn It Blue=Frida=Elliot Goldenthal & Julie Taymor; The Hands That Built America=Gangs of New York=U2; Father and Daughter=The Wild Thornberrys Movie=Paul Simon
+
+@2004|76th|2003
+PIC: The Lord of the Rings: The Return of the King*; Lost in Translation; Master and Commander: The Far Side of the World; Mystic River; Seabiscuit
+DIR: Peter Jackson=The Lord of the Rings: The Return of the King*; Sofia Coppola=Lost in Translation; Clint Eastwood=Mystic River; Fernando Meirelles=City of God; Peter Weir=Master and Commander: The Far Side of the World
+ACTOR: Sean Penn=Mystic River*; Johnny Depp=Pirates of the Caribbean: The Curse of the Black Pearl; Ben Kingsley=House of Sand and Fog; Jude Law=Cold Mountain; Bill Murray=Lost in Translation
+ACTRESS: Charlize Theron=Monster*; Keisha Castle-Hughes=Whale Rider; Diane Keaton=Something's Gotta Give; Samantha Morton=In America; Naomi Watts=21 Grams
+SUPACTOR: Tim Robbins=Mystic River*; Alec Baldwin=The Cooler; Benicio del Toro=21 Grams; Djimon Hounsou=In America; Ken Watanabe=The Last Samurai
+SUPACTRESS: Renée Zellweger=Cold Mountain*; Shohreh Aghdashloo=House of Sand and Fog; Patricia Clarkson=Pieces of April; Marcia Gay Harden=Mystic River; Holly Hunter=Thirteen
+SCORE: Howard Shore=The Lord of the Rings: The Return of the King*; Danny Elfman=Big Fish; Gabriel Yared=Cold Mountain; Thomas Newman=Finding Nemo; James Horner=House of Sand and Fog
+SONG: Into the West=The Lord of the Rings: The Return of the King=Annie Lennox, Howard Shore & Fran Walsh*; Scarlet Tide=Cold Mountain=T Bone Burnett & Elvis Costello; You Will Be My Ain True Love=Cold Mountain=Sting; A Kiss at the End of the Rainbow=A Mighty Wind=Michael McKean & Annette O'Toole; Belleville Rendez-vous=The Triplets of Belleville=Benoît Charest & Sylvain Chomet
+
+@2005|77th|2004
+PIC: Million Dollar Baby*; The Aviator; Finding Neverland; Ray; Sideways
+DIR: Clint Eastwood=Million Dollar Baby*; Taylor Hackford=Ray; Mike Leigh=Vera Drake; Alexander Payne=Sideways; Martin Scorsese=The Aviator
+ACTOR: Jamie Foxx=Ray*; Don Cheadle=Hotel Rwanda; Johnny Depp=Finding Neverland; Leonardo DiCaprio=The Aviator; Clint Eastwood=Million Dollar Baby
+ACTRESS: Hilary Swank=Million Dollar Baby*; Annette Bening=Being Julia; Catalina Sandino Moreno=Maria Full of Grace; Imelda Staunton=Vera Drake; Kate Winslet=Eternal Sunshine of the Spotless Mind
+SUPACTOR: Morgan Freeman=Million Dollar Baby*; Alan Alda=The Aviator; Thomas Haden Church=Sideways; Jamie Foxx=Collateral; Clive Owen=Closer
+SUPACTRESS: Cate Blanchett=The Aviator*; Laura Linney=Kinsey; Virginia Madsen=Sideways; Sophie Okonedo=Hotel Rwanda; Natalie Portman=Closer
+SCORE: Jan A. P. Kaczmarek=Finding Neverland*; John Williams=Harry Potter and the Prisoner of Azkaban; Thomas Newman=Lemony Snicket's A Series of Unfortunate Events; John Debney=The Passion of the Christ; James Newton Howard=The Village
+SONG: Al otro lado del río=The Motorcycle Diaries=Jorge Drexler*; Look to Your Path=The Chorus=Bruno Coulais & Christophe Barratier; Learn to Be Lonely=The Phantom of the Opera=Andrew Lloyd Webber & Charles Hart; Believe=The Polar Express=Glen Ballard & Alan Silvestri; Accidentally in Love=Shrek 2=Counting Crows, Adam Duritz & Dan Vickrey
+
+@2006|78th|2005
+PIC: Crash*; Brokeback Mountain; Capote; Good Night, and Good Luck; Munich
+DIR: Ang Lee=Brokeback Mountain*; George Clooney=Good Night, and Good Luck; Paul Haggis=Crash; Bennett Miller=Capote; Steven Spielberg=Munich
+ACTOR: Philip Seymour Hoffman=Capote*; Terrence Howard=Hustle & Flow; Heath Ledger=Brokeback Mountain; Joaquin Phoenix=Walk the Line; David Strathairn=Good Night, and Good Luck
+ACTRESS: Reese Witherspoon=Walk the Line*; Judi Dench=Mrs Henderson Presents; Felicity Huffman=Transamerica; Keira Knightley=Pride & Prejudice; Charlize Theron=North Country
+SUPACTOR: George Clooney=Syriana*; Matt Dillon=Crash; Paul Giamatti=Cinderella Man; Jake Gyllenhaal=Brokeback Mountain; William Hurt=A History of Violence
+SUPACTRESS: Rachel Weisz=The Constant Gardener*; Amy Adams=Junebug; Catherine Keener=Capote; Frances McDormand=North Country; Michelle Williams=Brokeback Mountain
+SCORE: Gustavo Santaolalla=Brokeback Mountain*; Alberto Iglesias=The Constant Gardener; John Williams=Memoirs of a Geisha; John Williams=Munich; Dario Marianelli=Pride & Prejudice
+SONG: It's Hard Out Here for a Pimp=Hustle & Flow=Frayser Boy, Juicy J & DJ Paul*; In the Deep=Crash=Michael Becker & Bird York; Travelin' Thru=Transamerica=Dolly Parton
+
+@2007|79th|2006
+PIC: The Departed*; Babel; Letters from Iwo Jima; Little Miss Sunshine; The Queen
+DIR: Martin Scorsese=The Departed*; Clint Eastwood=Letters from Iwo Jima; Stephen Frears=The Queen; Paul Greengrass=United 93; Alejandro González Iñárritu=Babel
+ACTOR: Forest Whitaker=The Last King of Scotland*; Leonardo DiCaprio=Blood Diamond; Ryan Gosling=Half Nelson; Peter O'Toole=Venus; Will Smith=The Pursuit of Happyness
+ACTRESS: Helen Mirren=The Queen*; Penélope Cruz=Volver; Judi Dench=Notes on a Scandal; Meryl Streep=The Devil Wears Prada; Kate Winslet=Little Children
+SUPACTOR: Alan Arkin=Little Miss Sunshine*; Jackie Earle Haley=Little Children; Djimon Hounsou=Blood Diamond; Eddie Murphy=Dreamgirls; Mark Wahlberg=The Departed
+SUPACTRESS: Jennifer Hudson=Dreamgirls*; Adriana Barraza=Babel; Cate Blanchett=Notes on a Scandal; Abigail Breslin=Little Miss Sunshine; Rinko Kikuchi=Babel
+SCORE: Gustavo Santaolalla=Babel*; Thomas Newman=The Good German; Philip Glass=Notes on a Scandal; Javier Navarrete=Pan's Labyrinth; Alexandre Desplat=The Queen
+SONG: I Need to Wake Up=An Inconvenient Truth=Melissa Etheridge*; Our Town=Cars=Randy Newman; Listen=Dreamgirls=Henry Krieger, Scott Cutler & Anne Preven; Love You I Do=Dreamgirls=Henry Krieger & Siedah Garrett; Patience=Dreamgirls=Henry Krieger & Willie Reale
+
+@2008|80th|2007
+PIC: No Country for Old Men*; Atonement; Juno; Michael Clayton; There Will Be Blood
+DIR: Joel Coen & Ethan Coen=No Country for Old Men*; Paul Thomas Anderson=There Will Be Blood; Tony Gilroy=Michael Clayton; Jason Reitman=Juno; Julian Schnabel=The Diving Bell and the Butterfly
+ACTOR: Daniel Day-Lewis=There Will Be Blood*; George Clooney=Michael Clayton; Johnny Depp=Sweeney Todd: The Demon Barber of Fleet Street; Tommy Lee Jones=In the Valley of Elah; Viggo Mortensen=Eastern Promises
+ACTRESS: Marion Cotillard=La Vie en Rose*; Cate Blanchett=Elizabeth: The Golden Age; Julie Christie=Away from Her; Laura Linney=The Savages; Elliot Page=Juno
+SUPACTOR: Javier Bardem=No Country for Old Men*; Casey Affleck=The Assassination of Jesse James by the Coward Robert Ford; Philip Seymour Hoffman=Charlie Wilson's War; Hal Holbrook=Into the Wild; Tom Wilkinson=Michael Clayton
+SUPACTRESS: Tilda Swinton=Michael Clayton*; Cate Blanchett=I'm Not There; Ruby Dee=American Gangster; Saoirse Ronan=Atonement; Amy Ryan=Gone Baby Gone
+SCORE: Dario Marianelli=Atonement*; Marco Beltrami=3:10 to Yuma; Alberto Iglesias=The Kite Runner; James Newton Howard=Michael Clayton; Michael Giacchino=Ratatouille
+SONG: Falling Slowly=Once=Glen Hansard & Markéta Irglová*; Happy Working Song=Enchanted=Alan Menken & Stephen Schwartz; So Close=Enchanted=Alan Menken & Stephen Schwartz; That's How You Know=Enchanted=Alan Menken & Stephen Schwartz; Raise It Up=August Rush=Jamal Joseph, Charles Mack & Tevin Thomas
+
+@2009|81st|2008
+PIC: Slumdog Millionaire*; The Curious Case of Benjamin Button; Frost/Nixon; Milk; The Reader
+DIR: Danny Boyle=Slumdog Millionaire*; Stephen Daldry=The Reader; David Fincher=The Curious Case of Benjamin Button; Ron Howard=Frost/Nixon; Gus Van Sant=Milk
+ACTOR: Sean Penn=Milk*; Richard Jenkins=The Visitor; Frank Langella=Frost/Nixon; Brad Pitt=The Curious Case of Benjamin Button; Mickey Rourke=The Wrestler
+ACTRESS: Kate Winslet=The Reader*; Anne Hathaway=Rachel Getting Married; Angelina Jolie=Changeling; Melissa Leo=Frozen River; Meryl Streep=Doubt
+SUPACTOR: Heath Ledger=The Dark Knight*; Josh Brolin=Milk; Robert Downey Jr.=Tropic Thunder; Philip Seymour Hoffman=Doubt; Michael Shannon=Revolutionary Road
+SUPACTRESS: Penélope Cruz=Vicky Cristina Barcelona*; Amy Adams=Doubt; Viola Davis=Doubt; Taraji P. Henson=The Curious Case of Benjamin Button; Marisa Tomei=The Wrestler
+SCORE: A. R. Rahman=Slumdog Millionaire*; Alexandre Desplat=The Curious Case of Benjamin Button; James Newton Howard=Defiance; Danny Elfman=Milk; Thomas Newman=WALL-E
+SONG: Jai Ho=Slumdog Millionaire=A. R. Rahman & Gulzar*; O... Saya=Slumdog Millionaire=A. R. Rahman & M.I.A.; Down to Earth=WALL-E=Peter Gabriel & Thomas Newman
+
+@2010|82nd|2009
+PIC: The Hurt Locker*; Avatar; The Blind Side; District 9; An Education; Inglourious Basterds; Precious; A Serious Man; Up; Up in the Air
+DIR: Kathryn Bigelow=The Hurt Locker*; James Cameron=Avatar; Lee Daniels=Precious; Jason Reitman=Up in the Air; Quentin Tarantino=Inglourious Basterds
+ACTOR: Jeff Bridges=Crazy Heart*; George Clooney=Up in the Air; Colin Firth=A Single Man; Morgan Freeman=Invictus; Jeremy Renner=The Hurt Locker
+ACTRESS: Sandra Bullock=The Blind Side*; Helen Mirren=The Last Station; Carey Mulligan=An Education; Gabourey Sidibe=Precious; Meryl Streep=Julie & Julia
+SUPACTOR: Christoph Waltz=Inglourious Basterds*; Matt Damon=Invictus; Woody Harrelson=The Messenger; Christopher Plummer=The Last Station; Stanley Tucci=The Lovely Bones
+SUPACTRESS: Mo'Nique=Precious*; Penélope Cruz=Nine; Vera Farmiga=Up in the Air; Maggie Gyllenhaal=Crazy Heart; Anna Kendrick=Up in the Air
+SCORE: Michael Giacchino=Up*; James Horner=Avatar; Alexandre Desplat=Fantastic Mr. Fox; Marco Beltrami & Buck Sanders=The Hurt Locker; Hans Zimmer=Sherlock Holmes
+SONG: The Weary Kind=Crazy Heart=Ryan Bingham & T Bone Burnett*; Take It All=Nine=Maury Yeston; Loin de Paname=Paris 36=Reinhardt Wagner & Frank Thomas; Almost There=The Princess and the Frog=Randy Newman; Down in New Orleans=The Princess and the Frog=Randy Newman
+
+@2011|83rd|2010
+PIC: The King's Speech*; Black Swan; The Fighter; Inception; The Kids Are All Right; 127 Hours; The Social Network; Toy Story 3; True Grit; Winter's Bone
+DIR: Tom Hooper=The King's Speech*; Darren Aronofsky=Black Swan; Joel Coen & Ethan Coen=True Grit; David Fincher=The Social Network; David O. Russell=The Fighter
+ACTOR: Colin Firth=The King's Speech*; Javier Bardem=Biutiful; Jeff Bridges=True Grit; Jesse Eisenberg=The Social Network; James Franco=127 Hours
+ACTRESS: Natalie Portman=Black Swan*; Annette Bening=The Kids Are All Right; Nicole Kidman=Rabbit Hole; Jennifer Lawrence=Winter's Bone; Michelle Williams=Blue Valentine
+SUPACTOR: Christian Bale=The Fighter*; John Hawkes=Winter's Bone; Jeremy Renner=The Town; Mark Ruffalo=The Kids Are All Right; Geoffrey Rush=The King's Speech
+SUPACTRESS: Melissa Leo=The Fighter*; Amy Adams=The Fighter; Helena Bonham Carter=The King's Speech; Hailee Steinfeld=True Grit; Jacki Weaver=Animal Kingdom
+SCORE: Trent Reznor & Atticus Ross=The Social Network*; A. R. Rahman=127 Hours; John Powell=How to Train Your Dragon; Hans Zimmer=Inception; Alexandre Desplat=The King's Speech
+SONG: We Belong Together=Toy Story 3=Randy Newman*; If I Rise=127 Hours=A. R. Rahman, Dido & Rollo Armstrong; Coming Home=Country Strong=Tom Douglas, Hillary Lindsey & Troy Verges; I See the Light=Tangled=Alan Menken & Glenn Slater
+
+@2012|84th|2011
+PIC: The Artist*; The Descendants; Extremely Loud & Incredibly Close; The Help; Hugo; Midnight in Paris; Moneyball; The Tree of Life; War Horse
+DIR: Michel Hazanavicius=The Artist*; Woody Allen=Midnight in Paris; Terrence Malick=The Tree of Life; Alexander Payne=The Descendants; Martin Scorsese=Hugo
+ACTOR: Jean Dujardin=The Artist*; Demián Bichir=A Better Life; George Clooney=The Descendants; Gary Oldman=Tinker Tailor Soldier Spy; Brad Pitt=Moneyball
+ACTRESS: Meryl Streep=The Iron Lady*; Glenn Close=Albert Nobbs; Viola Davis=The Help; Rooney Mara=The Girl with the Dragon Tattoo; Michelle Williams=My Week with Marilyn
+SUPACTOR: Christopher Plummer=Beginners*; Kenneth Branagh=My Week with Marilyn; Jonah Hill=Moneyball; Nick Nolte=Warrior; Max von Sydow=Extremely Loud & Incredibly Close
+SUPACTRESS: Octavia Spencer=The Help*; Bérénice Bejo=The Artist; Jessica Chastain=The Help; Melissa McCarthy=Bridesmaids; Janet McTeer=Albert Nobbs
+SCORE: Ludovic Bource=The Artist*; John Williams=The Adventures of Tintin; Howard Shore=Hugo; Alberto Iglesias=Tinker Tailor Soldier Spy; John Williams=War Horse
+SONG: Man or Muppet=The Muppets=Bret McKenzie*; Real in Rio=Rio=Carlinhos Brown, Sérgio Mendes & Siedah Garrett
+
+@2013|85th|2012
+PIC: Argo*; Amour; Beasts of the Southern Wild; Django Unchained; Life of Pi; Lincoln; Les Misérables; Silver Linings Playbook; Zero Dark Thirty
+DIR: Ang Lee=Life of Pi*; Michael Haneke=Amour; David O. Russell=Silver Linings Playbook; Steven Spielberg=Lincoln; Benh Zeitlin=Beasts of the Southern Wild
+ACTOR: Daniel Day-Lewis=Lincoln*; Bradley Cooper=Silver Linings Playbook; Hugh Jackman=Les Misérables; Joaquin Phoenix=The Master; Denzel Washington=Flight
+ACTRESS: Jennifer Lawrence=Silver Linings Playbook*; Jessica Chastain=Zero Dark Thirty; Emmanuelle Riva=Amour; Quvenzhané Wallis=Beasts of the Southern Wild; Naomi Watts=The Impossible
+SUPACTOR: Christoph Waltz=Django Unchained*; Alan Arkin=Argo; Robert De Niro=Silver Linings Playbook; Philip Seymour Hoffman=The Master; Tommy Lee Jones=Lincoln
+SUPACTRESS: Anne Hathaway=Les Misérables*; Amy Adams=The Master; Sally Field=Lincoln; Helen Hunt=The Sessions; Jacki Weaver=Silver Linings Playbook
+SCORE: Mychael Danna=Life of Pi*; Dario Marianelli=Anna Karenina; Alexandre Desplat=Argo; John Williams=Lincoln; Thomas Newman=Skyfall
+SONG: Skyfall=Skyfall=Adele & Paul Epworth*; Before My Time=Chasing Ice=J. Ralph; Suddenly=Les Misérables=Claude-Michel Schönberg, Alain Boublil & Herbert Kretzmer; Pi's Lullaby=Life of Pi=Mychael Danna & Bombay Jayashri; Everybody Needs a Best Friend=Ted=Walter Murphy & Seth MacFarlane
+
+@2014|86th|2013
+PIC: 12 Years a Slave*; American Hustle; Captain Phillips; Dallas Buyers Club; Gravity; Her; Nebraska; Philomena; The Wolf of Wall Street
+DIR: Alfonso Cuarón=Gravity*; Steve McQueen=12 Years a Slave; Alexander Payne=Nebraska; David O. Russell=American Hustle; Martin Scorsese=The Wolf of Wall Street
+ACTOR: Matthew McConaughey=Dallas Buyers Club*; Christian Bale=American Hustle; Bruce Dern=Nebraska; Leonardo DiCaprio=The Wolf of Wall Street; Chiwetel Ejiofor=12 Years a Slave
+ACTRESS: Cate Blanchett=Blue Jasmine*; Amy Adams=American Hustle; Sandra Bullock=Gravity; Judi Dench=Philomena; Meryl Streep=August: Osage County
+SUPACTOR: Jared Leto=Dallas Buyers Club*; Barkhad Abdi=Captain Phillips; Bradley Cooper=American Hustle; Michael Fassbender=12 Years a Slave; Jonah Hill=The Wolf of Wall Street
+SUPACTRESS: Lupita Nyong'o=12 Years a Slave*; Sally Hawkins=Blue Jasmine; Jennifer Lawrence=American Hustle; Julia Roberts=August: Osage County; June Squibb=Nebraska
+SCORE: Steven Price=Gravity*; John Williams=The Book Thief; Will Butler & Owen Pallett=Her; Alexandre Desplat=Philomena; Thomas Newman=Saving Mr. Banks
+SONG: Let It Go=Frozen=Kristen Anderson-Lopez & Robert Lopez*; Happy=Despicable Me 2=Pharrell Williams; The Moon Song=Her=Karen O & Spike Jonze; Ordinary Love=Mandela: Long Walk to Freedom=U2
+
+@2015|87th|2014
+PIC: Birdman*; American Sniper; Boyhood; The Grand Budapest Hotel; The Imitation Game; Selma; The Theory of Everything; Whiplash
+DIR: Alejandro G. Iñárritu=Birdman*; Wes Anderson=The Grand Budapest Hotel; Richard Linklater=Boyhood; Bennett Miller=Foxcatcher; Morten Tyldum=The Imitation Game
+ACTOR: Eddie Redmayne=The Theory of Everything*; Steve Carell=Foxcatcher; Bradley Cooper=American Sniper; Benedict Cumberbatch=The Imitation Game; Michael Keaton=Birdman
+ACTRESS: Julianne Moore=Still Alice*; Marion Cotillard=Two Days, One Night; Felicity Jones=The Theory of Everything; Rosamund Pike=Gone Girl; Reese Witherspoon=Wild
+SUPACTOR: J.K. Simmons=Whiplash*; Robert Duvall=The Judge; Ethan Hawke=Boyhood; Edward Norton=Birdman; Mark Ruffalo=Foxcatcher
+SUPACTRESS: Patricia Arquette=Boyhood*; Laura Dern=Wild; Keira Knightley=The Imitation Game; Emma Stone=Birdman; Meryl Streep=Into the Woods
+SCORE: Alexandre Desplat=The Grand Budapest Hotel*; Alexandre Desplat=The Imitation Game; Hans Zimmer=Interstellar; Gary Yershon=Mr. Turner; Jóhann Jóhannsson=The Theory of Everything
+SONG: Glory=Selma=Common & John Legend*; Lost Stars=Begin Again=Gregg Alexander & Danielle Brisebois; Grateful=Beyond the Lights=Diane Warren; I'm Not Gonna Miss You=Glen Campbell: I'll Be Me=Glen Campbell & Julian Raymond; Everything Is Awesome=The Lego Movie=Shawn Patterson
+
+@2016|88th|2015
+PIC: Spotlight*; The Big Short; Bridge of Spies; Brooklyn; Mad Max: Fury Road; The Martian; The Revenant; Room
+DIR: Alejandro G. Iñárritu=The Revenant*; Lenny Abrahamson=Room; Tom McCarthy=Spotlight; Adam McKay=The Big Short; George Miller=Mad Max: Fury Road
+ACTOR: Leonardo DiCaprio=The Revenant*; Bryan Cranston=Trumbo; Matt Damon=The Martian; Michael Fassbender=Steve Jobs; Eddie Redmayne=The Danish Girl
+ACTRESS: Brie Larson=Room*; Cate Blanchett=Carol; Jennifer Lawrence=Joy; Charlotte Rampling=45 Years; Saoirse Ronan=Brooklyn
+SUPACTOR: Mark Rylance=Bridge of Spies*; Christian Bale=The Big Short; Tom Hardy=The Revenant; Mark Ruffalo=Spotlight; Sylvester Stallone=Creed
+SUPACTRESS: Alicia Vikander=The Danish Girl*; Jennifer Jason Leigh=The Hateful Eight; Rooney Mara=Carol; Rachel McAdams=Spotlight; Kate Winslet=Steve Jobs
+SCORE: Ennio Morricone=The Hateful Eight*; Thomas Newman=Bridge of Spies; Carter Burwell=Carol; Jóhann Jóhannsson=Sicario; John Williams=Star Wars: The Force Awakens
+SONG: Writing's on the Wall=Spectre=Jimmy Napes & Sam Smith*; Earned It=Fifty Shades of Grey=Belly, DaHeala, Stephan Moccio & The Weeknd; Til It Happens to You=The Hunting Ground=Lady Gaga & Diane Warren; Manta Ray=Racing Extinction=J. Ralph & Anohni; Simple Song #3=Youth=David Lang
+
+@2017|89th|2016
+PIC: Moonlight*; Arrival; Fences; Hacksaw Ridge; Hell or High Water; Hidden Figures; La La Land; Lion; Manchester by the Sea
+DIR: Damien Chazelle=La La Land*; Mel Gibson=Hacksaw Ridge; Barry Jenkins=Moonlight; Kenneth Lonergan=Manchester by the Sea; Denis Villeneuve=Arrival
+ACTOR: Casey Affleck=Manchester by the Sea*; Andrew Garfield=Hacksaw Ridge; Ryan Gosling=La La Land; Viggo Mortensen=Captain Fantastic; Denzel Washington=Fences
+ACTRESS: Emma Stone=La La Land*; Isabelle Huppert=Elle; Ruth Negga=Loving; Natalie Portman=Jackie; Meryl Streep=Florence Foster Jenkins
+SUPACTOR: Mahershala Ali=Moonlight*; Jeff Bridges=Hell or High Water; Lucas Hedges=Manchester by the Sea; Dev Patel=Lion; Michael Shannon=Nocturnal Animals
+SUPACTRESS: Viola Davis=Fences*; Naomie Harris=Moonlight; Nicole Kidman=Lion; Octavia Spencer=Hidden Figures; Michelle Williams=Manchester by the Sea
+SCORE: Justin Hurwitz=La La Land*; Mica Levi=Jackie; Dustin O'Halloran & Volker Bertelmann=Lion; Nicholas Britell=Moonlight; Thomas Newman=Passengers
+SONG: City of Stars=La La Land=Justin Hurwitz, Benj Pasek & Justin Paul*; The Empty Chair=Jim: The James Foley Story=J. Ralph & Sting; Audition (The Fools Who Dream)=La La Land=Justin Hurwitz, Benj Pasek & Justin Paul; How Far I'll Go=Moana=Lin-Manuel Miranda; Can't Stop the Feeling!=Trolls=Max Martin, Shellback & Justin Timberlake
+
+@2018|90th|2017
+PIC: The Shape of Water*; Call Me by Your Name; Darkest Hour; Dunkirk; Get Out; Lady Bird; Phantom Thread; The Post; Three Billboards Outside Ebbing, Missouri
+DIR: Guillermo del Toro=The Shape of Water*; Paul Thomas Anderson=Phantom Thread; Greta Gerwig=Lady Bird; Christopher Nolan=Dunkirk; Jordan Peele=Get Out
+ACTOR: Gary Oldman=Darkest Hour*; Timothée Chalamet=Call Me by Your Name; Daniel Day-Lewis=Phantom Thread; Daniel Kaluuya=Get Out; Denzel Washington=Roman J. Israel, Esq.
+ACTRESS: Frances McDormand=Three Billboards Outside Ebbing, Missouri*; Sally Hawkins=The Shape of Water; Margot Robbie=I, Tonya; Saoirse Ronan=Lady Bird; Meryl Streep=The Post
+SUPACTOR: Sam Rockwell=Three Billboards Outside Ebbing, Missouri*; Willem Dafoe=The Florida Project; Woody Harrelson=Three Billboards Outside Ebbing, Missouri; Richard Jenkins=The Shape of Water; Christopher Plummer=All the Money in the World
+SUPACTRESS: Allison Janney=I, Tonya*; Mary J. Blige=Mudbound; Lesley Manville=Phantom Thread; Laurie Metcalf=Lady Bird; Octavia Spencer=The Shape of Water
+SCORE: Alexandre Desplat=The Shape of Water*; Hans Zimmer=Dunkirk; Jonny Greenwood=Phantom Thread; John Williams=Star Wars: The Last Jedi; Carter Burwell=Three Billboards Outside Ebbing, Missouri
+SONG: Remember Me=Coco=Kristen Anderson-Lopez & Robert Lopez*; Mystery of Love=Call Me by Your Name=Sufjan Stevens; This Is Me=The Greatest Showman=Benj Pasek & Justin Paul; Stand Up for Something=Marshall=Diane Warren & Common; Mighty River=Mudbound=Mary J. Blige, Raphael Saadiq & Taura Stinson
+
+@2019|91st|2018
+PIC: Green Book*; Black Panther; BlacKkKlansman; Bohemian Rhapsody; The Favourite; Roma; A Star Is Born; Vice
+DIR: Alfonso Cuarón=Roma*; Yorgos Lanthimos=The Favourite; Spike Lee=BlacKkKlansman; Adam McKay=Vice; Paweł Pawlikowski=Cold War
+ACTOR: Rami Malek=Bohemian Rhapsody*; Christian Bale=Vice; Bradley Cooper=A Star Is Born; Willem Dafoe=At Eternity's Gate; Viggo Mortensen=Green Book
+ACTRESS: Olivia Colman=The Favourite*; Yalitza Aparicio=Roma; Glenn Close=The Wife; Lady Gaga=A Star Is Born; Melissa McCarthy=Can You Ever Forgive Me?
+SUPACTOR: Mahershala Ali=Green Book*; Adam Driver=BlacKkKlansman; Sam Elliott=A Star Is Born; Richard E. Grant=Can You Ever Forgive Me?; Sam Rockwell=Vice
+SUPACTRESS: Regina King=If Beale Street Could Talk*; Amy Adams=Vice; Marina de Tavira=Roma; Emma Stone=The Favourite; Rachel Weisz=The Favourite
+SCORE: Ludwig Göransson=Black Panther*; Terence Blanchard=BlacKkKlansman; Nicholas Britell=If Beale Street Could Talk; Alexandre Desplat=Isle of Dogs; Marc Shaiman=Mary Poppins Returns
+SONG: Shallow=A Star Is Born=Lady Gaga, Mark Ronson, Anthony Rossomando & Andrew Wyatt*; When a Cowboy Trades His Spurs for Wings=The Ballad of Buster Scruggs=David Rawlings & Gillian Welch; All the Stars=Black Panther=Kendrick Lamar, Sounwave & Anthony Tiffith; The Place Where Lost Things Go=Mary Poppins Returns=Marc Shaiman & Scott Wittman; I'll Fight=RBG=Diane Warren
+
+@2020|92nd|2019
+PIC: Parasite*; Ford v Ferrari; The Irishman; Jojo Rabbit; Joker; Little Women; Marriage Story; 1917; Once Upon a Time in Hollywood
+DIR: Bong Joon-ho=Parasite*; Sam Mendes=1917; Todd Phillips=Joker; Martin Scorsese=The Irishman; Quentin Tarantino=Once Upon a Time in Hollywood
+ACTOR: Joaquin Phoenix=Joker*; Antonio Banderas=Pain and Glory; Leonardo DiCaprio=Once Upon a Time in Hollywood; Adam Driver=Marriage Story; Jonathan Pryce=The Two Popes
+ACTRESS: Renée Zellweger=Judy*; Cynthia Erivo=Harriet; Scarlett Johansson=Marriage Story; Saoirse Ronan=Little Women; Charlize Theron=Bombshell
+SUPACTOR: Brad Pitt=Once Upon a Time in Hollywood*; Tom Hanks=A Beautiful Day in the Neighborhood; Anthony Hopkins=The Two Popes; Al Pacino=The Irishman; Joe Pesci=The Irishman
+SUPACTRESS: Laura Dern=Marriage Story*; Kathy Bates=Richard Jewell; Scarlett Johansson=Jojo Rabbit; Florence Pugh=Little Women; Margot Robbie=Bombshell
+SCORE: Hildur Guðnadóttir=Joker*; Alexandre Desplat=Little Women; Randy Newman=Marriage Story; Thomas Newman=1917; John Williams=Star Wars: The Rise of Skywalker
+SONG: (I'm Gonna) Love Me Again=Rocketman=Elton John & Bernie Taupin*; I'm Standing with You=Breakthrough=Diane Warren; Into the Unknown=Frozen 2=Kristen Anderson-Lopez & Robert Lopez; Stand Up=Harriet=Joshuah Brian Campbell & Cynthia Erivo; I Can't Let You Throw Yourself Away=Toy Story 4=Randy Newman
+
+@2021|93rd|2020
+PIC: Nomadland*; The Father; Judas and the Black Messiah; Mank; Minari; Promising Young Woman; Sound of Metal; The Trial of the Chicago 7
+DIR: Chloé Zhao=Nomadland*; Lee Isaac Chung=Minari; Emerald Fennell=Promising Young Woman; David Fincher=Mank; Thomas Vinterberg=Another Round
+ACTOR: Anthony Hopkins=The Father*; Riz Ahmed=Sound of Metal; Chadwick Boseman=Ma Rainey's Black Bottom; Gary Oldman=Mank; Steven Yeun=Minari
+ACTRESS: Frances McDormand=Nomadland*; Viola Davis=Ma Rainey's Black Bottom; Andra Day=The United States vs. Billie Holiday; Vanessa Kirby=Pieces of a Woman; Carey Mulligan=Promising Young Woman
+SUPACTOR: Daniel Kaluuya=Judas and the Black Messiah*; Sacha Baron Cohen=The Trial of the Chicago 7; Leslie Odom Jr.=One Night in Miami...; Paul Raci=Sound of Metal; LaKeith Stanfield=Judas and the Black Messiah
+SUPACTRESS: Yuh-jung Youn=Minari*; Maria Bakalova=Borat Subsequent Moviefilm; Glenn Close=Hillbilly Elegy; Olivia Colman=The Father; Amanda Seyfried=Mank
+SCORE: Trent Reznor, Atticus Ross & Jon Batiste=Soul*; Terence Blanchard=Da 5 Bloods; Trent Reznor & Atticus Ross=Mank; Emile Mosseri=Minari; James Newton Howard=News of the World
+SONG: Fight for You=Judas and the Black Messiah=H.E.R., Dernst Emile II & Tiara Thomas*; Husavik=Eurovision Song Contest: The Story of Fire Saga=Rickard Göransson, Fat Max Gsus & Savan Kotecha; Io sì (Seen)=The Life Ahead=Diane Warren & Laura Pausini; Speak Now=One Night in Miami...=Sam Ashworth & Leslie Odom Jr.; Hear My Voice=The Trial of the Chicago 7=Daniel Pemberton & Celeste
+
+@2022|94th|2021
+PIC: CODA*; Belfast; Don't Look Up; Drive My Car; Dune; King Richard; Licorice Pizza; Nightmare Alley; The Power of the Dog; West Side Story
+DIR: Jane Campion=The Power of the Dog*; Paul Thomas Anderson=Licorice Pizza; Kenneth Branagh=Belfast; Ryusuke Hamaguchi=Drive My Car; Steven Spielberg=West Side Story
+ACTOR: Will Smith=King Richard*; Javier Bardem=Being the Ricardos; Benedict Cumberbatch=The Power of the Dog; Andrew Garfield=Tick, Tick... Boom!; Denzel Washington=The Tragedy of Macbeth
+ACTRESS: Jessica Chastain=The Eyes of Tammy Faye*; Olivia Colman=The Lost Daughter; Penélope Cruz=Parallel Mothers; Nicole Kidman=Being the Ricardos; Kristen Stewart=Spencer
+SUPACTOR: Troy Kotsur=CODA*; Ciarán Hinds=Belfast; Jesse Plemons=The Power of the Dog; J.K. Simmons=Being the Ricardos; Kodi Smit-McPhee=The Power of the Dog
+SUPACTRESS: Ariana DeBose=West Side Story*; Jessie Buckley=The Lost Daughter; Judi Dench=Belfast; Kirsten Dunst=The Power of the Dog; Aunjanue Ellis-Taylor=King Richard
+SCORE: Hans Zimmer=Dune*; Nicholas Britell=Don't Look Up; Germaine Franco=Encanto; Alberto Iglesias=Parallel Mothers; Jonny Greenwood=The Power of the Dog
+SONG: No Time to Die=No Time to Die=Billie Eilish & Finneas O'Connell*; Down to Joy=Belfast=Van Morrison; Dos Oruguitas=Encanto=Lin-Manuel Miranda; Somehow You Do=Four Good Days=Diane Warren; Be Alive=King Richard=Dixson & Beyoncé Knowles-Carter
+
+@2023|95th|2022
+PIC: Everything Everywhere All at Once*; All Quiet on the Western Front; Avatar: The Way of Water; The Banshees of Inisherin; Elvis; The Fabelmans; Tár; Top Gun: Maverick; Triangle of Sadness; Women Talking
+DIR: Daniel Kwan & Daniel Scheinert=Everything Everywhere All at Once*; Martin McDonagh=The Banshees of Inisherin; Steven Spielberg=The Fabelmans; Todd Field=Tár; Ruben Östlund=Triangle of Sadness
+ACTOR: Brendan Fraser=The Whale*; Austin Butler=Elvis; Colin Farrell=The Banshees of Inisherin; Paul Mescal=Aftersun; Bill Nighy=Living
+ACTRESS: Michelle Yeoh=Everything Everywhere All at Once*; Cate Blanchett=Tár; Ana de Armas=Blonde; Andrea Riseborough=To Leslie; Michelle Williams=The Fabelmans
+SUPACTOR: Ke Huy Quan=Everything Everywhere All at Once*; Brendan Gleeson=The Banshees of Inisherin; Brian Tyree Henry=Causeway; Judd Hirsch=The Fabelmans; Barry Keoghan=The Banshees of Inisherin
+SUPACTRESS: Jamie Lee Curtis=Everything Everywhere All at Once*; Angela Bassett=Black Panther: Wakanda Forever; Hong Chau=The Whale; Kerry Condon=The Banshees of Inisherin; Stephanie Hsu=Everything Everywhere All at Once
+SCORE: Volker Bertelmann=All Quiet on the Western Front*; Justin Hurwitz=Babylon; Carter Burwell=The Banshees of Inisherin; Son Lux=Everything Everywhere All at Once; John Williams=The Fabelmans
+SONG: Naatu Naatu=RRR=M. M. Keeravani & Chandrabose*; Lift Me Up=Black Panther: Wakanda Forever=Tems, Rihanna, Ryan Coogler & Ludwig Göransson; This Is a Life=Everything Everywhere All at Once=Ryan Lott, David Byrne & Mitski; Applause=Tell It Like a Woman=Diane Warren; Hold My Hand=Top Gun: Maverick=Lady Gaga & BloodPop
+
+@2024|96th|2023
+PIC: Oppenheimer*; American Fiction; Anatomy of a Fall; Barbie; The Holdovers; Killers of the Flower Moon; Maestro; Past Lives; Poor Things; The Zone of Interest
+DIR: Christopher Nolan=Oppenheimer*; Jonathan Glazer=The Zone of Interest; Yorgos Lanthimos=Poor Things; Martin Scorsese=Killers of the Flower Moon; Justine Triet=Anatomy of a Fall
+ACTOR: Cillian Murphy=Oppenheimer*; Bradley Cooper=Maestro; Colman Domingo=Rustin; Paul Giamatti=The Holdovers; Jeffrey Wright=American Fiction
+ACTRESS: Emma Stone=Poor Things*; Annette Bening=Nyad; Lily Gladstone=Killers of the Flower Moon; Sandra Hüller=Anatomy of a Fall; Carey Mulligan=Maestro
+SUPACTOR: Robert Downey Jr.=Oppenheimer*; Sterling K. Brown=American Fiction; Robert De Niro=Killers of the Flower Moon; Ryan Gosling=Barbie; Mark Ruffalo=Poor Things
+SUPACTRESS: Da'Vine Joy Randolph=The Holdovers*; Emily Blunt=Oppenheimer; Danielle Brooks=The Color Purple; America Ferrera=Barbie; Jodie Foster=Nyad
+SCORE: Ludwig Göransson=Oppenheimer*; Laura Karpman=American Fiction; John Williams=Indiana Jones and the Dial of Destiny; Robbie Robertson=Killers of the Flower Moon; Jerskin Fendrix=Poor Things
+SONG: What Was I Made For?=Barbie=Billie Eilish & Finneas O'Connell*; It Never Went Away=American Symphony=Jon Batiste & Dan Wilson; I'm Just Ken=Barbie=Mark Ronson & Andrew Wyatt; The Fire Inside=Flamin' Hot=Diane Warren; Wahzhazhe (A Song for My People)=Killers of the Flower Moon=Scott George
+
+@2025|97th|2024
+PIC: Anora*; The Brutalist; A Complete Unknown; Conclave; Dune: Part Two; Emilia Pérez; I'm Still Here; Nickel Boys; The Substance; Wicked
+DIR: Sean Baker=Anora*; Jacques Audiard=Emilia Pérez; Brady Corbet=The Brutalist; Coralie Fargeat=The Substance; James Mangold=A Complete Unknown
+ACTOR: Adrien Brody=The Brutalist*; Timothée Chalamet=A Complete Unknown; Colman Domingo=Sing Sing; Ralph Fiennes=Conclave; Sebastian Stan=The Apprentice
+ACTRESS: Mikey Madison=Anora*; Cynthia Erivo=Wicked; Karla Sofía Gascón=Emilia Pérez; Demi Moore=The Substance; Fernanda Torres=I'm Still Here
+SUPACTOR: Kieran Culkin=A Real Pain*; Yura Borisov=Anora; Edward Norton=A Complete Unknown; Guy Pearce=The Brutalist; Jeremy Strong=The Apprentice
+SUPACTRESS: Zoe Saldaña=Emilia Pérez*; Monica Barbaro=A Complete Unknown; Ariana Grande=Wicked; Felicity Jones=The Brutalist; Isabella Rossellini=Conclave
+SCORE: Daniel Blumberg=The Brutalist*; Volker Bertelmann=Conclave; Clément Ducol & Camille=Emilia Pérez; John Powell & Stephen Schwartz=Wicked; Kris Bowers=The Wild Robot
+SONG: El Mal=Emilia Pérez=Camille, Clément Ducol & Jacques Audiard*; Never Too Late=Elton John: Never Too Late=Elton John, Brandi Carlile, Bernie Taupin & Andrew Watt; Mi Camino=Emilia Pérez=Camille & Clément Ducol; Like a Bird=Sing Sing=Abraham Alexander & Adrian Quesada; The Journey=The Six Triple Eight=Diane Warren
+
+@2026|98th|2025
+PIC: One Battle After Another*; Bugonia; F1; Frankenstein; Hamnet; Marty Supreme; The Secret Agent; Sentimental Value; Sinners; Train Dreams
+DIR: Paul Thomas Anderson=One Battle After Another*; Ryan Coogler=Sinners; Josh Safdie=Marty Supreme; Joachim Trier=Sentimental Value; Chloé Zhao=Hamnet
+ACTOR: Michael B. Jordan=Sinners*; Timothée Chalamet=Marty Supreme; Leonardo DiCaprio=One Battle After Another; Ethan Hawke=Blue Moon; Wagner Moura=The Secret Agent
+ACTRESS: Jessie Buckley=Hamnet*; Rose Byrne=If I Had Legs I'd Kick You; Kate Hudson=Song Sung Blue; Renate Reinsve=Sentimental Value; Emma Stone=Bugonia
+SUPACTOR: Sean Penn=One Battle After Another*; Benicio del Toro=One Battle After Another; Jacob Elordi=Frankenstein; Delroy Lindo=Sinners; Stellan Skarsgård=Sentimental Value
+SUPACTRESS: Amy Madigan=Weapons*; Elle Fanning=Sentimental Value; Inga Ibsdotter Lilleaas=Sentimental Value; Wunmi Mosaku=Sinners; Teyana Taylor=One Battle After Another
+SCORE: Ludwig Göransson=Sinners*; Jerskin Fendrix=Bugonia; Alexandre Desplat=Frankenstein; Max Richter=Hamnet; Jonny Greenwood=One Battle After Another
+SONG: Golden=KPop Demon Hunters=Ejae, Mark Sonnenblick, Joong Gyu Kwak, Yu Han Lee, Hee Dong Nam, Jeong Hoon Seo & Teddy Park*; Dear Me=Diane Warren: Relentless=Diane Warren; I Lied to You=Sinners=Ludwig Göransson & Raphael Saadiq; Sweet Dreams of Joy=Viva Verdi!=Nicholas Pike; Train Dreams=Train Dreams=Nick Cave & Bryce Dessner
+
+#DIRECTORS
+The Green Mile | Frank Darabont
+The Straight Story | David Lynch
+Sweet and Lowdown | Woody Allen
+The Hurricane | Norman Jewison
+Boys Don't Cry | Kimberly Peirce
+Tumbleweeds | Gavin O'Connor
+The End of the Affair | Neil Jordan
+Music of the Heart | Wes Craven
+Magnolia | Paul Thomas Anderson
+The Talented Mr. Ripley | Anthony Minghella
+Girl, Interrupted | James Mangold
+The Red Violin | François Girard
+Angela's Ashes | Alan Parker
+Tarzan | Chris Buck & Kevin Lima
+South Park: Bigger, Longer & Uncut | Trey Parker
+Toy Story 2 | John Lasseter
+Chocolat | Lasse Hallström
+Before Night Falls | Julian Schnabel
+Cast Away | Robert Zemeckis
+Pollock | Ed Harris
+Quills | Philip Kaufman
+The Contender | Rod Lurie
+Requiem for a Dream | Darren Aronofsky
+You Can Count on Me | Kenneth Lonergan
+Shadow of the Vampire | E. Elias Merhige
+Almost Famous | Cameron Crowe
+Malèna | Giuseppe Tornatore
+The Patriot | Roland Emmerich
+Wonder Boys | Curtis Hanson
+Dancer in the Dark | Lars von Trier
+The Emperor's New Groove | Mark Dindal
+Meet the Parents | Jay Roach
+In the Bedroom | Todd Field
+Moulin Rouge! | Baz Luhrmann
+Training Day | Antoine Fuqua
+I Am Sam | Jessie Nelson
+Ali | Michael Mann
+Monster's Ball | Marc Forster
+Iris | Richard Eyre
+Bridget Jones's Diary | Sharon Maguire
+Sexy Beast | Jonathan Glazer
+A.I. Artificial Intelligence | Steven Spielberg
+Harry Potter and the Sorcerer's Stone | Chris Columbus
+Monsters, Inc. | Pete Docter
+Kate & Leopold | James Mangold
+Pearl Harbor | Michael Bay
+Vanilla Sky | Cameron Crowe
+The Lord of the Rings: The Two Towers | Peter Jackson
+Adaptation | Spike Jonze
+The Quiet American | Phillip Noyce
+About Schmidt | Alexander Payne
+Frida | Julie Taymor
+Unfaithful | Adrian Lyne
+Far from Heaven | Todd Haynes
+Road to Perdition | Sam Mendes
+Catch Me If You Can | Steven Spielberg
+8 Mile | Curtis Hanson
+The Wild Thornberrys Movie | Jeff McGrath & Cathy Malkasian
+Seabiscuit | Gary Ross
+Pirates of the Caribbean: The Curse of the Black Pearl | Gore Verbinski
+House of Sand and Fog | Vadim Perelman
+Cold Mountain | Anthony Minghella
+Monster | Patty Jenkins
+Whale Rider | Niki Caro
+Something's Gotta Give | Nancy Meyers
+In America | Jim Sheridan
+21 Grams | Alejandro González Iñárritu
+The Cooler | Wayne Kramer
+The Last Samurai | Edward Zwick
+Pieces of April | Peter Hedges
+Thirteen | Catherine Hardwicke
+Big Fish | Tim Burton
+Finding Nemo | Andrew Stanton
+A Mighty Wind | Christopher Guest
+The Triplets of Belleville | Sylvain Chomet
+Finding Neverland | Marc Forster
+Hotel Rwanda | Terry George
+Being Julia | István Szabó
+Maria Full of Grace | Joshua Marston
+Eternal Sunshine of the Spotless Mind | Michel Gondry
+Collateral | Michael Mann
+Closer | Mike Nichols
+Kinsey | Bill Condon
+Harry Potter and the Prisoner of Azkaban | Alfonso Cuarón
+Lemony Snicket's A Series of Unfortunate Events | Brad Silberling
+The Passion of the Christ | Mel Gibson
+The Village | M. Night Shyamalan
+The Motorcycle Diaries | Walter Salles
+The Chorus | Christophe Barratier
+The Phantom of the Opera | Joel Schumacher
+The Polar Express | Robert Zemeckis
+Shrek 2 | Andrew Adamson, Kelly Asbury & Conrad Vernon
+Hustle & Flow | Craig Brewer
+Walk the Line | James Mangold
+Mrs Henderson Presents | Stephen Frears
+Transamerica | Duncan Tucker
+Pride & Prejudice | Joe Wright
+North Country | Niki Caro
+Syriana | Stephen Gaghan
+Cinderella Man | Ron Howard
+A History of Violence | David Cronenberg
+The Constant Gardener | Fernando Meirelles
+Junebug | Phil Morrison
+Memoirs of a Geisha | Rob Marshall
+Little Miss Sunshine | Jonathan Dayton & Valerie Faris
+The Last King of Scotland | Kevin Macdonald
+Blood Diamond | Edward Zwick
+Half Nelson | Ryan Fleck
+Venus | Roger Michell
+The Pursuit of Happyness | Gabriele Muccino
+Volver | Pedro Almodóvar
+Notes on a Scandal | Richard Eyre
+The Devil Wears Prada | David Frankel
+Little Children | Todd Field
+Dreamgirls | Bill Condon
+The Good German | Steven Soderbergh
+Pan's Labyrinth | Guillermo del Toro
+An Inconvenient Truth | Davis Guggenheim
+Cars | John Lasseter
+Atonement | Joe Wright
+Sweeney Todd: The Demon Barber of Fleet Street | Tim Burton
+In the Valley of Elah | Paul Haggis
+Eastern Promises | David Cronenberg
+La Vie en Rose | Olivier Dahan
+Elizabeth: The Golden Age | Shekhar Kapur
+Away from Her | Sarah Polley
+The Savages | Tamara Jenkins
+The Assassination of Jesse James by the Coward Robert Ford | Andrew Dominik
+Charlie Wilson's War | Mike Nichols
+Into the Wild | Sean Penn
+I'm Not There | Todd Haynes
+American Gangster | Ridley Scott
+Gone Baby Gone | Ben Affleck
+3:10 to Yuma | James Mangold
+The Kite Runner | Marc Forster
+Ratatouille | Brad Bird
+Once | John Carney
+Enchanted | Kevin Lima
+August Rush | Kirsten Sheridan
+The Visitor | Tom McCarthy
+The Wrestler | Darren Aronofsky
+Rachel Getting Married | Jonathan Demme
+Changeling | Clint Eastwood
+Frozen River | Courtney Hunt
+Doubt | John Patrick Shanley
+The Dark Knight | Christopher Nolan
+Tropic Thunder | Ben Stiller
+Revolutionary Road | Sam Mendes
+Vicky Cristina Barcelona | Woody Allen
+Defiance | Edward Zwick
+WALL-E | Andrew Stanton
+The Blind Side | John Lee Hancock
+District 9 | Neill Blomkamp
+An Education | Lone Scherfig
+A Serious Man | Joel Coen & Ethan Coen
+Up | Pete Docter
+Crazy Heart | Scott Cooper
+A Single Man | Tom Ford
+Invictus | Clint Eastwood
+The Last Station | Michael Hoffman
+Julie & Julia | Nora Ephron
+The Messenger | Oren Moverman
+The Lovely Bones | Peter Jackson
+Nine | Rob Marshall
+Fantastic Mr. Fox | Wes Anderson
+Sherlock Holmes | Guy Ritchie
+Paris 36 | Christophe Barratier
+The Princess and the Frog | Ron Clements & John Musker
+Inception | Christopher Nolan
+The Kids Are All Right | Lisa Cholodenko
+127 Hours | Danny Boyle
+Toy Story 3 | Lee Unkrich
+Winter's Bone | Debra Granik
+Biutiful | Alejandro González Iñárritu
+Rabbit Hole | John Cameron Mitchell
+Blue Valentine | Derek Cianfrance
+The Town | Ben Affleck
+Animal Kingdom | David Michôd
+How to Train Your Dragon | Chris Sanders & Dean DeBlois
+Country Strong | Shana Feste
+Tangled | Nathan Greno & Byron Howard
+Extremely Loud & Incredibly Close | Stephen Daldry
+The Help | Tate Taylor
+Moneyball | Bennett Miller
+War Horse | Steven Spielberg
+A Better Life | Chris Weitz
+Tinker Tailor Soldier Spy | Tomas Alfredson
+The Iron Lady | Phyllida Lloyd
+Albert Nobbs | Rodrigo García
+The Girl with the Dragon Tattoo | David Fincher
+My Week with Marilyn | Simon Curtis
+Beginners | Mike Mills
+Warrior | Gavin O'Connor
+Bridesmaids | Paul Feig
+The Adventures of Tintin | Steven Spielberg
+The Muppets | James Bobin
+Rio | Carlos Saldanha
+Argo | Ben Affleck
+Django Unchained | Quentin Tarantino
+Les Misérables | Tom Hooper
+Zero Dark Thirty | Kathryn Bigelow
+The Master | Paul Thomas Anderson
+Flight | Robert Zemeckis
+The Impossible | J. A. Bayona
+The Sessions | Ben Lewin
+Anna Karenina | Joe Wright
+Skyfall | Sam Mendes
+Chasing Ice | Jeff Orlowski
+Ted | Seth MacFarlane
+Captain Phillips | Paul Greengrass
+Dallas Buyers Club | Jean-Marc Vallée
+Her | Spike Jonze
+Philomena | Stephen Frears
+Blue Jasmine | Woody Allen
+August: Osage County | John Wells
+The Book Thief | Brian Percival
+Saving Mr. Banks | John Lee Hancock
+Frozen | Chris Buck & Jennifer Lee
+Despicable Me 2 | Pierre Coffin & Chris Renaud
+Mandela: Long Walk to Freedom | Justin Chadwick
+American Sniper | Clint Eastwood
+Selma | Ava DuVernay
+The Theory of Everything | James Marsh
+Whiplash | Damien Chazelle
+Still Alice | Richard Glatzer & Wash Westmoreland
+Two Days, One Night | Jean-Pierre Dardenne & Luc Dardenne
+Gone Girl | David Fincher
+Wild | Jean-Marc Vallée
+The Judge | David Dobkin
+Into the Woods | Rob Marshall
+Interstellar | Christopher Nolan
+Mr. Turner | Mike Leigh
+Begin Again | John Carney
+Beyond the Lights | Gina Prince-Bythewood
+Glen Campbell: I'll Be Me | James Keach
+The Lego Movie | Phil Lord & Christopher Miller
+Bridge of Spies | Steven Spielberg
+Brooklyn | John Crowley
+The Martian | Ridley Scott
+Trumbo | Jay Roach
+Steve Jobs | Danny Boyle
+The Danish Girl | Tom Hooper
+Carol | Todd Haynes
+Joy | David O. Russell
+45 Years | Andrew Haigh
+Creed | Ryan Coogler
+The Hateful Eight | Quentin Tarantino
+Sicario | Denis Villeneuve
+Star Wars: The Force Awakens | J. J. Abrams
+Spectre | Sam Mendes
+Fifty Shades of Grey | Sam Taylor-Johnson
+The Hunting Ground | Kirby Dick
+Racing Extinction | Louie Psihoyos
+Youth | Paolo Sorrentino
+Fences | Denzel Washington
+Hell or High Water | David Mackenzie
+Hidden Figures | Theodore Melfi
+Lion | Garth Davis
+Captain Fantastic | Matt Ross
+Elle | Paul Verhoeven
+Loving | Jeff Nichols
+Jackie | Pablo Larraín
+Florence Foster Jenkins | Stephen Frears
+Nocturnal Animals | Tom Ford
+Passengers | Morten Tyldum
+Jim: The James Foley Story | Brian Oakes
+Moana | Ron Clements & John Musker
+Trolls | Mike Mitchell & Walt Dohrn
+Call Me by Your Name | Luca Guadagnino
+Darkest Hour | Joe Wright
+The Post | Steven Spielberg
+Three Billboards Outside Ebbing, Missouri | Martin McDonagh
+Roman J. Israel, Esq. | Dan Gilroy
+I, Tonya | Craig Gillespie
+The Florida Project | Sean Baker
+All the Money in the World | Ridley Scott
+Mudbound | Dee Rees
+Star Wars: The Last Jedi | Rian Johnson
+Coco | Lee Unkrich
+The Greatest Showman | Michael Gracey
+Marshall | Reginald Hudlin
+Green Book | Peter Farrelly
+Black Panther | Ryan Coogler
+Bohemian Rhapsody | Bryan Singer
+A Star Is Born | Bradley Cooper
+At Eternity's Gate | Julian Schnabel
+The Wife | Björn Runge
+Can You Ever Forgive Me? | Marielle Heller
+If Beale Street Could Talk | Barry Jenkins
+Isle of Dogs | Wes Anderson
+Mary Poppins Returns | Rob Marshall
+The Ballad of Buster Scruggs | Joel Coen & Ethan Coen
+RBG | Julie Cohen & Betsy West
+Ford v Ferrari | James Mangold
+Jojo Rabbit | Taika Waititi
+Little Women | Greta Gerwig
+Marriage Story | Noah Baumbach
+Pain and Glory | Pedro Almodóvar
+The Two Popes | Fernando Meirelles
+Judy | Rupert Goold
+Harriet | Kasi Lemmons
+Bombshell | Jay Roach
+A Beautiful Day in the Neighborhood | Marielle Heller
+Richard Jewell | Clint Eastwood
+Star Wars: The Rise of Skywalker | J. J. Abrams
+Rocketman | Dexter Fletcher
+Breakthrough | Roxann Dawson
+Frozen 2 | Chris Buck & Jennifer Lee
+Toy Story 4 | Josh Cooley
+The Father | Florian Zeller
+Judas and the Black Messiah | Shaka King
+Sound of Metal | Darius Marder
+The Trial of the Chicago 7 | Aaron Sorkin
+Ma Rainey's Black Bottom | George C. Wolfe
+The United States vs. Billie Holiday | Lee Daniels
+Pieces of a Woman | Kornél Mundruczó
+One Night in Miami... | Regina King
+Borat Subsequent Moviefilm | Jason Woliner
+Hillbilly Elegy | Ron Howard
+Soul | Pete Docter & Kemp Powers
+Da 5 Bloods | Spike Lee
+News of the World | Paul Greengrass
+Eurovision Song Contest: The Story of Fire Saga | David Dobkin
+The Life Ahead | Edoardo Ponti
+CODA | Sian Heder
+Don't Look Up | Adam McKay
+Dune | Denis Villeneuve
+King Richard | Reinaldo Marcus Green
+Nightmare Alley | Guillermo del Toro
+Being the Ricardos | Aaron Sorkin
+Tick, Tick... Boom! | Lin-Manuel Miranda
+The Tragedy of Macbeth | Joel Coen
+The Eyes of Tammy Faye | Michael Showalter
+The Lost Daughter | Maggie Gyllenhaal
+Parallel Mothers | Pedro Almodóvar
+Spencer | Pablo Larraín
+Encanto | Jared Bush & Byron Howard
+No Time to Die | Cary Joji Fukunaga
+Four Good Days | Rodrigo García
+All Quiet on the Western Front | Edward Berger
+Avatar: The Way of Water | James Cameron
+Elvis | Baz Luhrmann
+Top Gun: Maverick | Joseph Kosinski
+Women Talking | Sarah Polley
+The Whale | Darren Aronofsky
+Aftersun | Charlotte Wells
+Living | Oliver Hermanus
+Blonde | Andrew Dominik
+To Leslie | Michael Morris
+Causeway | Lila Neugebauer
+Black Panther: Wakanda Forever | Ryan Coogler
+Babylon | Damien Chazelle
+RRR | S. S. Rajamouli
+American Fiction | Cord Jefferson
+Barbie | Greta Gerwig
+The Holdovers | Alexander Payne
+Maestro | Bradley Cooper
+Past Lives | Celine Song
+Rustin | George C. Wolfe
+Nyad | Elizabeth Chai Vasarhelyi & Jimmy Chin
+The Color Purple | Blitz Bazawule
+Indiana Jones and the Dial of Destiny | James Mangold
+American Symphony | Matthew Heineman
+Flamin' Hot | Eva Longoria
+Conclave | Edward Berger
+Dune: Part Two | Denis Villeneuve
+I'm Still Here | Walter Salles
+Nickel Boys | RaMell Ross
+Wicked | Jon M. Chu
+Sing Sing | Greg Kwedar
+The Apprentice | Ali Abbasi
+A Real Pain | Jesse Eisenberg
+The Wild Robot | Chris Sanders
+Elton John: Never Too Late | R.J. Cutler & David Furnish
+The Six Triple Eight | Tyler Perry
+Bugonia | Yorgos Lanthimos
+F1 | Joseph Kosinski
+Frankenstein | Guillermo del Toro
+The Secret Agent | Kleber Mendonça Filho
+Train Dreams | Clint Bentley
+Blue Moon | Richard Linklater
+If I Had Legs I'd Kick You | Mary Bronstein
+Song Sung Blue | Craig Brewer
+Weapons | Zach Cregger
+KPop Demon Hunters | Maggie Kang & Chris Appelhans
+Diane Warren: Relentless | Bess Kargman

@@ -1,0 +1,789 @@
+# Goyas source data. One block per ceremony. Winner = trailing *
+# Categories: PIC DIR ACTOR ACTRESS SUPACTOR SUPACTRESS SCORE SONG
+# Items separated by ;   Person=Film   Song=Film=Songwriters
+# Film titles are the Spanish (original) titles. #EN maps Spanish title | English title.
+# After the ceremonies: #DIRECTORS (Title | Director) for films without a Best Director nomination
+
+@2000|14th|1999
+PIC: Todo sobre mi madre*; Cuando vuelvas a mi lado; La lengua de las mariposas; Solas
+DIR: Pedro Almodóvar=Todo sobre mi madre*; Gracia Querejeta=Cuando vuelvas a mi lado; José Luis Cuerda=La lengua de las mariposas; Benito Zambrano=Solas
+ACTOR: Francisco Rabal=Goya en Burdeos*; Josep Maria Pou=Amic/Amat; Fernando Fernán Gómez=La lengua de las mariposas; Jordi Mollà=Segunda piel
+ACTRESS: Cecilia Roth=Todo sobre mi madre*; Mercedes Sampietro=Cuando vuelvas a mi lado; Ariadna Gil=Lágrimas negras; Carmen Maura=Lisboa
+SUPACTOR: Juan Diego=París-Tombuctú*; Mario Gas=Amic/Amat; José Coronado=Goya en Burdeos; Álex Angulo=Muertos de risa
+SUPACTRESS: María Galiana=Solas*; Adriana Ozores=Cuando vuelvas a mi lado; Julieta Serrano=Cuando vuelvas a mi lado; Candela Peña=Todo sobre mi madre
+SCORE: Alberto Iglesias=Todo sobre mi madre*; Ángel Illarramendi=Cuando vuelvas a mi lado; Alejandro Amenábar=La lengua de las mariposas; Antonio Meliveo=Solas
+
+@2001|15th|2000
+PIC: El bola*; La comunidad; Leo; You're the One (Una historia de entonces)
+DIR: José Luis Borau=Leo*; Jaime Chávarri=Besos para todos; Álex de la Iglesia=La comunidad; José Luis Garci=You're the One (Una historia de entonces)
+ACTOR: Juan Luis Galiardo=Adiós con el corazón*; Carmelo Gómez=El portero; Juan Diego Botto=Plenilunio; Miguel Ángel Solá=Sé quién eres
+ACTRESS: Carmen Maura=La comunidad*; Icíar Bollaín=Leo; Adriana Ozores=Plenilunio; Lydia Bosch=You're the One (Una historia de entonces)
+SUPACTOR: Emilio Gutiérrez Caba=La comunidad*; Luis Cuenca=Obra maestra; Iñaki Miramón=You're the One (Una historia de entonces); Juan Diego=You're the One (Una historia de entonces)
+SUPACTRESS: Julia Gutiérrez Caba=You're the One (Una historia de entonces)*; Chusa Barbero=Besos para todos; Terele Pávez=La comunidad; Ana Fernández=You're the One (Una historia de entonces)
+SCORE: José Nieto=Sé quién eres*; Nacho Mastretta & Najwa Nimri=Asfalto; Roque Baños=La comunidad; Antonio Meliveo=Plenilunio
+SONG: Fugitivas=Fugitivas=Manuel Malou, Natboccara & JJ Chaleco*; El arte de morir=El arte de morir=Cristina Lliso, Suso Saiz & Tito Fargo; Gitano=Gitano=Arturo Pérez-Reverte & Abigail Marcet; Km. 0=Km. 0=Ismael Serrano
+
+@2002|16th|2001
+PIC: Los otros*; Juana la Loca; Lucía y el sexo; Sin noticias de Dios
+DIR: Alejandro Amenábar=Los otros*; Vicente Aranda=Juana la Loca; Julio Medem=Lucía y el sexo; Agustín Díaz Yanes=Sin noticias de Dios
+ACTOR: Eduard Fernández=Fausto 5.0*; Eusebio Poncela=Intacto; Tristán Ulloa=Lucía y el sexo; Sergi López=Sólo mía
+ACTRESS: Pilar López de Ayala=Juana la Loca*; Nicole Kidman=Los otros; Victoria Abril=Sin noticias de Dios; Paz Vega=Sólo mía
+SUPACTOR: Emilio Gutiérrez Caba=El cielo abierto*; Antonio Dechent=Intacto; Gael García Bernal=Sin noticias de Dios; Eduard Fernández=Son de mar
+SUPACTRESS: Rosa Maria Sardà=Sin vergüenza*; Rosana Pastor=Juana la Loca; Najwa Nimri=Lucía y el sexo; Elena Anaya=Lucía y el sexo
+SCORE: Alberto Iglesias=Lucía y el sexo*; José Nieto=Juana la Loca; Alejandro Amenábar=Los otros; Bernardo Bonezzi=Sin noticias de Dios
+SONG: Tu bosque animado=El bosque animado=Luz Casal & Pablo Guerrero*; Again=El cielo abierto=Olga Román; Sólo mía=Sólo mía=Eusebio Bonilla & Clara Montes; Semos diferentes=Torrente 2: Misión en Marbella=Joaquín Sabina
+
+@2003|17th|2002
+PIC: Los lunes al sol*; En la ciudad sin límites; El otro lado de la cama; Hable con ella
+DIR: Fernando León de Aranoa=Los lunes al sol*; Pedro Almodóvar=Hable con ella; Antonio Hernández=En la ciudad sin límites; Emilio Martínez Lázaro=El otro lado de la cama
+ACTOR: Javier Bardem=Los lunes al sol*; Sancho Gracia=800 balas; Javier Cámara=Hable con ella; Juan Luis Galiardo=El caballero Don Quijote
+ACTRESS: Mercedes Sampietro=Lugares comunes*; Ana Fernández=Historia de un beso; Adriana Ozores=La vida de nadie; Leonor Watling=A mi madre le gustan las mujeres
+SUPACTOR: Luis Tosar=Los lunes al sol*; José Coronado=La caja 507; Carlos Hipólito=Historia de un beso; Alberto San Juan=El otro lado de la cama
+SUPACTRESS: Geraldine Chaplin=En la ciudad sin límites*; María Esteve=El otro lado de la cama; Mar Regueras=Rencor; Tina Sainz=Historia de un beso
+SCORE: Alberto Iglesias=Hable con ella*; Roque Baños=800 balas; Víctor Reyes=En la ciudad sin límites; Juan Bardem=A mi madre le gustan las mujeres
+SONG: Sevillana para Carlos=Salomé=Roque Baños*; Ojos de gacela=Arderás conmigo=Eva Gancedo & Rasha; Un lugar más allá=Dragon Hill, la colina del dragón=Emilio Alquézar & Manuel Cubedo Fort; Human Monkeys=Guerreros=Carlos Jean & Najwa Nimri
+
+@2004|18th|2003
+PIC: Te doy mis ojos*; Planta 4ª; Mi vida sin mí; Soldados de Salamina
+DIR: Icíar Bollaín=Te doy mis ojos*; Isabel Coixet=Mi vida sin mí; Cesc Gay=En la ciudad; David Trueba=Soldados de Salamina
+ACTOR: Luis Tosar=Te doy mis ojos*; Ernesto Alterio=Días de fútbol; Javier Cámara=Torremolinos 73; Alfredo Landa=La luz prodigiosa
+ACTRESS: Laia Marull=Te doy mis ojos*; Ariadna Gil=Soldados de Salamina; Adriana Ozores=La suerte dormida; Sarah Polley=Mi vida sin mí
+SUPACTOR: Eduard Fernández=En la ciudad*; Joan Dalmau=Soldados de Salamina; Juan Diego=Torremolinos 73; José Luis Gómez=La luz prodigiosa
+SUPACTRESS: Candela Peña=Te doy mis ojos*; Mónica López=En la ciudad; María Botto=Soldados de Salamina; María Pujalte=El lápiz del carpintero
+SCORE: Juan Bardem=Al sur de Granada*; Pablo Cervantes=Hotel Danubio; Santi Vega=Eyengui, el dios del sueño; Juan Carlos Cuello=Valentín
+SONG: Humans Like You=Mi vida sin mí=Chop Suey*; Cuando me maten=Carmen=José Nieto; Atraco a tu corazón=Atraco a las 3... y media=Paco Ortega; Just Sorcery=Cosa de brujas=Mario de Benito & Richelieu Morris
+
+@2005|19th|2004
+PIC: Mar adentro*; La mala educación; Roma; Tiovivo c. 1950
+DIR: Alejandro Amenábar=Mar adentro*; Pedro Almodóvar=La mala educación; Adolfo Aristarain=Roma; Carlos Saura=El 7º día
+ACTOR: Javier Bardem=Mar adentro*; Eduard Fernández=Cosas que hacen que la vida valga la pena; Eduardo Noriega=El lobo; Guillermo Toledo=Crimen ferpecto
+ACTRESS: Lola Dueñas=Mar adentro*; Ana Belén=Cosas que hacen que la vida valga la pena; Pilar Bardem=María querida; Penélope Cruz=No te muevas
+SUPACTOR: Celso Bugallo=Mar adentro*; Luis Varela=Crimen ferpecto; Juan Diego=El 7º día; Unax Ugalde=Héctor
+SUPACTRESS: Mabel Rivera=Mar adentro*; Victoria Abril=El 7º día; Silvia Abascal=El lobo; Mercedes Sampietro=Inconscientes
+SCORE: Alejandro Amenábar=Mar adentro*; Roque Baños=El maquinista; Ángel Illarramendi=Héctor; Sergio Moure=Inconscientes
+SONG: Zambie Mameto=El milagro de Candeal=Carlinhos Brown & Mateus*; Atunes en el paraíso=Atún y chocolate=Javier Ruibal; Corre=Incautos=Bebe; La rubia de la cuarta fila=Isi & Disi. Amor a lo bestia=Joaquín Sabina
+
+@2006|20th|2005
+PIC: La vida secreta de las palabras*; 7 vírgenes; Obaba; Princesas
+DIR: Isabel Coixet=La vida secreta de las palabras*; Alberto Rodríguez=7 vírgenes; Benito Zambrano=Habana Blues; Montxo Armendáriz=Obaba
+ACTOR: Óscar Jaenada=Camarón*; Juan José Ballesta=7 vírgenes; Eduard Fernández=El método; Manuel Alexandre=Elsa y Fred
+ACTRESS: Candela Peña=Princesas*; Adriana Ozores=Heroína; Nathalie Poza=Malas temporadas; Emma Vilarasau=Para que no me olvides
+SUPACTOR: Carmelo Gómez=El método*; Javier Cámara=La vida secreta de las palabras; Enrique Villén=Ninette; Fernando Guillén=Otros días vendrán
+SUPACTRESS: Elvira Mínguez=Tapas*; Verónica Sánchez=Camarón; Pilar López de Ayala=Obaba; Marta Etura=Para que no me olvides
+SCORE: Juan Antonio Leyva & others=Habana Blues*; Roque Baños=Frágiles; Eva Gancedo=La noche del hermano; Pablo Cervantes=Ninette
+SONG: Me llaman calle=Princesas=Manu Chao*; Llora por tus miserias=Bagdad Rap=Mario Gaitán; Los malos amores=La noche del hermano=Eva Gancedo & Yamil; Laura=Sinfín=Dani Martín
+
+@2007|21st|2006
+PIC: Volver*; Alatriste; El laberinto del fauno; Salvador (Puig Antich)
+DIR: Pedro Almodóvar=Volver*; Agustín Díaz Yanes=Alatriste; Guillermo del Toro=El laberinto del fauno; Manuel Huerga=Salvador (Puig Antich)
+ACTOR: Juan Diego=Vete de mí*; Viggo Mortensen=Alatriste; Sergi López=El laberinto del fauno; Daniel Brühl=Salvador (Puig Antich)
+ACTRESS: Penélope Cruz=Volver*; Marta Etura=Azul oscuro casi negro; Maribel Verdú=El laberinto del fauno; Silvia Abascal=La dama boba
+SUPACTOR: Antonio de la Torre=Azul oscuro casi negro*; Juan Echanove=Alatriste; Leonardo Sbaraglia=Salvador (Puig Antich); Juan Diego Botto=Vete de mí
+SUPACTRESS: Carmen Maura=Volver*; Ariadna Gil=Alatriste; Blanca Portillo=Volver; Lola Dueñas=Volver
+SCORE: Alberto Iglesias=Volver*; Roque Baños=Alatriste; Javier Navarrete=El laberinto del fauno; Lluís Llach=Salvador (Puig Antich)
+SONG: Tiempo pequeño=La educación de las hadas=Bebe & Lucio Godoy*; Imaginarte=Azul oscuro casi negro=Alba Gárate-Lantana; Duermen los niños=Bienvenido a casa=Javier Limón, Andrés Calamaro & David Trueba; Shockal Fire Ash=El próximo Oriente=Juan Bardem & Qazi Abdur Rahim
+
+@2008|22nd|2007
+PIC: La soledad*; Las 13 rosas; El orfanato; Siete mesas de billar francés
+DIR: Jaime Rosales=La soledad*; Icíar Bollaín=Mataharis; Emilio Martínez Lázaro=Las 13 rosas; Gracia Querejeta=Siete mesas de billar francés
+ACTOR: Alberto San Juan=Bajo las estrellas*; Alfredo Landa=Luz de domingo; Álvaro de Luna=El prado de las estrellas; Tristán Ulloa=Mataharis
+ACTRESS: Maribel Verdú=Siete mesas de billar francés*; Belén Rueda=El orfanato; Blanca Portillo=Siete mesas de billar francés; Emma Suárez=Bajo las estrellas
+SUPACTOR: José Manuel Cervino=Las 13 rosas*; Raúl Arévalo=Siete mesas de billar francés; Emilio Gutiérrez Caba=La torre de Suso; Carlos Larrañaga=Luz de domingo; Julián Villagrán=Bajo las estrellas
+SUPACTRESS: Amparo Baró=Siete mesas de billar francés*; Geraldine Chaplin=El orfanato; Nuria González=Mataharis; María Vázquez=Mataharis
+SCORE: Roque Baños=Las 13 rosas*; Mikel Salas=Bajo las estrellas; Fernando Velázquez=El orfanato; Carlos Cases=Oviedo Express
+SONG: Fado da saudade=Fados=Fernando Pinto do Amaral & Carlos do Carmo*; Circus Honey Blues=Concursante=Víctor Reyes & Rodrigo Cortés; La vida secreta de las pequeñas cosas=Cándida=David Broza & Jorge Drexler; Pequeño paria=El niño de barro=Daniel Melingo
+
+@2009|23rd|2008
+PIC: Camino*; Los girasoles ciegos; Sólo quiero caminar; Los crímenes de Oxford
+DIR: Javier Fesser=Camino*; José Luis Cuerda=Los girasoles ciegos; Agustín Díaz Yanes=Sólo quiero caminar; Álex de la Iglesia=Los crímenes de Oxford
+ACTOR: Benicio del Toro=Che: El argentino*; Raúl Arévalo=Los girasoles ciegos; Javier Cámara=Fuera de carta; Diego Luna=Sólo quiero caminar
+ACTRESS: Carme Elías=Camino*; Verónica Echegui=El patio de mi cárcel; Ariadna Gil=Sólo quiero caminar; Maribel Verdú=Los girasoles ciegos
+SUPACTOR: Jordi Dauder=Camino*; José Ángel Egido=Los girasoles ciegos; Fernando Tejero=Fuera de carta; José María Yazpik=Sólo quiero caminar
+SUPACTRESS: Penélope Cruz=Vicky Cristina Barcelona*; Elvira Mínguez=Cobardes; Rosana Pastor=La conjura de El Escorial; Tina Sainz=Sangre de mayo
+SCORE: Roque Baños=Los crímenes de Oxford*; Alberto Iglesias=Che: El argentino; Bingen Mendizábal=El juego del ahorcado; Lucio Godoy=Los girasoles ciegos
+SONG: A tientas=El truco del manco=Woulfrank Zannou & Juan Manuel Montilla*; Podemos volar juntos=El patio de mi cárcel=Raúl Sánchez Zafra & Juan Pablo Compaired; Manousal=Retorno a Hansala=Tao Gutiérrez; Entre tu balcón y mi ventana=Una palabra tuya=Javier Laguna, José Ángel Taboada & Antonio Manuel Mellado
+
+@2010|24th|2009
+PIC: Celda 211*; Ágora; El baile de la Victoria; El secreto de sus ojos
+DIR: Daniel Monzón=Celda 211*; Alejandro Amenábar=Ágora; Fernando Trueba=El baile de la Victoria; Juan José Campanella=El secreto de sus ojos
+ACTOR: Luis Tosar=Celda 211*; Jordi Mollà=El cónsul de Sodoma; Ricardo Darín=El secreto de sus ojos; Antonio de la Torre=Gordos
+ACTRESS: Lola Dueñas=Yo, también*; Rachel Weisz=Ágora; Penélope Cruz=Los abrazos rotos; Maribel Verdú=Tetro
+SUPACTOR: Raúl Arévalo=Gordos*; Carlos Bardem=Celda 211; Antonio Resines=Celda 211; Ricardo Darín=El baile de la Victoria
+SUPACTRESS: Marta Etura=Celda 211*; Vicky Peña=El cónsul de Sodoma; Pilar Castro=Gordos; Verónica Sánchez=Gordos
+SCORE: Alberto Iglesias=Los abrazos rotos*; Dario Marianelli=Ágora; Roque Baños=Celda 211; Federico Jusid=El secreto de sus ojos
+SONG: Yo, también=Yo, también=Guille Milkyway*; Agallas vs. Escamas=Agallas=Javier Echániz, Juan Antonio Gil, Xavi Font & Arturo Vaquero; Stick It to the Man=Planet 51=Tom Cawte; Spanish Song=Spanish Movie=Gorka Hernando Menchaca
+
+@2011|25th|2010
+PIC: Pa negre*; Balada triste de trompeta; Buried; También la lluvia
+DIR: Agustí Villaronga=Pa negre*; Rodrigo Cortés=Buried; Álex de la Iglesia=Balada triste de trompeta; Icíar Bollaín=También la lluvia
+ACTOR: Javier Bardem=Biutiful*; Antonio de la Torre=Balada triste de trompeta; Ryan Reynolds=Buried; Luis Tosar=También la lluvia
+ACTRESS: Nora Navas=Pa negre*; Elena Anaya=Habitación en Roma; Emma Suárez=La mosquitera; Belén Rueda=Los ojos de Julia
+SUPACTOR: Karra Elejalde=También la lluvia*; Álex Angulo=El gran Vázquez; Sergi López=Pa negre; Eduard Fernández=Biutiful
+SUPACTRESS: Laia Marull=Pa negre*; Ana Wagener=Biutiful; Pilar López de Ayala=Lope; Terele Pávez=Balada triste de trompeta
+SCORE: Alberto Iglesias=También la lluvia*; Gustavo Santaolalla=Biutiful; Víctor Reyes=Buried; Roque Baños=Balada triste de trompeta
+SONG: Que el soneto nos tome por sorpresa=Lope=Jorge Drexler*; In the Lap of the Mountain=Buried=Víctor Reyes & Rodrigo Cortés; Loving Strangers=Habitación en Roma=Russian Red; No se puede vivir con un franco=Pájaros de papel=Emilio Aragón
+
+@2012|26th|2011
+PIC: No habrá paz para los malvados*; Blackthorn; La piel que habito; La voz dormida
+DIR: Enrique Urbizu=No habrá paz para los malvados*; Pedro Almodóvar=La piel que habito; Mateo Gil=Blackthorn; Benito Zambrano=La voz dormida
+ACTOR: José Coronado=No habrá paz para los malvados*; Antonio Banderas=La piel que habito; Daniel Brühl=Eva; Luis Tosar=Mientras duermes
+ACTRESS: Elena Anaya=La piel que habito*; Verónica Echegui=Katmandú, un espejo en el cielo; Salma Hayek=La chispa de la vida; Inma Cuesta=La voz dormida
+SUPACTOR: Lluís Homar=Eva*; Raúl Arévalo=Primos; Juanjo Artero=No habrá paz para los malvados; Juan Diego=23-F La película
+SUPACTRESS: Ana Wagener=La voz dormida*; Pilar López de Ayala=Intruders; Goya Toledo=Maktub; Maribel Verdú=De tu ventana a la mía
+SCORE: Alberto Iglesias=La piel que habito*; Lucio Godoy=Blackthorn; Evgueni & Sacha Galperine=Eva; Mario de Benito=No habrá paz para los malvados
+SONG: Nana de la hierbabuena=La voz dormida=Carmen Agredano*; Debajo del limón=De tu ventana a la mía=Paula Ortiz, Avshalom Caspi & Pachi García; Nuestra playa eres tú=Maktub=Jorge Pérez Quintero, Borja Jiménez Mérida & Patricio Martín Díaz; Verbo=Verbo=Pascal Gaigne & Ignacio Fornés Olmo
+
+@2013|27th|2012
+PIC: Blancanieves*; El artista y la modelo; Grupo 7; Lo imposible
+DIR: J. A. Bayona=Lo imposible*; Pablo Berger=Blancanieves; Alberto Rodríguez=Grupo 7; Fernando Trueba=El artista y la modelo
+ACTOR: José Sacristán=El muerto y ser feliz*; Daniel Giménez Cacho=Blancanieves; Jean Rochefort=El artista y la modelo; Antonio de la Torre=Grupo 7
+ACTRESS: Maribel Verdú=Blancanieves*; Penélope Cruz=Volver a nacer; Aida Folch=El artista y la modelo; Naomi Watts=Lo imposible
+SUPACTOR: Julián Villagrán=Grupo 7*; Ewan McGregor=Lo imposible; Josep Maria Pou=Blancanieves; Antonio de la Torre=Invasor
+SUPACTRESS: Candela Peña=Una pistola en cada mano*; Chus Lampreave=El artista y la modelo; María León=Carmina o revienta; Ángela Molina=Blancanieves
+SCORE: Alfonso de Vilallonga=Blancanieves*; Fernando Velázquez=Lo imposible; Zacarías M. de la Riva & Álex Martínez=Las aventuras de Tadeo Jones; Julio de la Rosa=Grupo 7
+SONG: No te puedo encontrar=Blancanieves=Pablo Berger & Juan Gómez "Chicuelo"*; Líneas paralelas=Els nens salvatges=Víctor M. Peinado, Pablo Cervantes Gutiérrez & Pablo José Fernández Brenes; L'as tu vue?=La banda Picasso=Alfonso Albacete & Juan Bardem Aguado; Te voy a esperar=Las aventuras de Tadeo Jones=Juan Magán
+
+@2014|28th|2013
+PIC: Vivir es fácil con los ojos cerrados*; 15 años y un día; Caníbal; La gran familia española; La herida
+DIR: David Trueba=Vivir es fácil con los ojos cerrados*; Gracia Querejeta=15 años y un día; Manuel Martín Cuenca=Caníbal; Daniel Sánchez Arévalo=La gran familia española
+ACTOR: Javier Cámara=Vivir es fácil con los ojos cerrados*; Tito Valverde=15 años y un día; Antonio de la Torre=Caníbal; Eduard Fernández=Todas las mujeres
+ACTRESS: Marian Álvarez=La herida*; Inma Cuesta=3 bodas de más; Aura Garrido=Stockholm; Nora Navas=Tots volem el millor per a ella
+SUPACTOR: Roberto Álamo=La gran familia española*; Carlos Bardem=Alacrán enamorado; Juan Diego Botto=Ismael; Antonio de la Torre=La gran familia española
+SUPACTRESS: Terele Pávez=Las brujas de Zugarramurdi*; Susi Sánchez=10.000 noches en ninguna parte; Maribel Verdú=15 años y un día; Nathalie Poza=Todas las mujeres
+SCORE: Pat Metheny=Vivir es fácil con los ojos cerrados*; Óscar Navarro=La mula; Emilio Aragón=A Night in Old Mexico; Joan Valent=Las brujas de Zugarramurdi
+SONG: Do You Really Want to Be in Love?=La gran familia española=Josh Rouse*; Rap 15 años y un día=15 años y un día=Arón Piper, Pablo Salinas & Cecilia Fernández Blanco; Aquí sigo=A Night in Old Mexico=Emilio Aragón & Julieta Venegas; De cerca del mar=Alegrías de Cádiz=Fernando Arduán
+
+@2015|29th|2014
+PIC: La isla mínima*; El Niño; Loreak; Magical Girl; Relatos salvajes
+DIR: Alberto Rodríguez=La isla mínima*; Daniel Monzón=El Niño; Carlos Vermut=Magical Girl; Damián Szifrón=Relatos salvajes
+ACTOR: Javier Gutiérrez=La isla mínima*; Raúl Arévalo=La isla mínima; Luis Bermejo=Magical Girl; Ricardo Darín=Relatos salvajes
+ACTRESS: Bárbara Lennie=Magical Girl*; María León=Marsella; Macarena Gómez=Musarañas; Elena Anaya=Todos están muertos
+SUPACTOR: Karra Elejalde=Ocho apellidos vascos*; Eduard Fernández=El Niño; Antonio de la Torre=La isla mínima; José Sacristán=Magical Girl
+SUPACTRESS: Carmen Machi=Ocho apellidos vascos*; Bárbara Lennie=El Niño; Mercedes León=La isla mínima; Goya Toledo=Marsella
+SCORE: Julio de la Rosa=La isla mínima*; Roque Baños=El Niño; Pascal Gaigne=Loreak; Gustavo Santaolalla=Relatos salvajes
+SONG: Niño sin miedo=El Niño=India Martínez, Riki Rivera & David Santisteban*; Me ducho en tus besos=Haz de tu vida una obra de arte=Fernando Merinero, Luis Ivars & Raúl Marín; Morta y File=Mortadelo y Filemón contra Jimmy el Cachondo=Rafael Arnau; No te marches jamás=Ocho apellidos vascos=Fernando Velázquez
+
+@2016|30th|2015
+PIC: Truman*; A cambio de nada; La novia; Nadie quiere la noche; Un día perfecto
+DIR: Cesc Gay=Truman*; Paula Ortiz=La novia; Isabel Coixet=Nadie quiere la noche; Fernando León de Aranoa=Un día perfecto
+ACTOR: Ricardo Darín=Truman*; Pedro Casablanc=B, la película; Luis Tosar=El desconocido; Asier Etxeandia=La novia
+ACTRESS: Natalia de Molina=Techo y comida*; Inma Cuesta=La novia; Penélope Cruz=Ma ma; Juliette Binoche=Nadie quiere la noche
+SUPACTOR: Javier Cámara=Truman*; Felipe García Vélez=A cambio de nada; Manolo Solo=B, la película; Tim Robbins=Un día perfecto
+SUPACTRESS: Luisa Gavasa=La novia*; Elvira Mínguez=El desconocido; Marian Álvarez=Felices 140; Nora Navas=Felices 140
+SCORE: Lucas Vidal=Nadie quiere la noche*; Shigeru Umebayashi=La novia; Santi Vega=El teatro del más allá. Chavín de Huántar; Alberto Iglesias=Ma ma
+SONG: Palmeras en la nieve=Palmeras en la nieve=Lucas Vidal & Pablo Alborán*; So Far and Yet So Close=El país del miedo=Antonio Meliveo; Como el tiempo me mata=Matar el tiempo=Luis Ivars; Techo y comida=Techo y comida=Daniel Quiñones Perulero & Miguel Carabante Manzano
+
+@2017|31st|2016
+PIC: Tarde para la ira*; El hombre de las mil caras; Julieta; Que Dios nos perdone; Un monstruo viene a verme
+DIR: J. A. Bayona=Un monstruo viene a verme*; Pedro Almodóvar=Julieta; Alberto Rodríguez=El hombre de las mil caras; Rodrigo Sorogoyen=Que Dios nos perdone
+ACTOR: Roberto Álamo=Que Dios nos perdone*; Luis Callejo=Tarde para la ira; Antonio de la Torre=Tarde para la ira; Eduard Fernández=El hombre de las mil caras
+ACTRESS: Emma Suárez=Julieta*; Penélope Cruz=La reina de España; Bárbara Lennie=María (y los demás); Carmen Machi=La puerta abierta
+SUPACTOR: Manolo Solo=Tarde para la ira*; Karra Elejalde=100 metros; Javier Gutiérrez=El olivo; Javier Pereira=Que Dios nos perdone
+SUPACTRESS: Emma Suárez=La próxima piel*; Terele Pávez=La puerta abierta; Candela Peña=Kiki, el amor se hace; Sigourney Weaver=Un monstruo viene a verme
+SCORE: Fernando Velázquez=Un monstruo viene a verme*; Julio de la Rosa=El hombre de las mil caras; Pascal Gaigne=El olivo; Alberto Iglesias=Julieta
+SONG: Ai, ai, ai=Cerca de tu casa=Sílvia Pérez Cruz*; Descubriendo India=Bollywood Made in Spain=Luis Ivars; Muerte=Frágil equilibrio=Zeltia Montes; Kiki=Kiki, el amor se hace=Alejandro Acosta, Cristina Manjón, David Borràs Paronella, Marc Peña Rius & Paco León
+
+@2018|32nd|2017
+PIC: La librería*; Handia; El autor; Verano 1993; Verónica
+DIR: Isabel Coixet=La librería*; Aitor Arregi & Jon Garaño=Handia; Manuel Martín Cuenca=El autor; Paco Plaza=Verónica
+ACTOR: Javier Gutiérrez=El autor*; Andrés Gertrúdix=Morir; Javier Bardem=Loving Pablo; Antonio de la Torre=Abracadabra
+ACTRESS: Nathalie Poza=No sé decir adiós*; Emily Mortimer=La librería; Penélope Cruz=Loving Pablo; Maribel Verdú=Abracadabra
+SUPACTOR: David Verdaguer=Verano 1993*; José Mota=Abracadabra; Antonio de la Torre=El autor; Bill Nighy=La librería
+SUPACTRESS: Adelfa Calvo=El autor*; Belén Cuesta=La llamada; Anna Castillo=La llamada; Lola Dueñas=No sé decir adiós
+SCORE: Pascal Gaigne=Handia*; Alfonso de Vilallonga=La librería; Eugenio Mira=Verónica; Alberto Iglesias=La cordillera
+SONG: La llamada=La llamada=José Miguel Conejo*; Algunas veces=El autor=José Luis Perales; Feeling Lonely on a Sunday Afternoon=La librería=Alfonso de Vilallonga; Rap Zona Hostil=Zona hostil=Roque Baños
+
+@2019|33rd|2018
+PIC: Campeones*; Carmen y Lola; El reino; Entre dos aguas; Todos lo saben
+DIR: Rodrigo Sorogoyen=El reino*; Javier Fesser=Campeones; Isaki Lacuesta=Entre dos aguas; Asghar Farhadi=Todos lo saben
+ACTOR: Antonio de la Torre=El reino*; Javier Gutiérrez=Campeones; Javier Bardem=Todos lo saben; José Coronado=Tu hijo
+ACTRESS: Susi Sánchez=La enfermedad del domingo*; Najwa Nimri=Quién te cantará; Penélope Cruz=Todos lo saben; Lola Dueñas=Viaje al cuarto de una madre
+SUPACTOR: Luis Zahera=El reino*; Juan Margallo=Campeones; Antonio de la Torre=La noche de 12 años; Eduard Fernández=Todos lo saben
+SUPACTRESS: Carolina Yuste=Carmen y Lola*; Ana Wagener=El reino; Natalia de Molina=Quién te cantará; Anna Castillo=Viaje al cuarto de una madre
+SCORE: Olivier Arson=El reino*; Alberto Iglesias=Yuli; Iván Palomares=En las estrellas; Manuel Riveiro & Xavi Font=La sombra de la ley
+SONG: Este es el momento=Campeones=Coque Malla*; Me vas a extrañar=Carmen y Lola=Paco de la Rosa; Tarde azul de abril=El hombre que mató a Don Quijote=Roque Baños & Tessy Díez Martín; Una de esas noches sin final=Todos lo saben=Javier Limón
+
+@2020|34th|2019
+PIC: Dolor y gloria*; Intemperie; La trinchera infinita; Lo que arde; Mientras dure la guerra
+DIR: Pedro Almodóvar=Dolor y gloria*; Alejandro Amenábar=Mientras dure la guerra; Aitor Arregi, Jon Garaño & Jose Mari Goenaga=La trinchera infinita; Oliver Laxe=Lo que arde
+ACTOR: Antonio Banderas=Dolor y gloria*; Antonio de la Torre=La trinchera infinita; Karra Elejalde=Mientras dure la guerra; Luis Tosar=Quien a hierro mata
+ACTRESS: Belén Cuesta=La trinchera infinita*; Penélope Cruz=Dolor y gloria; Greta Fernández=La hija de un ladrón; Marta Nieto=Madre
+SUPACTOR: Eduard Fernández=Mientras dure la guerra*; Luis Callejo=Intemperie; Asier Etxeandia=Dolor y gloria; Leonardo Sbaraglia=Dolor y gloria
+SUPACTRESS: Julieta Serrano=Dolor y gloria*; Natalia de Molina=Adiós; Mona Martínez=Adiós; Nathalie Poza=Mientras dure la guerra
+SCORE: Alberto Iglesias=Dolor y gloria*; Arturo Cardelús=Buñuel en el laberinto de las tortugas; Pascal Gaigne=La trinchera infinita; Alejandro Amenábar=Mientras dure la guerra
+SONG: Intemperie=Intemperie=Javier Ruibal*; Invisible=Klaus=Caroline Pennell, Jussi Ilmari Karvinen & Justin Tranter; Allí en la arena=La inocencia=Toni M. Mir; Nana de las dos lunas=La noche de las dos lunas=Sergio de la Puente
+
+@2021|35th|2020
+PIC: Las niñas*; Adú; Ane; La boda de Rosa; Sentimental
+DIR: Salvador Calvo=Adú*; Juanma Bajo Ulloa=Baby; Icíar Bollaín=La boda de Rosa; Isabel Coixet=Nieva en Benidorm
+ACTOR: Mario Casas=No matarás*; Javier Cámara=Sentimental; Ernesto Alterio=Un mundo normal; David Verdaguer=Uno para todos
+ACTRESS: Patricia López Arnaiz=Ane*; Amaia Aberasturi=Akelarre; Kiti Mánver=El inconveniente; Candela Peña=La boda de Rosa
+SUPACTOR: Alberto San Juan=Sentimental*; Álvaro Cervantes=Adú; Sergi López=La boda de Rosa; Juan Diego Botto=Los europeos
+SUPACTRESS: Nathalie Poza=La boda de Rosa*; Juana Acosta=El inconveniente; Verónica Echegui=Explota explota; Natalia de Molina=Las niñas
+SCORE: Maite Arroitajauregi & Aránzazu Calleja=Akelarre*; Roque Baños=Adú; Bingen Mendizabal & Koldo Uriarte=Baby; Federico Jusid=El verano que vivimos
+SONG: Que no, que no=La boda de Rosa=María Rozalén*; Sabadoo=Adú=Cherif Badua & Roque Baños; El verano que vivimos=El verano que vivimos=Alejandro Sanz & Alfonso Pérez Arias; Lunas de papel=Las niñas=Carlos Naya
+
+@2022|36th|2021
+PIC: El buen patrón*; Libertad; Madres paralelas; Maixabel; Mediterráneo
+DIR: Fernando León de Aranoa=El buen patrón*; Manuel Martín Cuenca=La hija; Icíar Bollaín=Maixabel; Pedro Almodóvar=Madres paralelas
+ACTOR: Javier Bardem=El buen patrón*; Javier Gutiérrez=La hija; Eduard Fernández=Mediterráneo; Luis Tosar=Maixabel
+ACTRESS: Blanca Portillo=Maixabel*; Emma Suárez=Josefina; Petra Martínez=La vida era eso; Penélope Cruz=Madres paralelas
+SUPACTOR: Urko Olazabal=Maixabel*; Fernando Albizu=El buen patrón; Celso Bugallo=El buen patrón; Manolo Solo=El buen patrón
+SUPACTRESS: Nora Navas=Libertad*; Sonia Almarcha=El buen patrón; Aitana Sánchez-Gijón=Madres paralelas; Milena Smit=Madres paralelas
+SCORE: Zeltia Montes=El buen patrón*; Fatima Al Qadiri=La abuela; Alberto Iglesias=Maixabel; Arnau Bataller=Mediterráneo
+SONG: Te espera el mar=Mediterráneo=María José Llergo*; Burst Out=Álbum de posguerra=Àngel Leiro, Jean-Paul Dupeyron & Xavier Capellas; Que me busquen por dentro=El Cover=Antonio Orozco & Jordi Colell Pinillos; Las leyes de la frontera=Las leyes de la frontera=Alejandro García Rodríguez & others
+
+@2023|37th|2022
+PIC: As bestas*; Alcarràs; Cinco lobitos; La maternal; Modelo 77
+DIR: Rodrigo Sorogoyen=As bestas*; Carla Simón=Alcarràs; Pilar Palomero=La maternal; Carlos Vermut=Mantícora; Alberto Rodríguez=Modelo 77
+ACTOR: Denis Ménochet=As bestas*; Luis Tosar=En los márgenes; Nacho Sánchez=Mantícora; Javier Gutiérrez=Modelo 77; Miguel Herrán=Modelo 77
+ACTRESS: Laia Costa=Cinco lobitos*; Marina Foïs=As bestas; Anna Castillo=Girasoles silvestres; Bárbara Lennie=Los renglones torcidos de Dios; Vicky Luengo=Suro
+SUPACTOR: Luis Zahera=As bestas*; Diego Anido=As bestas; Ramón Barea=Cinco lobitos; Fernando Tejero=Modelo 77; Jesús Carroza=Modelo 77
+SUPACTRESS: Susi Sánchez=Cinco lobitos*; Marie Colomb=As bestas; Carmen Machi=Cerdita; Penélope Cruz=En los márgenes; Ángela Cervantes=La maternal
+SCORE: Olivier Arson=As bestas*; Aránzazu Calleja & Maite Arroitajauregi=Irati; Iván Palomares=Las niñas de cristal; Fernando Velázquez=Los renglones torcidos de Dios; Julio de la Rosa=Modelo 77
+SONG: Sintiéndolo mucho=Sintiéndolo mucho=Joaquín Sabina & Leiva*; En los márgenes=En los márgenes=Eduardo Cruz & María Rozalén; Izena duena bada=Irati=Aránzazu Calleja, Maite Arroitajauregi & Paul Urkijo Alijo; Un paraíso en el sur=La vida chipén=Paloma Peñarrubia Ruiz & Vanesa Benítez Zamora; Batalla=Unicorn Wars=Joseba Beristain
+
+@2024|38th|2023
+PIC: La sociedad de la nieve*; 20.000 especies de abejas; Cerrar los ojos; Un amor; Saben aquell
+DIR: J. A. Bayona=La sociedad de la nieve*; Víctor Erice=Cerrar los ojos; Isabel Coixet=Un amor; David Trueba=Saben aquell; Elena Martín=Creatura
+ACTOR: David Verdaguer=Saben aquell*; Manolo Solo=Cerrar los ojos; Enric Auquer=El maestro que prometió el mar; Hovik Keuchkerian=Un amor; Alberto Ammann=Upon Entry
+ACTRESS: Malena Alterio=Que nadie duerma*; Patricia López Arnaiz=20.000 especies de abejas; María Vázquez=Matria; Carolina Yuste=Saben aquell; Laia Costa=Un amor
+SUPACTOR: José Coronado=Cerrar los ojos*; Martxelo Rubio=20.000 especies de abejas; Juan Carlos Vellido=Bajo terapia; Álex Brendemühl=Creatura; Hugo Silva=Un amor
+SUPACTRESS: Ane Gabarain=20.000 especies de abejas*; Ana Torrent=Cerrar los ojos; Itziar Lazkano=20.000 especies de abejas; Luisa Gavasa=El maestro que prometió el mar; Clara Segura=Creatura
+SCORE: Michael Giacchino=La sociedad de la nieve*; Natasha Arizu=El maestro que prometió el mar; Arnau Bataller=La paradoja de Antares; Alfonso de Vilallonga=Robot Dreams; Andrea Motis=Saben aquell
+SONG: Yo solo quiero amor=Te estoy amando locamente=Rigoberta Bandini*; Eco=Amigos hasta la muerte=Xoel López; Chinas=Chinas=Marina Herlop; El amor de Andrea=El amor de Andrea=Vetusta Morla & Valeria Castro; La gallinita=La imatge permanent=Fernando Moreri Haberman & Sergio Bertran
+
+@2025|39th|2024
+PIC: El 47*; La infiltrada*; Casa en flames; La estrella azul; Segundo premio
+DIR: Isaki Lacuesta & Pol Rodríguez=Segundo premio*; Pedro Almodóvar=La habitación de al lado; Arantxa Echevarría=La infiltrada; Paula Ortiz=La virgen roja; Aitor Arregi & Jon Garaño=Marco
+ACTOR: Eduard Fernández=Marco*; Alberto San Juan=Casa en flames; Alfredo Castro=Polvo serán; Urko Olazabal=Soy Nevenka; Vito Sanz=Volveréis
+ACTRESS: Carolina Yuste=La infiltrada*; Emma Vilarasau=Casa en flames; Julianne Moore=La habitación de al lado; Tilda Swinton=La habitación de al lado; Patricia López Arnaiz=Los destellos
+SUPACTOR: Salva Reina=El 47*; Enric Auquer=Casa en flames; Óscar de la Fuente=La casa; Luis Tosar=La infiltrada; Antonio de la Torre=Los destellos
+SUPACTRESS: Clara Segura=El 47*; Macarena García=Casa en flames; Maria Rodríguez Soto=Casa en flames; Nausicaa Bonnín=La infiltrada; Aixa Villagrán=La virgen roja
+SCORE: Alberto Iglesias=La habitación de al lado*; Arnau Bataller=El 47; Arturo Cardelús=Guardiana de Dragones; Fernando Velázquez=La infiltrada; Sergio de la Puente=Verano en diciembre
+SONG: Los almendros=La guitarra flamenca de Yerai Cortés=Antón Álvarez & Yerai Cortés*; Show Me=Buffalo Kids=Fernando Velázquez; El borde del mundo=El 47=Valeria Castro; La virgen roja=La virgen roja=Maria Arnal; Love Is the Worst=Segundo premio=Alondra Bentley & Isaki Lacuesta
+
+@2026|40th|2025
+PIC: Los domingos*; La cena; Maspalomas; Sirāt; Sorda
+DIR: Alauda Ruiz de Azúa=Los domingos*; Aitor Arregi & Jose Mari Goenaga=Maspalomas; Carla Simón=Romería; Oliver Laxe=Sirāt; Albert Serra=Tardes de soledad
+ACTOR: José Ramón Soroiz=Maspalomas*; Alberto San Juan=La cena; Miguel Garcés=Los domingos; Mario Casas=Muy lejos; Manolo Solo=Una quinta portuguesa
+ACTRESS: Patricia López Arnaiz=Los domingos*; Ángela Cervantes=La furia; Antonia Zegers=Los tortuga; Nora Navas=Mi amiga Eva; Susana Abaitua=Un fantasma en la batalla
+SUPACTOR: Álvaro Cervantes=Sorda*; Miguel Rellán=El cautivo; Juan Minujín=Los domingos; Kandido Uranga=Maspalomas; Tamar Novas=Rondallas
+SUPACTRESS: Nagore Aranburu=Los domingos*; Elvira Mínguez=La cena; Miryam Gallego=Romería; Elena Irureta=Sorda; María de Medeiros=Una quinta portuguesa
+SCORE: Kangding Ray=Sirāt*; Carla F. Benedicto=El talento; Iván Palomares=Leo & Lou; Julio de la Rosa=Los Tigres; Aránzazu Calleja=Maspalomas
+SONG: Flores para Antonio=Flores para Antonio=Alba Flores & Sílvia Pérez Cruz*; La Arepera=¡Caigan las rosas blancas!=Paloma Peñarrubia Ruiz; Hasta que me quede sin voz=Hasta que me quede sin voz=Leiva; Y mientras tanto, canto=La cena=Víctor Manuel; Caminar el tiempo=Parecido a un asesinato=Blanca Paloma Ramos, Jose Pablo Polo & Luis Ivars
+
+#EN
+Todo sobre mi madre | All About My Mother
+Solas | Alone
+La lengua de las mariposas | Butterfly's Tongue
+Cuando vuelvas a mi lado | By My Side Again
+Goya en Burdeos | Goya in Bordeaux
+Amic/Amat | Beloved/Friend
+Segunda piel | Second Skin
+Lágrimas negras | Black Tears
+Lisboa | Lisbon
+París-Tombuctú | Paris-Timbuktu
+Muertos de risa | Dying of Laughter
+El bola | Pellet
+La comunidad | Common Wealth
+You're the One (Una historia de entonces) | You're the One
+Besos para todos | Kisses for Everyone
+Adiós con el corazón | Goodbye from the Heart
+Plenilunio | Plenilune
+Sé quién eres | I Know Who You Are
+Obra maestra | Masterpiece
+Los otros | The Others
+Sin noticias de Dios | Don't Tempt Me
+Juana la Loca | Mad Love
+Lucía y el sexo | Sex and Lucia
+Sólo mía | Mine Alone
+Son de mar | Sound of the Sea
+Sin vergüenza | No Shame
+Torrente 2: Misión en Marbella | Torrente 2: Mission in Marbella
+Los lunes al sol | Mondays in the Sun
+En la ciudad sin límites | The City of No Limits
+El otro lado de la cama | The Other Side of the Bed
+Hable con ella | Talk to Her
+800 balas | 800 Bullets
+El caballero Don Quijote | Don Quixote, Knight Errant
+Lugares comunes | Common Ground
+Historia de un beso | Story of a Kiss
+La vida de nadie | Nobody's Life
+A mi madre le gustan las mujeres | My Mother Likes Women
+La caja 507 | Box 507
+Rencor | Rancour
+Arderás conmigo | Burn with Me
+Guerreros | Warriors
+Te doy mis ojos | Take My Eyes
+Planta 4ª | The 4th Floor
+Mi vida sin mí | My Life Without Me
+Soldados de Salamina | Soldiers of Salamis
+En la ciudad | In the City
+Días de fútbol | Football Days
+La luz prodigiosa | The End of a Mystery
+La suerte dormida | Sleeping Luck
+El lápiz del carpintero | The Carpenter's Pencil
+Al sur de Granada | South from Granada
+Hotel Danubio | Danube Hotel
+Mar adentro | The Sea Inside
+La mala educación | Bad Education
+El 7º día | The 7th Day
+Cosas que hacen que la vida valga la pena | Things That Make Living Worthwhile
+Crimen ferpecto | Ferpect Crime
+El lobo | The Wolf
+María querida | Dearest Maria
+No te muevas | Don't Move
+Inconscientes | Unconscious
+El maquinista | The Machinist
+Atún y chocolate | Tuna and Chocolate
+Incautos | Swindled
+La vida secreta de las palabras | The Secret Life of Words
+7 vírgenes | 7 Virgins
+Camarón | Camarón: When Flamenco Became Legend
+Elsa y Fred | Elsa & Fred
+El método | The Method
+Heroína | Heroine
+Malas temporadas | Hard Times
+Para que no me olvides | Something to Remember Me By
+Otros días vendrán | Other Days Will Come
+La noche del hermano | The Night of the Brother
+Frágiles | Fragile
+El laberinto del fauno | Pan's Labyrinth
+Vete de mí | Go Away from Me
+La dama boba | The Idiot Maiden
+Azul oscuro casi negro | Dark Blue Almost Black
+La soledad | Solitary Fragments
+Las 13 rosas | 13 Roses
+El orfanato | The Orphanage
+Siete mesas de billar francés | Seven Billiard Tables
+Bajo las estrellas | Under the Stars
+Luz de domingo | Sunday Light
+La torre de Suso | Suso's Tower
+Los girasoles ciegos | The Blind Sunflowers
+Sólo quiero caminar | Just Walking
+Los crímenes de Oxford | The Oxford Murders
+Fuera de carta | Chef's Special
+El patio de mi cárcel | My Prison Yard
+Cobardes | Cowards
+La conjura de El Escorial | The El Escorial Conspiracy
+Sangre de mayo | Blood of May
+Retorno a Hansala | Return to Hansala
+Celda 211 | Cell 211
+Ágora | Agora
+El baile de la Victoria | The Dancer and the Thief
+El secreto de sus ojos | The Secret in Their Eyes
+El cónsul de Sodoma | The Consul of Sodom
+Gordos | Fat People
+Yo, también | Me Too
+Los abrazos rotos | Broken Embraces
+Agallas | Guts
+Pa negre | Black Bread
+Balada triste de trompeta | The Last Circus
+También la lluvia | Even the Rain
+Habitación en Roma | Room in Rome
+La mosquitera | The Mosquito Net
+Los ojos de Julia | Julia's Eyes
+El gran Vázquez | The Great Vázquez
+Pájaros de papel | Paper Birds
+No habrá paz para los malvados | No Rest for the Wicked
+La piel que habito | The Skin I Live In
+La voz dormida | The Sleeping Voice
+Mientras duermes | Sleep Tight
+Katmandú, un espejo en el cielo | Kathmandu Lullaby
+La chispa de la vida | As Luck Would Have It
+Primos | Cousinhood
+El artista y la modelo | The Artist and the Model
+Grupo 7 | Unit 7
+Lo imposible | The Impossible
+El muerto y ser feliz | The Dead Man and Being Happy
+Volver a nacer | Twice Born
+Invasor | Invader
+Una pistola en cada mano | A Gun in Each Hand
+Carmina o revienta | Carmina or Blow Up
+Las aventuras de Tadeo Jones | Tad, the Lost Explorer
+Els nens salvatges | The Wild Ones
+Vivir es fácil con los ojos cerrados | Living Is Easy with Eyes Closed
+15 años y un día | 15 Years and One Day
+Caníbal | Cannibal
+La gran familia española | Family United
+La herida | Wounded
+Todas las mujeres | All the Women
+3 bodas de más | Three Many Weddings
+Tots volem el millor per a ella | We All Want What's Best for Her
+Alacrán enamorado | Scorpion in Love
+Las brujas de Zugarramurdi | Witching & Bitching
+10.000 noches en ninguna parte | 10,000 Nights Nowhere
+La mula | The Mule
+La isla mínima | Marshland
+Loreak | Flowers
+Relatos salvajes | Wild Tales
+Marsella | Marseille
+Musarañas | Shrew's Nest
+Todos están muertos | They Are All Dead
+Ocho apellidos vascos | Spanish Affair
+A cambio de nada | Nothing in Return
+La novia | The Bride
+Nadie quiere la noche | Nobody Wants the Night
+Un día perfecto | A Perfect Day
+El desconocido | Retribution
+Techo y comida | Food and Shelter
+Felices 140 | Happy 140
+Palmeras en la nieve | Palm Trees in the Snow
+Tarde para la ira | The Fury of a Patient Man
+El hombre de las mil caras | Smoke & Mirrors
+Que Dios nos perdone | May God Save Us
+Un monstruo viene a verme | A Monster Calls
+La reina de España | The Queen of Spain
+María (y los demás) | María (and Everybody Else)
+La puerta abierta | The Open Door
+100 metros | 100 Meters
+El olivo | The Olive Tree
+La próxima piel | The Next Skin
+Kiki, el amor se hace | Kiki, Love to Love
+Cerca de tu casa | At Your Doorstep
+La librería | The Bookshop
+Handia | Giant
+El autor | The Motive
+Verano 1993 | Summer 1993
+Morir | Dying
+No sé decir adiós | Can't Say Goodbye
+La llamada | Holy Camp!
+La cordillera | The Summit
+Campeones | Champions
+Carmen y Lola | Carmen & Lola
+El reino | The Realm
+Entre dos aguas | Between Two Waters
+Todos lo saben | Everybody Knows
+Tu hijo | Your Son
+La enfermedad del domingo | Sunday's Illness
+Viaje al cuarto de una madre | Journey to a Mother's Room
+La noche de 12 años | A Twelve-Year Night
+La sombra de la ley | Gun City
+El hombre que mató a Don Quijote | The Man Who Killed Don Quixote
+Dolor y gloria | Pain and Glory
+Intemperie | Out in the Open
+La trinchera infinita | The Endless Trench
+Lo que arde | Fire Will Come
+Mientras dure la guerra | While at War
+Quien a hierro mata | Eye for an Eye
+La hija de un ladrón | A Thief's Daughter
+Madre | Mother
+Adiós | Bye
+Buñuel en el laberinto de las tortugas | Buñuel in the Labyrinth of the Turtles
+La inocencia | The Innocence
+Las niñas | Schoolgirls
+Ane | Ane Is Missing
+La boda de Rosa | Rosa's Wedding
+Sentimental | The People Upstairs
+Nieva en Benidorm | It Snows in Benidorm
+No matarás | Cross the Line
+Uno para todos | One for All
+Akelarre | Coven
+El inconveniente | One Careful Owner
+Explota explota | My Heart Goes Boom!
+El verano que vivimos | The Summer We Lived
+El buen patrón | The Good Boss
+Madres paralelas | Parallel Mothers
+Mediterráneo | Mediterraneo: The Law of the Sea
+La hija | The Daughter
+Josefina | Josephine
+La vida era eso | That Was Life
+La abuela | The Grandmother
+El Cover | The Cover
+Las leyes de la frontera | Outlaws
+As bestas | The Beasts
+Cinco lobitos | Lullaby
+La maternal | Motherhood
+Modelo 77 | Prison 77
+Mantícora | Manticore
+En los márgenes | On the Fringe
+Girasoles silvestres | Wild Flowers
+Los renglones torcidos de Dios | God's Crooked Lines
+Suro | Cork
+Cerdita | Piggy
+Las niñas de cristal | Dancing on Glass
+La sociedad de la nieve | Society of the Snow
+20.000 especies de abejas | 20,000 Species of Bees
+Cerrar los ojos | Close Your Eyes
+Saben aquell | Jokes & Cigarettes
+El maestro que prometió el mar | The Teacher Who Promised the Sea
+Bajo terapia | Under Therapy
+La paradoja de Antares | The Antares Paradox
+El 47 | The 47
+La infiltrada | Undercover
+Casa en flames | A House on Fire
+La estrella azul | The Blue Star
+Segundo premio | Saturn Return
+La habitación de al lado | The Room Next Door
+La virgen roja | The Red Virgin
+Marco | Marco, the Invented Truth
+Polvo serán | They Will Be Dust
+Soy Nevenka | I Am Nevenka
+Volveréis | The Other Way Around
+Los destellos | Glimmers
+Guardiana de Dragones | Dragonkeeper
+La guitarra flamenca de Yerai Cortés | The Flamenco Guitar of Yerai Cortés
+Los domingos | Sundays
+La cena | The Dinner
+Sorda | Deaf
+Tardes de soledad | Afternoons of Solitude
+Muy lejos | Away
+Una quinta portuguesa | The Portuguese House
+La furia | Fury
+Mi amiga Eva | My Friend Eva
+Un fantasma en la batalla | She Walks in Darkness
+El cautivo | The Captive
+Rondallas | Band Together
+El talento | The Talent
+¡Caigan las rosas blancas! | White Roses, Fall!
+
+#DIRECTORS
+Goya en Burdeos | Carlos Saura
+Amic/Amat | Ventura Pons
+Segunda piel | Gerardo Vera
+Lágrimas negras | Ricardo Franco & Ángeles González-Sinde
+Lisboa | Antonio Hernández
+París-Tombuctú | Luis García Berlanga
+Muertos de risa | Álex de la Iglesia
+El bola | Achero Mañas
+Adiós con el corazón | José Luis García Sánchez
+El portero | Gonzalo Suárez
+Plenilunio | Imanol Uribe
+Sé quién eres | Patricia Ferreira
+Obra maestra | David Trueba
+Asfalto | Daniel Calparsoro
+Fugitivas | Miguel Hermoso
+El arte de morir | Álvaro Fernández Armero
+Gitano | Manuel Palacios
+Km. 0 | Yolanda García Serrano & Juan Luis Iborra
+Fausto 5.0 | Isidro Ortiz, Carlos Padrissa & Àlex Ollé
+Intacto | Juan Carlos Fresnadillo
+Sólo mía | Javier Balaguer
+El cielo abierto | Miguel Albaladejo
+Son de mar | Bigas Luna
+Sin vergüenza | Joaquín Oristrell
+El bosque animado | Ángel de la Cruz & Manolo Gómez
+Torrente 2: Misión en Marbella | Santiago Segura
+800 balas | Álex de la Iglesia
+El caballero Don Quijote | Manuel Gutiérrez Aragón
+Lugares comunes | Adolfo Aristarain
+Historia de un beso | José Luis Garci
+La vida de nadie | Eduard Cortés
+A mi madre le gustan las mujeres | Daniela Féjerman & Inés París
+La caja 507 | Enrique Urbizu
+Rencor | Miguel Albaladejo
+Salomé | Carlos Saura
+Guerreros | Daniel Calparsoro
+Planta 4ª | Antonio Mercero
+Días de fútbol | David Serrano
+Torremolinos 73 | Pablo Berger
+La luz prodigiosa | Miguel Hermoso
+La suerte dormida | Ángeles González-Sinde
+El lápiz del carpintero | Antón Reixa
+Al sur de Granada | Fernando Colomo
+Valentín | Alejandro Agresti
+Carmen | Vicente Aranda
+Atraco a las 3... y media | Raúl Marchand
+Tiovivo c. 1950 | José Luis Garci
+Cosas que hacen que la vida valga la pena | Manuel Gómez Pereira
+El lobo | Miguel Courtois
+Crimen ferpecto | Álex de la Iglesia
+María querida | José Luis García Sánchez
+No te muevas | Sergio Castellitto
+Héctor | Gracia Querejeta
+Inconscientes | Joaquín Oristrell
+El maquinista | Brad Anderson
+El milagro de Candeal | Fernando Trueba
+Atún y chocolate | Pablo Carbonell
+Incautos | Miguel Bardem
+Isi & Disi. Amor a lo bestia | Chema de la Peña
+Princesas | Fernando León de Aranoa
+Camarón | Jaime Chávarri
+El método | Marcelo Piñeyro
+Elsa y Fred | Marcos Carnevale
+Heroína | Gerardo Herrero
+Malas temporadas | Manuel Martín Cuenca
+Para que no me olvides | Patricia Ferreira
+Ninette | José Luis Garci
+Otros días vendrán | Eduard Cortés
+Tapas | José Corbacho & Juan Cruz
+Frágiles | Jaume Balagueró
+La noche del hermano | Santiago García de Leániz
+Vete de mí | Víctor García León
+Azul oscuro casi negro | Daniel Sánchez Arévalo
+La dama boba | Manuel Iborra
+La educación de las hadas | José Luis Cuerda
+Bienvenido a casa | David Trueba
+El próximo Oriente | Fernando Colomo
+El orfanato | J. A. Bayona
+Bajo las estrellas | Félix Viscarret
+Luz de domingo | José Luis Garci
+El prado de las estrellas | Mario Camus
+La torre de Suso | Tom Fernández
+Oviedo Express | Gonzalo Suárez
+Fados | Carlos Saura
+Concursante | Rodrigo Cortés
+Cándida | Guillermo Fesser
+El niño de barro | Jorge Algora
+Che: El argentino | Steven Soderbergh
+Fuera de carta | Nacho G. Velilla
+El patio de mi cárcel | Belén Macías
+Vicky Cristina Barcelona | Woody Allen
+Cobardes | José Corbacho & Juan Cruz
+La conjura de El Escorial | Antonio del Real
+Sangre de mayo | José Luis Garci
+El juego del ahorcado | Manuel Gómez Pereira
+El truco del manco | Santiago Zannou
+Retorno a Hansala | Chus Gutiérrez
+Una palabra tuya | Ángeles González-Sinde
+El cónsul de Sodoma | Sergi Belbel
+Gordos | Daniel Sánchez Arévalo
+Yo, también | Álvaro Pastor & Antonio Naharro
+Los abrazos rotos | Pedro Almodóvar
+Tetro | Francis Ford Coppola
+Planet 51 | Jorge Blanco
+Spanish Movie | Javier Ruiz Caldera
+Biutiful | Alejandro González Iñárritu
+Habitación en Roma | Julio Medem
+La mosquitera | Agustí Vila
+Los ojos de Julia | Guillem Morales
+El gran Vázquez | Óscar Aibar
+Lope | Andrucha Waddington
+Pájaros de papel | Emilio Aragón
+Eva | Kike Maíllo
+Mientras duermes | Jaume Balagueró
+Katmandú, un espejo en el cielo | Icíar Bollaín
+La chispa de la vida | Álex de la Iglesia
+Primos | Daniel Sánchez Arévalo
+23-F La película | Chema de la Peña
+Intruders | Juan Carlos Fresnadillo
+Maktub | Paco Arango
+De tu ventana a la mía | Paula Ortiz
+Verbo | Eduardo Chapero-Jackson
+El muerto y ser feliz | Javier Rebollo
+Volver a nacer | Sergio Castellitto
+Invasor | Daniel Calparsoro
+Una pistola en cada mano | Cesc Gay
+Carmina o revienta | Paco León
+Las aventuras de Tadeo Jones | Enrique Gato
+Els nens salvatges | Patricia Ferreira
+La banda Picasso | Fernando Colomo
+La herida | Fernando Franco
+Todas las mujeres | Mariano Barroso
+3 bodas de más | Javier Ruiz Caldera
+Stockholm | Rodrigo Sorogoyen
+Tots volem el millor per a ella | Mar Coll
+Alacrán enamorado | Santiago Zannou
+Ismael | Marcelo Piñeyro
+Las brujas de Zugarramurdi | Álex de la Iglesia
+La mula | Michael Radford
+A Night in Old Mexico | Emilio Aragón
+Loreak | Jon Garaño & José Mari Goenaga
+Marsella | Belén Macías
+Musarañas | Juanfer Andrés & Esteban Roel
+Todos están muertos | Beatriz Sanchis
+Ocho apellidos vascos | Emilio Martínez Lázaro
+Mortadelo y Filemón contra Jimmy el Cachondo | Javier Fesser
+A cambio de nada | Daniel Guzmán
+B, la película | David Ilundain
+El desconocido | Dani de la Torre
+Techo y comida | Juan Miguel del Castillo
+Ma ma | Julio Medem
+Felices 140 | Gracia Querejeta
+Palmeras en la nieve | Fernando González Molina
+El país del miedo | Francisco Espada
+Matar el tiempo | Antonio Hens
+Tarde para la ira | Raúl Arévalo
+La reina de España | Fernando Trueba
+María (y los demás) | Nely Reguera
+La puerta abierta | Marc Vigil
+100 metros | Marcel Barrena
+El olivo | Icíar Bollaín
+La próxima piel | Isaki Lacuesta & Isa Campo
+Kiki, el amor se hace | Paco León
+Cerca de tu casa | Eduard Cortés
+Frágil equilibrio | Guillermo García-López
+Verano 1993 | Carla Simón
+Morir | Fernando Franco
+Loving Pablo | Fernando León de Aranoa
+Abracadabra | Pablo Berger
+No sé decir adiós | Lino Escalera
+La llamada | Javier Calvo & Javier Ambrossi
+La cordillera | Santiago Mitre
+Zona hostil | Adolfo Martínez
+Carmen y Lola | Arantxa Echevarría
+Tu hijo | Miguel Ángel Vivas
+La enfermedad del domingo | Ramón Salazar
+Quién te cantará | Carlos Vermut
+Viaje al cuarto de una madre | Celia Rico
+La noche de 12 años | Álvaro Brechner
+Yuli | Icíar Bollaín
+En las estrellas | Zoe Berriatúa
+La sombra de la ley | Dani de la Torre
+El hombre que mató a Don Quijote | Terry Gilliam
+Intemperie | Benito Zambrano
+Quien a hierro mata | Paco Plaza
+La hija de un ladrón | Belén Funes
+Madre | Rodrigo Sorogoyen
+Adiós | Paco Cabezas
+Buñuel en el laberinto de las tortugas | Salvador Simó
+Klaus | Sergio Pablos
+La inocencia | Lucía Alemany
+Las niñas | Pilar Palomero
+Ane | David Pérez Sañudo
+Sentimental | Cesc Gay
+No matarás | David Victori
+Un mundo normal | Achero Mañas
+Uno para todos | David Ilundain
+Akelarre | Pablo Agüero
+El inconveniente | Bernabé Rico
+Los europeos | Víctor Iriarte
+Explota explota | Nacho Álvarez
+El verano que vivimos | Carlos Sedes
+Libertad | Clara Roquet
+Mediterráneo | Marcel Barrena
+Josefina | Javier Marco
+La vida era eso | David Martín de los Santos
+La abuela | Paco Plaza
+El Cover | Secun de la Rosa
+Las leyes de la frontera | Daniel Monzón
+Cinco lobitos | Alauda Ruiz de Azúa
+En los márgenes | Juan Diego Botto
+Girasoles silvestres | Jaime Rosales
+Los renglones torcidos de Dios | Oriol Paulo
+Suro | Mikel Gurrea
+Cerdita | Carlota Pereda
+Irati | Paul Urkijo Alijo
+Las niñas de cristal | Jesús del Cerro
+Sintiéndolo mucho | Fernando León de Aranoa
+Unicorn Wars | Alberto Vázquez
+20.000 especies de abejas | Estibaliz Urresola Solaguren
+El maestro que prometió el mar | Patricia Font
+Upon Entry | Alejandro Rojas & Juan Sebastián Vásquez
+Que nadie duerma | Juanjo Giménez
+Matria | Álvaro Gago
+Robot Dreams | Pablo Berger
+Te estoy amando locamente | Alejandro Marín
+La imatge permanent | Laura Ferrés
+El 47 | Marcel Barrena
+Casa en flames | Dani de la Orden
+La estrella azul | Javier Macipe
+Polvo serán | Carlos Marqués-Marcet
+Soy Nevenka | Icíar Bollaín
+Volveréis | Jonás Trueba
+Los destellos | Pilar Palomero
+La casa | Álex Montoya
+Guardiana de Dragones | Salvador Simó
+Buffalo Kids | Juan Jesús García Galocha & Pedro Solís García
+La cena | Manuel Gómez Pereira
+Sorda | Eva Libertad
+Muy lejos | Gerard Oms
+Una quinta portuguesa | Avelina Prat
+La furia | Gemma Blasco
+Mi amiga Eva | Cesc Gay
+Un fantasma en la batalla | Agustín Díaz Yanes
+El cautivo | Alejandro Amenábar
+El talento | Reyes Baztán
+Los Tigres | Alberto Rodríguez
+Flores para Antonio | Isaki Lacuesta & Elena Molina
