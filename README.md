@@ -1,6 +1,6 @@
-# Film Awards — Oscars & Goyas
+# Film Awards — Oscars, Goyas, Emmys & Golden Globes
 
-A phone-friendly site listing every nominee and winner of the **Oscars** and the **Goyas** (ceremonies 2000–2026) in the main categories. For each film you can tick **Seen**, give your own star rating, write comments, and open a detail page with all its nominations.
+A phone-friendly site listing every nominee and winner of the **Oscars** and **Goyas** (under the *Films* tab) and the **Emmys** and **Golden Globes (TV)** (under the *Series* tab), ceremonies 2000–2026, plus empty *2027* entries ready to fill in. For each film or series you can tick **Seen**, give your own star rating, write comments, and open a detail page with all its nominations.
 
 * Static site: plain HTML/CSS/JS, hosted for free on **GitHub Pages**. No server, no build step for the site itself.
 * Works as a home-screen app and offline after the first visit.
@@ -10,14 +10,19 @@ A phone-friendly site listing every nominee and winner of the **Oscars** and the
 
 | | |
 |---|---|
-| Ceremonies | Oscars 72nd–98th (2000–2026), Goyas 14th–40th (2000–2026) |
-| Categories | Picture/Film, Director, Actor, Actress, Supporting Actor, Supporting Actress, Original Score, Original Song |
+| Ceremonies | Oscars 72nd–98th, Goyas 14th–40th, Emmys 52nd–78th, Globes 57th–83rd (all 2000–2026), plus 2027 (not held yet: shown as "coming up") |
+| Film categories | Picture/Film, Director, Actor, Actress, Supporting Actor, Supporting Actress, Original Score, Original Song |
+| Emmy categories | Drama/Comedy/Limited series, lead and supporting acting (drama, comedy, limited/movie), directing, music (score, limited score, main theme, song) |
+| Globes (TV) categories | Drama/Comedy/Limited series, lead acting in each, supporting actor and actress |
 | Year convention | "2026" = the year the ceremony was held (the films are from 2025) |
 | Titles | Oscars: English title. Goyas: Spanish title with the English title underneath |
 
 Notes:
 * The 2025 Goyas (39th) had **two** Best Film winners (*El 47* and *La infiltrada*); the site shows both.
 * Directors are included for every Best Director nominee and for most other films. The 31 films without one in the data (almost all of them only nominated for Original Song or Score) get the director from TMDB when you open them, if you've set up a TMDB key.
+* Series: the *creator*, seasons, network, cast and where to watch come from TMDB when you open the series. A series keeps one "seen"/rating/comment across all its years and both awards.
+* Emmys: the year is the end of the TV season (the 75th Emmys, held in January 2024, are listed as **2023**). The "Limited / Movie" categories include TV movies.
+* Golden Globes: in 2023 two supporting categories (series vs limited/TV film) were merged into one list per gender, so each has two winners.
 * The data was assembled from Wikipedia and the official Goya site. It was cross-checked, but if you spot a mistake, fix it in `data-src/` (see below) and it will be right for good.
 
 ## 1. Put it on GitHub Pages
@@ -45,7 +50,7 @@ The key is saved only in your phone's browser; it is never part of the repo or o
 
 ## 3. Updating each year
 
-All the data lives in two plain-text files, `data-src/oscars.txt` and `data-src/goyas.txt`. Each year add one block **above** the `#EN` / `#DIRECTORS` sections at the bottom:
+All the data lives in plain-text files in `data-src/` (`oscars.txt`, `goyas.txt`, `emmys.txt`, `globes.txt`). The 2027 blocks already exist, empty: just add the category lines under them (header lines like `@2027|99th|2026`). Each year add one block **above** the `#EN` / `#DIRECTORS` sections at the bottom:
 
 ```
 @2027|99th|2026
@@ -65,9 +70,11 @@ SONG: Song Title=Film C=Songwriter One, Songwriter Two*; Another Song=Film B=Wri
 * Films with no Best Director nomination can get a line under `#DIRECTORS` (`Title | Director`), or leave them out and TMDB will fill it in.
 * Spell a film's title the same way in every category.
 
+Emmys / Globes use the same format with their own category keys (see the comment at the top of each file), e.g. `SER_D: Show A*; Show B`, `ACT_D: Actor=Show*`, `DIR_D: Director (Episode)=Show*`, `SONG: Song=Show=Writers*`.
+
 Then rebuild the JSON:
 
-* **On a computer:** `python3 tools/build.py`, then commit `data/oscars.json` and `data/goyas.json`. It prints warnings for anything odd (a category with no winner, a malformed line).
+* **On a computer:** `python3 tools/build.py`, then commit the four `data/*.json` files. It prints warnings for anything odd (a category with no winner, a malformed line).
 * **From the phone / github.com:** edit the `.txt` file in the GitHub web editor and commit. The included workflow (`.github/workflows/build-data.yml`) rebuilds the JSON automatically — check the *Actions* tab if the site doesn't update after a couple of minutes.
 
 New ceremonies show up on their own (the year list is built from the data).

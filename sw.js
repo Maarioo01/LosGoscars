@@ -2,11 +2,11 @@
  * - App files + data: network first (so a yearly data update shows up straight away), cache as fallback.
  * - TMDB posters: cache first, capped.
  * TMDB API calls are never intercepted. */
-const VERSION = 'v1';
+const VERSION = 'v2';
 const SHELL = 'fa-shell-' + VERSION;
 const IMGS = 'fa-img-' + VERSION;
 const FILES = ['./', 'index.html', 'css/app.css', 'js/store.js', 'js/tmdb.js', 'js/app.js',
-  'manifest.webmanifest', 'icons/icon.svg', 'icons/icon-192.png', 'data/oscars.json', 'data/goyas.json'];
+  'manifest.webmanifest', 'icons/icon.svg', 'icons/icon-192.png', 'data/oscars.json', 'data/goyas.json', 'data/emmys.json', 'data/globes.json'];
 
 self.addEventListener('install', (e) => {
   e.waitUntil(caches.open(SHELL).then((c) => Promise.all(FILES.map((f) => c.add(f).catch(() => {})))).then(() => self.skipWaiting()));

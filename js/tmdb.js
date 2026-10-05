@@ -60,6 +60,9 @@
     }, function () { throw err('network'); });
   }
 
+  function K(film) { return film.uid || film.id; }
+  function isTV(film) { return film.kind === 'tv'; }
+
   // ---- title matching -----------------------------------------------------------------------
   function norm(s) {
     return String(s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '')
@@ -67,15 +70,20 @@
   }
   function strip(n) { return n.replace(/^(the|a|an|el|la|los|las|un|una|le|les|l|il|der|die|das)\s+/, ''); }
 
-  function scoreResult(r, wanted, year) {
-    var names = [r.title, r.original_title].filter(Boolean).map(function (n) { return strip(norm(n)); });
+  function scoreResult(r, wanted, year, tv) {
+    var names = [r.title, r.original_title, r.name, r.original_name].filter(Boolean).map(function (n) { return strip(norm(n)); });
     var exact = wanted.some(function (w) { return names.indexOf(w) >= 0; });
     var loose = !exact && wanted.some(function (w) {
       return w.length > 3 && names.some(function (n) { return n.indexOf(w) === 0 || w.indexOf(n) === 0; });
     });
-    var ry = r.release_date ? parseInt(r.release_date.slice(0, 4), 10) : NaN;
+    var ds = r.release_date || r.first_air_date;
+    var ry = ds ? parseInt(ds.slice(0, 4), 10) : NaN;
     var dy = isNaN(ry) ? 4 : Math.abs(ry - year);
     var s = 0;
+    if (tv) {
+      // a series keeps airing for years: only penalise ones that started after the nomination
+      dy = isNaN(ry) || ry <= year + 1 ? 0 : ry - year;
+    }
     if (exact) s += 10; else if (loose) s += 5;
     if (dy === 0) s += 4; else if (dy === 1) s += 3; else if (dy > 2) s -= 4 * (dy - 2);
     s += Math.min(2, Math.log10(1 + (r.popularity || 0)) / 2);
@@ -83,10 +91,10 @@
     return s;
   }
 
-  function pick(cands, wanted, year) {
+  function pick(cands, wanted, year, tv) {
     var best = null, bestScore = -99;
     cands.forEach(function (r) {
-      var s = scoreResult(r, wanted, year);
+      var s = scoreResult(r, wanted, year, tv);
       if (s > bestScore) { best = r; bestScore = s; }
     });
     return bestScore >= 8 ? best : null;
@@ -102,27 +110,29 @@
     var wanted = titles.map(function (t) { return strip(norm(t)); });
     var cands = new Map();
     var topOfYear = null;
+    var tv = isTV(film);
 
     function run(q, year) {
       var p = { query: q, include_adult: 'false', language: 'en-US' };
-      if (year) p.year = String(year);
-      return req('/search/movie', p).then(function (j) {
+      if (year && !tv) p.year = String(year);
+      return req(tv ? '/search/tv' : '/search/movie', p).then(function (j) {
         var res = j.results || [];
         res.forEach(function (r) { if (!cands.has(r.id)) cands.set(r.id, r); });
         if (year && year === film.year && res.length && !topOfYear) topOfYear = res[0];
-        return pick(cands, wanted, film.year);
+        return pick(cands, wanted, film.year, tv);
       });
     }
 
-    var steps = [[titles[0], 0], [titles[0], film.year]];
-    if (titles[1]) steps.push([titles[1], 0], [titles[1], film.year]);
+    var steps = tv ? [[titles[0], 0]] : [[titles[0], 0], [titles[0], film.year]];
+    if (titles[1]) steps.push([titles[1], 0]);
+    if (titles[1] && !tv) steps.push([titles[1], film.year]);
 
     var chain = Promise.resolve(null);
     steps.forEach(function (st) {
       chain = chain.then(function (found) { return found || run(st[0], st[1]); });
     });
     return chain.then(function (found) {
-      if (!found && topOfYear) {
+      if (!found && topOfYear && !tv) {
         var ry = topOfYear.release_date ? parseInt(topOfYear.release_date.slice(0, 4), 10) : NaN;
         if (!isNaN(ry) && Math.abs(ry - film.year) <= 1) found = topOfYear; // weak fallback
       }
@@ -130,16 +140,16 @@
     });
   }
 
-  function fromId(id) {
-    return req('/movie/' + id, { language: 'en-US' }).then(entryFrom);
+  function fromId(id, tv) {
+    return req((tv ? '/tv/' : '/movie/') + id, { language: 'en-US' }).then(entryFrom);
   }
 
   // ---- resolve one film to a cache entry ---------------------------------------------------
   var pending = new Map();
 
   function isFresh(film) {
-    var ov = store.getOverrides()[film.id];
-    var e = cache[film.id];
+    var ov = store.getOverrides()[K(film)];
+    var e = cache[K(film)];
     if (!e) return false;
     if (ov && e.i !== ov) return false;
     var age = Date.now() - (e.t || 0);
@@ -147,22 +157,22 @@
   }
 
   function resolve(film) {
-    if (pending.has(film.id)) return pending.get(film.id);
-    var ov = store.getOverrides()[film.id];
-    var e = cache[film.id];
+    if (pending.has(K(film))) return pending.get(K(film));
+    var ov = store.getOverrides()[K(film)];
+    var e = cache[K(film)];
     var p;
     if (isFresh(film)) p = Promise.resolve(e);
-    else if (ov) p = fromId(ov);
-    else if (e && e.i) p = fromId(e.i).catch(function (er) { if (er.code === 'not-found') return searchFilm(film); throw er; });
+    else if (ov) p = fromId(ov, isTV(film));
+    else if (e && e.i) p = fromId(e.i, isTV(film)).catch(function (er) { if (er.code === 'not-found') return searchFilm(film); throw er; });
     else p = searchFilm(film);
     p = p.then(function (ne) {
-      cache[film.id] = ne;
+      cache[K(film)] = ne;
       persistSoon();
-      emit('film', film.id);
+      emit('film', K(film));
       return ne;
     });
-    pending.set(film.id, p);
-    var done = function () { pending.delete(film.id); };
+    pending.set(K(film), p);
+    var done = function () { pending.delete(K(film)); };
     p.then(done, done);
     return p;
   }
@@ -181,11 +191,11 @@
     if (now < pausedUntil) { setTimeout(pump, pausedUntil - now + 50); return; }
     while (active < MAX_ACTIVE && queue.length) {
       var film = queue.shift();
-      queued.delete(film.id);
+      queued.delete(K(film));
       active++;
       resolve(film).then(null, function (er) {
         if (er.code === 'bad-key') { blocked = true; emit('error', er); }
-        else if (er.code === 'rate') { pausedUntil = Date.now() + (er.extra || 3) * 1000; queue.unshift(film); queued.add(film.id); }
+        else if (er.code === 'rate') { pausedUntil = Date.now() + (er.extra || 3) * 1000; queue.unshift(film); queued.add(K(film)); }
         else if (er.code === 'network') { emit('error', er); }
       }).then(function () { active--; pump(); });
     }
@@ -194,8 +204,8 @@
 
   function enqueue(film, low) {
     if (!store.getKey() || blocked) return;
-    if (isFresh(film) || pending.has(film.id) || queued.has(film.id)) return;
-    queued.add(film.id);
+    if (isFresh(film) || pending.has(K(film)) || queued.has(K(film))) return;
+    queued.add(K(film));
     if (low) queue.push(film); else queue.unshift(film);
     pump();
   }
@@ -204,10 +214,12 @@
   function details(film) {
     return resolve(film).then(function (e) {
       if (!e || !e.i) return null;
-      var key = 'd.' + e.i;
+      var tv = isTV(film);
+      var key = 'd.' + (tv ? 'tv.' : '') + e.i;
       var d = store.read(key, null);
       if (d && Date.now() - d.t < DETAIL_TTL) return d;
-      return req('/movie/' + e.i, { language: 'en-US', append_to_response: 'credits' }).then(function (j) {
+      return req((tv ? '/tv/' : '/movie/') + e.i, { language: 'en-US', append_to_response: tv ? 'aggregate_credits,external_ids' : 'credits' }).then(function (j) {
+        if (tv) return tvOut(j, key, film);
         var crew = (j.credits && j.credits.crew) || [];
         var cast = (j.credits && j.credits.cast) || [];
         var out = {
@@ -223,19 +235,43 @@
           store.keys('d.').concat(store.keys('p.')).forEach(store.remove);
           store.write(key, out);
         }
-        cache[film.id] = { i: j.id, p: out.p, r: out.r, v: out.v, t: Date.now() };
+        cache[K(film)] = { i: j.id, p: out.p, r: out.r, v: out.v, t: Date.now() };
         persistSoon();
-        emit('film', film.id);
+        emit('film', K(film));
         return out;
       });
     });
   }
 
-  function providers(tmdbId, region) {
-    var key = 'p.' + tmdbId;
+  function tvOut(j, key, film) {
+    var ac = (j.aggregate_credits && j.aggregate_credits.cast) || [];
+    var out = {
+      t: Date.now(), id: j.id, kind: 'tv', title: j.name, ot: j.original_name, tag: j.tagline || '', ov: j.overview || '',
+      rt: (j.episode_run_time && j.episode_run_time[0]) || 0, g: (j.genres || []).map(function (x) { return x.name; }),
+      rd: j.first_air_date || '', last: j.last_air_date || '', lang: j.original_language || '',
+      c: (j.origin_country || []).slice(),
+      r: j.vote_average || 0, v: j.vote_count || 0, imdb: (j.external_ids && j.external_ids.imdb_id) || '', p: j.poster_path || null,
+      dir: (j.created_by || []).map(function (x) { return x.name; }),
+      seasons: j.number_of_seasons || 0, eps: j.number_of_episodes || 0, status: j.status || '',
+      nets: (j.networks || []).map(function (x) { return x.name; }).slice(0, 3),
+      cast: ac.slice(0, 8).map(function (x) { return { n: x.name, ch: (x.roles && x.roles[0] && x.roles[0].character) || '' }; }),
+    };
+    if (!store.write(key, out)) {
+      store.keys('d.').concat(store.keys('p.')).forEach(store.remove);
+      store.write(key, out);
+    }
+    cache[K(film)] = { i: j.id, p: out.p, r: out.r, v: out.v, t: Date.now() };
+    persistSoon();
+    emit('film', K(film));
+    return out;
+  }
+
+  function providers(tmdbId, region, kind) {
+    var tv = kind === 'tv';
+    var key = 'p.' + (tv ? 'tv.' : '') + tmdbId;
     var c = store.read(key, null);
     if (c && c.region === region && Date.now() - c.t < PROV_TTL) return Promise.resolve(c);
-    return req('/movie/' + tmdbId + '/watch/providers', {}).then(function (j) {
+    return req((tv ? '/tv/' : '/movie/') + tmdbId + '/watch/providers', {}).then(function (j) {
       var r = (j.results && j.results[region]) || {};
       function names(a) { return (a || []).map(function (x) { return x.provider_name; }); }
       var out = { t: Date.now(), region: region, f: names(r.flatrate), r: names(r.rent), b: names(r.buy), l: r.link || '' };
@@ -256,8 +292,8 @@
     on: function (fn) { listeners.push(fn); },
     unblock: function () { blocked = false; },
     setOverride: function (film, tmdbId) {
-      store.setOverride(film.id, tmdbId);
-      delete cache[film.id];
+      store.setOverride(K(film), tmdbId);
+      delete cache[K(film)];
       persistSoon();
       return resolve(film);
     },

@@ -1,0 +1,654 @@
+# Emmys (Primetime) source data. One block per ceremony. Winner = trailing *
+# Block header: @ceremony year | ordinal | first year of the TV season it honours
+# Series categories: SER_D SER_C SER_L (just titles). Person categories: Person=Series. DIR_*: Director (Episode)=Series
+# SONG: Song=Series=Songwriters.  SCORE / SCORE_L / THEME: Composer=Series
+# Ceremony year = end of the TV season (the 75th Emmys were held in January 2024 but belong to the 2022-23 season, so they are listed as 2023).
+# After the ceremonies: #DIRECTORS (Title | Creator) is optional; TMDB fills the creator in otherwise.
+
+@2000|52nd|1999
+SER_D: The West Wing*; ER; Law & Order; The Practice; The Sopranos
+SER_C: Will & Grace*; Everybody Loves Raymond; Frasier; Friends; Sex and the City
+SER_L: The Corner*; Arabian Nights; The Beach Boys: An American Family; Jesus; P. T. Barnum
+ACT_D: James Gandolfini=The Sopranos*; Dennis Franz=NYPD Blue; Jerry Orbach=Law & Order; Martin Sheen=The West Wing; Sam Waterston=Law & Order
+ACTR_D: Sela Ward=Once and Again*; Lorraine Bracco=The Sopranos; Amy Brenneman=Judging Amy; Edie Falco=The Sopranos; Julianna Margulies=ER
+ACT_C: Michael J. Fox=Spin City*; Kelsey Grammer=Frasier; John Lithgow=3rd Rock from the Sun; Eric McCormack=Will & Grace; Ray Romano=Everybody Loves Raymond
+ACTR_C: Patricia Heaton=Everybody Loves Raymond*; Jenna Elfman=Dharma & Greg; Jane Kaczmarek=Malcolm in the Middle; Debra Messing=Will & Grace; Sarah Jessica Parker=Sex and the City
+ACT_L: Jack Lemmon=Tuesdays with Morrie*; Beau Bridges=P. T. Barnum; Brian Dennehy=Death of a Salesman; William H. Macy=A Slight Case of Murder; Liev Schreiber=RKO 281
+ACTR_L: Halle Berry=Introducing Dorothy Dandridge*; Judy Davis=A Cooler Climate; Sally Field=A Cooler Climate; Holly Hunter=Harlan County War; Gena Rowlands=The Color of Love: Jacey's Story
+SUPACT_D: Richard Schiff=The West Wing*; Michael Badalucco=The Practice; Dominic Chianese=The Sopranos; Steve Harris=The Practice; John Spencer=The West Wing
+SUPACTR_D: Allison Janney=The West Wing*; Stockard Channing=The West Wing; Tyne Daly=Judging Amy; Nancy Marchand=The Sopranos; Holland Taylor=The Practice
+SUPACT_C: Sean Hayes=Will & Grace*; Peter Boyle=Everybody Loves Raymond; Brad Garrett=Everybody Loves Raymond; Peter MacNicol=Ally McBeal; David Hyde Pierce=Frasier
+SUPACTR_C: Megan Mullally=Will & Grace*; Jennifer Aniston=Friends; Kim Cattrall=Sex and the City; Lisa Kudrow=Friends; Doris Roberts=Everybody Loves Raymond
+SUPACT_L: Hank Azaria=Tuesdays with Morrie*; Klaus Maria Brandauer=Introducing Dorothy Dandridge; James Cromwell=RKO 281; Danny Glover=Freedom Song; John Malkovich=RKO 281
+SUPACTR_L: Vanessa Redgrave=If These Walls Could Talk 2*; Kathy Bates=Annie; Elizabeth Franz=Death of a Salesman; Melanie Griffith=RKO 281; Maggie Smith=David Copperfield
+DIR_D: Thomas Schlamme (Pilot)=The West Wing*; Jonathan Kaplan (All in the Family)=ER; John Wells (Such Sweet Sorrow)=ER; John Patterson (Funhouse)=The Sopranos; Allen Coulter (The Knight in White Satin Armor)=The Sopranos
+DIR_C: Todd Holland (Pilot)=Malcolm in the Middle*; Bill D'Elia (Ally McBeal: The Musical, Almost)=Ally McBeal; Will Mackenzie (The Christmas Picture)=Everybody Loves Raymond; Michael Lembeck (The One That Could Have Been)=Friends; Thomas Schlamme (Quo Vadimus)=Sports Night; James Burrows (Homo for the Holidays)=Will & Grace
+DIR_L: Charles S. Dutton (The Corner)=The Corner*; Martha Coolidge=Introducing Dorothy Dandridge; Rob Marshall=Annie; Stephen Frears=Fail Safe; Benjamin Ross=RKO 281
+SCORE: Joseph LoDuca=Xena: Warrior Princess*; Jay Gruska=Falcone; Danny Pelfrey, W. G. Snuffy Walden=Felicity; Jay Chattaway=Star Trek: Voyager; Mark Snow=The X-Files
+SCORE_L: John Altman=RKO 281*; Ernest Troost=Beyond the Prairie; Richard Hartley=Don Quixote; Charles Bernstein=Enslavement; Ben Bartlett=Walking with Dinosaurs
+THEME: W. G. Snuffy Walden=The West Wing*; Jay Gruska=Falcone; Hal Foxton Beckett=Jack London's Call of the Wild; Joseph LoDuca=Jack of All Trades; Velton Ray Bunch, Mark Leggett=The Pretender
+SONG: Up to You=Nickellennium=John Kimbrough*; My Bill Gates=The 14th Annual American Comedy Awards=Glen Roven, Bruce Vilanch; Without You=AFI's 100 Years...100 Stars=Carole Bayer Sager, Marvin Hamlisch; We Only Live to Kiss Your Ass=Family Guy=Ron Jones, Chris Sheridan; Song of Freedom=Freedom Song=Carole King
+
+@2001|53rd|2000
+SER_D: The West Wing*; ER; Law & Order; The Practice; The Sopranos
+SER_C: Sex and the City*; Everybody Loves Raymond; Frasier; Malcolm in the Middle; Will & Grace
+SER_L: Anne Frank: The Whole Story*; Armistead Maupin's Further Tales of the City; Horatio Hornblower; Life with Judy Garland: Me and My Shadows; Nuremberg
+ACT_D: James Gandolfini=The Sopranos*; Andre Braugher=Gideon's Crossing; Dennis Franz=NYPD Blue; Rob Lowe=The West Wing; Martin Sheen=The West Wing
+ACTR_D: Edie Falco=The Sopranos*; Lorraine Bracco=The Sopranos; Amy Brenneman=Judging Amy; Marg Helgenberger=CSI: Crime Scene Investigation; Sela Ward=Once and Again
+ACT_C: Eric McCormack=Will & Grace*; Kelsey Grammer=Frasier; John Lithgow=3rd Rock from the Sun; Frankie Muniz=Malcolm in the Middle; Ray Romano=Everybody Loves Raymond
+ACTR_C: Patricia Heaton=Everybody Loves Raymond*; Calista Flockhart=Ally McBeal; Jane Kaczmarek=Malcolm in the Middle; Debra Messing=Will & Grace; Sarah Jessica Parker=Sex and the City
+ACT_L: Kenneth Branagh=Conspiracy*; Andy García=For Love or Country: The Arturo Sandoval Story; Gregory Hines=Bojangles; Ben Kingsley=Anne Frank: The Whole Story; Barry Pepper=61
+ACTR_L: Judy Davis=Life with Judy Garland: Me and My Shadows*; Judi Dench=The Last of the Blonde Bombshells; Hannah Taylor-Gordon=Anne Frank: The Whole Story; Holly Hunter=When Billie Beat Bobby; Emma Thompson=Wit
+SUPACT_D: Bradley Whitford=The West Wing*; Dominic Chianese=The Sopranos; Michael Imperioli=The Sopranos; Richard Schiff=The West Wing; John Spencer=The West Wing
+SUPACTR_D: Allison Janney=The West Wing*; Stockard Channing=The West Wing; Tyne Daly=Judging Amy; Maura Tierney=ER; Aida Turturro=The Sopranos
+SUPACT_C: Peter MacNicol=Ally McBeal*; Peter Boyle=Everybody Loves Raymond; Robert Downey Jr.=Ally McBeal; Sean Hayes=Will & Grace; David Hyde Pierce=Frasier
+SUPACTR_C: Doris Roberts=Everybody Loves Raymond*; Jennifer Aniston=Friends; Kim Cattrall=Sex and the City; Lisa Kudrow=Friends; Megan Mullally=Will & Grace
+SUPACT_L: Brian Cox=Nuremberg*; Alan Alda=Club Land; Colin Firth=Conspiracy; Victor Garber=Life with Judy Garland: Me and My Shadows; Ian Holm=The Last of the Blonde Bombshells; Stanley Tucci=Conspiracy
+SUPACTR_L: Tammy Blanchard=Life with Judy Garland: Me and My Shadows*; Anne Bancroft=Haven; Brenda Blethyn=Anne Frank: The Whole Story; Holly Hunter=Things You Can Tell Just by Looking at Her; Audra McDonald=Wit
+DIR_D: Thomas Schlamme (In the Shadow of Two Gunmen)=The West Wing*; Jonathan Kaplan (The Visit)=ER; Tim Van Patten (Amour Fou)=The Sopranos; Steve Buscemi (Pine Barrens)=The Sopranos; Allen Coulter (University)=The Sopranos; Laura Innes (Shibboleth)=The West Wing
+DIR_C: Todd Holland (Bowling)=Malcolm in the Middle*; James Frawley (Pilot)=Ed; Jeff Melman (Flashback)=Malcolm in the Middle; Charles McDougall (Easy Come, Easy Go)=Sex and the City; James Burrows (Lows in the Mid-Eighties)=Will & Grace
+DIR_L: Mike Nichols=Wit*; Billy Crystal=61; Robert Dornhelm=Anne Frank: The Whole Story; Frank Pierson=Conspiracy; Robert Allan Ackerman=Life with Judy Garland: Me and My Shadows
+SCORE: Jay Chattaway=Star Trek: Voyager*; Alf Clausen=The Simpsons; Dennis McCarthy=Star Trek: Voyager; W. G. Snuffy Walden=The West Wing; Joseph LoDuca=Xena: Warrior Princess
+SCORE_L: Arturo Sandoval=For Love or Country*; Mason Daring=Bailey's Mistake; Lawrence Shragge=Haven; Martin Davich=Jackie, Ethel, Joan; Velton Ray Bunch=Papa's Angels
+THEME: James Newton Howard=Gideon's Crossing*; Marc Bonilla=Big Apple; Kenneth Edmonds, Al Green=Soul Food; Russ Landau=Survivor; Michael Josephs=Thoroughbred
+SONG: A Dream That Only I Can Know=Yesterday's Children=Patrick Williams*; On the Way to Becoming Me=AFI Life Achievement Award: A Tribute to Barbra Streisand=Marvin Hamlisch, Alan Bergman, Marilyn Bergman; Welcome Back (All My Soulmates)=Dancing in September=Mark Sparks, Sy Smith; Mole Folks Song=Gary & Mike=Greg O'Connor, Fax Bahr, Howard Gewirtz, Adam Small; Colonoscopy=Robert Klein: Child in His 50s=Robert Klein, Bob Stein
+
+@2002|54th|2001
+SER_D: The West Wing*; 24; CSI: Crime Scene Investigation; Law & Order; Six Feet Under
+SER_C: Friends*; Curb Your Enthusiasm; Everybody Loves Raymond; Sex and the City; Will & Grace
+SER_L: Band of Brothers*; Dinotopia; The Mists of Avalon; Shackleton
+ACT_D: Michael Chiklis=The Shield*; Michael C. Hall=Six Feet Under; Peter Krause=Six Feet Under; Martin Sheen=The West Wing; Kiefer Sutherland=24
+ACTR_D: Allison Janney=The West Wing*; Amy Brenneman=Judging Amy; Frances Conroy=Six Feet Under; Jennifer Garner=Alias; Rachel Griffiths=Six Feet Under
+ACT_C: Ray Romano=Everybody Loves Raymond*; Kelsey Grammer=Frasier; Matt LeBlanc=Friends; Bernie Mac=The Bernie Mac Show; Matthew Perry=Friends
+ACTR_C: Jennifer Aniston=Friends*; Patricia Heaton=Everybody Loves Raymond; Jane Kaczmarek=Malcolm in the Middle; Debra Messing=Will & Grace; Sarah Jessica Parker=Sex and the City
+ACT_L: Albert Finney=The Gathering Storm*; Kenneth Branagh=Shackleton; Beau Bridges=We Were the Mulvaneys; James Franco=James Dean; Michael Gambon=Path to War
+ACTR_L: Laura Linney=Wild Iris*; Angela Bassett=The Rosa Parks Story; Blythe Danner=We Were the Mulvaneys; Vanessa Redgrave=The Gathering Storm; Gena Rowlands=Wild Iris
+SUPACT_D: John Spencer=The West Wing*; Victor Garber=Alias; Dulé Hill=The West Wing; Freddy Rodriguez=Six Feet Under; Richard Schiff=The West Wing; Bradley Whitford=The West Wing
+SUPACTR_D: Stockard Channing=The West Wing*; Lauren Ambrose=Six Feet Under; Tyne Daly=Judging Amy; Janel Moloney=The West Wing; Mary-Louise Parker=The West Wing
+SUPACT_C: Brad Garrett=Everybody Loves Raymond*; Peter Boyle=Everybody Loves Raymond; Bryan Cranston=Malcolm in the Middle; Sean Hayes=Will & Grace; David Hyde Pierce=Frasier
+SUPACTR_C: Doris Roberts=Everybody Loves Raymond*; Kim Cattrall=Sex and the City; Wendie Malick=Just Shoot Me!; Megan Mullally=Will & Grace; Cynthia Nixon=Sex and the City
+SUPACT_L: Michael Moriarty=James Dean*; Alec Baldwin=Path to War; Jim Broadbent=The Gathering Storm; Don Cheadle=Things Behind the Sun; Jon Voight=Uprising
+SUPACTR_L: Stockard Channing=The Matthew Shepard Story*; Joan Allen=The Mists of Avalon; Anjelica Huston=The Mists of Avalon; Diana Rigg=Victoria & Albert; Sissy Spacek=Last Call
+DIR_D: Alan Ball (Pilot)=Six Feet Under*; Clark Johnson (Pilot)=The Shield; Stephen Hopkins (12:00 a.m. – 1:00 a.m.)=24; Paris Barclay (The Indians in the Lobby)=The West Wing; Alex Graves (Posse Comitatus)=The West Wing
+DIR_C: Michael Patrick King (The Real Me)=Sex and the City*; Robert B. Weide (The Doll)=Curb Your Enthusiasm; Jeff Melman (Christmas)=Malcolm in the Middle; Marc Buckland (My Old Lady)=Scrubs; James Burrows (A Chorus Lie)=Will & Grace
+DIR_L: Phil Alden Robinson (Currahee)=Band of Brothers*; Richard Loncraine (The Gathering Storm)=The Gathering Storm; Mark Rydell (James Dean)=James Dean; Moisés Kaufman (The Laramie Project)=The Laramie Project; John Frankenheimer (Path to War)=Path to War
+SCORE: George Fenton=The Blue Planet*; Steven Bramson=JAG; Sean Callery=24; Mark Snow=The X-Files; Joseph LoDuca=Xena: Warrior Princess
+SCORE_L: Adrian Johnston=Shackleton*; Dave Grusin=Dinner with Friends; Brian Tyler=Last Call; Rupert Gregson-Williams=Jack and the Beanstalk; Lee Holdridge=The Mists of Avalon; Patrick Williams=We Were the Mulvaneys
+THEME: Thomas Newman=Six Feet Under*; Mark Leggett=A Day in Their Lives; Bruce Broughton=First Monday; Lolita Ritmanis=Justice League; David Schwartz=Wolf Lake
+SONG: You've Got a Lot to See=Family Guy=Walter Murphy, Seth MacFarlane*; A Mackie Rag=The Carol Burnett Show: Show Stoppers=Ken Welch, Mitzie Welch; I Wish Every Day Could Be Christmas=The Fairly OddParents=Butch Hartman, Steve Marmel, Guy Moon; The Best Kind of Answer=Judging Amy=Peter Himmelman; Ode to Branson=The Simpsons=Alf Clausen, Jon Vitti
+
+@2003|55th|2002
+SER_D: The West Wing*; 24; CSI: Crime Scene Investigation; Six Feet Under; The Sopranos
+SER_C: Everybody Loves Raymond*; Curb Your Enthusiasm; Friends; Sex and the City; Will & Grace
+SER_L: Taken*; Hitler: The Rise of Evil; Napoléon
+ACT_D: James Gandolfini=The Sopranos*; Michael Chiklis=The Shield; Peter Krause=Six Feet Under; Martin Sheen=The West Wing; Kiefer Sutherland=24
+ACTR_D: Edie Falco=The Sopranos*; Frances Conroy=Six Feet Under; Jennifer Garner=Alias; Marg Helgenberger=CSI: Crime Scene Investigation; Allison Janney=The West Wing
+ACT_C: Tony Shalhoub=Monk*; Larry David=Curb Your Enthusiasm; Matt LeBlanc=Friends; Bernie Mac=The Bernie Mac Show; Eric McCormack=Will & Grace; Ray Romano=Everybody Loves Raymond
+ACTR_C: Debra Messing=Will & Grace*; Jennifer Aniston=Friends; Patricia Heaton=Everybody Loves Raymond; Jane Kaczmarek=Malcolm in the Middle; Sarah Jessica Parker=Sex and the City
+ACT_L: William H. Macy=Door to Door*; Brad Garrett=Gleason; Paul Newman=Our Town; Tom Wilkinson=Normal; James Woods=Rudy: The Rudy Giuliani Story
+ACTR_L: Maggie Smith=My House in Umbria*; Thora Birch=Homeless to Harvard: The Liz Murray Story; Helena Bonham Carter=Live from Baghdad; Jessica Lange=Normal; Helen Mirren=The Roman Spring of Mrs. Stone
+SUPACT_D: Joe Pantoliano=The Sopranos*; Victor Garber=Alias; Michael Imperioli=The Sopranos; John Spencer=The West Wing; Bradley Whitford=The West Wing
+SUPACTR_D: Tyne Daly=Judging Amy*; Lauren Ambrose=Six Feet Under; Stockard Channing=The West Wing; Rachel Griffiths=Six Feet Under; Lena Olin=Alias
+SUPACT_C: Brad Garrett=Everybody Loves Raymond*; Peter Boyle=Everybody Loves Raymond; Bryan Cranston=Malcolm in the Middle; Sean Hayes=Will & Grace; John Mahoney=Frasier; David Hyde Pierce=Frasier
+SUPACTR_C: Doris Roberts=Everybody Loves Raymond*; Kim Cattrall=Sex and the City; Cheryl Hines=Curb Your Enthusiasm; Megan Mullally=Will & Grace; Cynthia Nixon=Sex and the City
+SUPACT_L: Ben Gazzara=Hysterical Blindness*; Alan Arkin=The Pentagon Papers; Chris Cooper=My House in Umbria; John Malkovich=Napoléon; Peter O'Toole=Hitler: The Rise of Evil
+SUPACTR_L: Gena Rowlands=Hysterical Blindness*; Kathy Baker=Door to Door; Anne Bancroft=The Roman Spring of Mrs. Stone; Juliette Lewis=Hysterical Blindness; Helen Mirren=Door to Door
+DIR_D: Christopher Misiano (Twenty Five)=The West Wing*; Ian Toynton (Day 2: 10:00 p.m. – 11:00 p.m.)=24; Alan Poul (Nobody Sleeps)=Six Feet Under; John Patterson (Whitecaps)=The Sopranos; Tim Van Patten (Whoever Did This)=The Sopranos
+DIR_C: Robert B. Weide (Krazee-Eyez Killa)=Curb Your Enthusiasm*; David Steinberg (Mary, Joseph, and Larry)=Curb Your Enthusiasm; Larry Charles (The Nanny from Hell)=Curb Your Enthusiasm; Bryan Gordon (The Special Section)=Curb Your Enthusiasm; Michael Engler (I Love a Charade)=Sex and the City; James Burrows (24)=Will & Grace
+DIR_L: Steven Schachter=Door to Door*; Mick Jackson=Live from Baghdad; Richard Loncraine=My House in Umbria; Robert Allan Ackerman=The Roman Spring of Mrs. Stone; Frank Pierson=Soldier's Girl
+SCORE: Sean Callery=24*; Jason Derlatka, Jon Ehrlich=The Agency; Dennis McCarthy=Enterprise; Steven Bramson=JAG; Laura Karpman=Odyssey 5
+SCORE_L: Bruce Broughton=Eloise at the Plaza*; Normand Corbeil=Hitler: The Rise of Evil; Robert Lane=The Lost World; Ernest Troost=Martin and Lewis; John Altman=The Roman Spring of Mrs. Stone
+THEME: Jeff Beal=Monk*; Philip Giffin=Boomtown; Blake Neely=Everwood; W. G. Snuffy Walden, Joseph Williams=Miracles; Gary Stockdale=Penn and Teller: Bullshit!
+SONG: Aren't They All Our Children=The Concert for World Children's Day=David Foster, Linda Thompson*; It's Great to Be a Guy=The Fairly OddParents=Guy Moon, Butch Hartman, Steve Marmel; What Girls Love=The Fairly OddParents=Guy Moon, Scott Fellows, Butch Hartman, Steve Marmel; Everyone Matters=It's a Very Merry Muppet Christmas Movie=Desmond Child, Davitt Sigerson; Everybody Hates Ned Flanders=The Simpsons=Alf Clausen, Ken Keeler, Ian Maxtone-Graham
+
+@2004|56th|2003
+SER_D: The Sopranos*; 24; CSI: Crime Scene Investigation; Joan of Arcadia; The West Wing
+SER_C: Arrested Development*; Curb Your Enthusiasm; Everybody Loves Raymond; Sex and the City; Will & Grace
+SER_L: Angels in America*; American Family; Hornblower; Prime Suspect 6: The Last Witness; Traffic
+ACT_D: James Spader=The Practice*; James Gandolfini=The Sopranos; Anthony LaPaglia=Without a Trace; Martin Sheen=The West Wing; Kiefer Sutherland=24
+ACTR_D: Allison Janney=The West Wing*; Edie Falco=The Sopranos; Jennifer Garner=Alias; Mariska Hargitay=Law & Order: Special Victims Unit; Amber Tamblyn=Joan of Arcadia
+ACT_C: Kelsey Grammer=Frasier*; Larry David=Curb Your Enthusiasm; Matt LeBlanc=Friends; John Ritter=8 Simple Rules; Tony Shalhoub=Monk
+ACTR_C: Sarah Jessica Parker=Sex and the City*; Jennifer Aniston=Friends; Patricia Heaton=Everybody Loves Raymond; Bonnie Hunt=Life with Bonnie; Jane Kaczmarek=Malcolm in the Middle
+ACT_L: Al Pacino=Angels in America*; Antonio Banderas=And Starring Pancho Villa as Himself; James Brolin=The Reagans; Mos Def=Something the Lord Made; Alan Rickman=Something the Lord Made
+ACTR_L: Meryl Streep=Angels in America*; Glenn Close=The Lion in Winter; Judy Davis=The Reagans; Helen Mirren=Prime Suspect 6: The Last Witness; Emma Thompson=Angels in America
+SUPACT_D: Michael Imperioli=The Sopranos*; Steve Buscemi=The Sopranos; Brad Dourif=Deadwood; Victor Garber=Alias; John Spencer=The West Wing
+SUPACTR_D: Drea de Matteo=The Sopranos*; Stockard Channing=The West Wing; Tyne Daly=Judging Amy; Janel Moloney=The West Wing; Robin Weigert=Deadwood
+SUPACT_C: David Hyde Pierce=Frasier*; Peter Boyle=Everybody Loves Raymond; Brad Garrett=Everybody Loves Raymond; Sean Hayes=Will & Grace; Jeffrey Tambor=Arrested Development
+SUPACTR_C: Cynthia Nixon=Sex and the City*; Kim Cattrall=Sex and the City; Kristin Davis=Sex and the City; Megan Mullally=Will & Grace; Doris Roberts=Everybody Loves Raymond
+SUPACT_L: Jeffrey Wright=Angels in America*; Justin Kirk=Angels in America; William H. Macy=Stealing Sinatra; Ben Shenkman=Angels in America; Patrick Wilson=Angels in America
+SUPACTR_L: Mary-Louise Parker=Angels in America*; Julie Andrews=Eloise at Christmastime; Anne Heche=Gracie's Choice; Anjelica Huston=Iron Jawed Angels; Angela Lansbury=The Blackwater Lightship
+DIR_D: Walter Hill=Deadwood*; Christopher Chulack (The Lost)=ER; Ryan Murphy (Pilot)=Nip/Tuck; Allen Coulter (Irregular Around the Margins)=The Sopranos; Tim Van Patten (Long Term Parking)=The Sopranos
+DIR_C: Anthony Russo, Joe Russo (Pilot)=Arrested Development*; Robert B. Weide (The Car Pool Lane)=Curb Your Enthusiasm; Bryan Gordon (The 5 Wood)=Curb Your Enthusiasm; Larry Charles (The Survivor)=Curb Your Enthusiasm; Tim Van Patten (An American Girl in Paris: Part Deux)=Sex and the City
+DIR_L: Mike Nichols=Angels in America*; Robert Harmon=Ike: Countdown to D-Day; Andrey Konchalovskiy=The Lion in Winter; Tom Hooper=Prime Suspect 6: The Last Witness; Joseph Sargent=Something the Lord Made
+SCORE: Velton Ray Bunch=Enterprise*; Stewart Copeland=Dead Like Me; Larry Groupé=Line of Fire; Philip Glass=Pandemic: Facing AIDS; Alf Clausen=The Simpsons; Sean Callery=24
+SCORE_L: Bruce Broughton=Eloise at Christmastime*; Elliot Goldenthal=Dance in America; Ernest Troost=Fallen Angel; Mark Snow=Helter Skelter; Robert Lane=The Last King; Sheldon Mirowitz=The Nazi Officer's Wife
+THEME: Randy Newman=Monk*; David Schwartz=Deadwood; Daniel Mackenzie=Monster House; Jeffrey Cain, Cedric Lemoyne, Gregory Slay=Nip/Tuck; Lee Aronsohn, Grant Geissman, Chuck Lorre=Two and a Half Men
+SONG: Because You Are Beautiful=Until the Violence Stops=Toni Childs, Eddy Free, David Ricketts*; Wish Come True!=The Fairly OddParents=Guy Moon, Butch Hartman, Steve Marmel; I Want My Hands Back=Futurama=Ken Keeler; The Street We Live On=Sesame Street Presents: The Street We Live On=Mike Renzi, Lou Berger; A Vote for a Winner=The Simpsons=Alf Clausen, Dana Gould
+
+@2005|57th|2004
+SER_D: Lost*; 24; Deadwood; Six Feet Under; The West Wing
+SER_C: Everybody Loves Raymond*; Arrested Development; Desperate Housewives; Scrubs; Will & Grace
+SER_L: The Lost Prince*; The 4400; Elvis; Empire Falls
+ACT_D: James Spader=Boston Legal*; Hank Azaria=Huff; Hugh Laurie=House; Ian McShane=Deadwood; Kiefer Sutherland=24
+ACTR_D: Patricia Arquette=Medium*; Glenn Close=The Shield; Frances Conroy=Six Feet Under; Jennifer Garner=Alias; Mariska Hargitay=Law & Order: Special Victims Unit
+ACT_C: Tony Shalhoub=Monk*; Jason Bateman=Arrested Development; Zach Braff=Scrubs; Eric McCormack=Will & Grace; Ray Romano=Everybody Loves Raymond
+ACTR_C: Felicity Huffman=Desperate Housewives*; Marcia Cross=Desperate Housewives; Teri Hatcher=Desperate Housewives; Patricia Heaton=Everybody Loves Raymond; Jane Kaczmarek=Malcolm in the Middle
+ACT_L: Geoffrey Rush=The Life and Death of Peter Sellers*; Kenneth Branagh=Warm Springs; Ed Harris=Empire Falls; William H. Macy=The Wool Cap; Jonathan Rhys Meyers=Elvis
+ACTR_L: S. Epatha Merkerson=Lackawanna Blues*; Halle Berry=Their Eyes Were Watching God; Blythe Danner=Back When We Were Grownups; Cynthia Nixon=Warm Springs; Debra Winger=Dawn Anna
+SUPACT_D: William Shatner=Boston Legal*; Alan Alda=The West Wing; Naveen Andrews=Lost; Terry O'Quinn=Lost; Oliver Platt=Huff
+SUPACTR_D: Blythe Danner=Huff*; Stockard Channing=The West Wing; Tyne Daly=Judging Amy; Sandra Oh=Grey's Anatomy; C. C. H. Pounder=The Shield
+SUPACT_C: Brad Garrett=Everybody Loves Raymond*; Peter Boyle=Everybody Loves Raymond; Sean Hayes=Will & Grace; Jeremy Piven=Entourage; Jeffrey Tambor=Arrested Development
+SUPACTR_C: Doris Roberts=Everybody Loves Raymond*; Conchata Ferrell=Two and a Half Men; Megan Mullally=Will & Grace; Holland Taylor=Two and a Half Men; Jessica Walter=Arrested Development
+SUPACT_L: Paul Newman=Empire Falls*; Brian Dennehy=Our Fathers; Philip Seymour Hoffman=Empire Falls; Christopher Plummer=Our Fathers; Randy Quaid=Elvis
+SUPACTR_L: Jane Alexander=Warm Springs*; Kathy Bates=Warm Springs; Camryn Manheim=Elvis; Charlize Theron=The Life and Death of Peter Sellers; Joanne Woodward=Empire Falls
+DIR_D: J. J. Abrams (Pilot)=Lost*; Quentin Tarantino (Grave Danger)=CSI: Crime Scene Investigation; Gregg Fienberg (Complications)=Deadwood; Peter Horton (A Hard Day's Night)=Grey's Anatomy; Scott Winant (Crazy Nuts & All Fucked Up)=Huff; Peter Tolan (Guts)=Rescue Me; Alex Graves (2162 Votes)=The West Wing
+DIR_C: Charles McDougall (Pilot)=Desperate Housewives*; David Frankel (Pilot)=Entourage; Gary Halvorson (The Finale)=Everybody Loves Raymond; Randall Zisk (Mr. Monk Takes His Medicine)=Monk; James Burrows (It's a Dad, Dad, Dad, Dad World)=Will & Grace
+DIR_L: Stephen Hopkins=The Life and Death of Peter Sellers*; Fred Schepisi=Empire Falls; George C. Wolfe=Lackawanna Blues; Joseph Sargent=Warm Springs
+SCORE: Michael Giacchino=Lost*; Jeff Beal=Carnivàle; Christopher Hoag=House; Alf Clausen=The Simpsons; Sean Callery=24
+SCORE_L: Bruce Broughton=Warm Springs*; Joseph Conlan=Miracle Run; George Fenton=Pride; Joseph Vitarelli=Revelations; Christopher Gordon, Lisa Gerrard=Salem's Lot; Bruno Coulais=Sometimes in April
+THEME: Danny Elfman=Desperate Housewives*; James Venable=Foster's Home for Imaginary Friends; W. G. Snuffy Walden=Huff; Michael McCuistion=Justice League Unlimited; Joel Goldsmith=Stargate Atlantis
+SONG: Mary Jane/Mary Lane=Reefer Madness=Dan Studney, Kevin Murphy*; The Marriage Bed=Malcolm in the Middle=Charles Sydnor, Eric Kaplan; When I'm with You=The Muppets' Wizard of Oz=Adam Cohen, Michael Giacchino, Debra Frank, Steve L. Hayes, Jeannie Lurie; Always My Dad=The Simpsons=Alf Clausen, Carolyn Omine; The Tears of the Angels=Terror at Home: Domestic Violence in America=Michael Bolton
+
+@2019|71st|2018
+SER_D: Game of Thrones*; Better Call Saul; Bodyguard; Killing Eve; Ozark; Pose; Succession; This Is Us
+SER_C: Fleabag*; Barry; The Good Place; The Marvelous Mrs. Maisel; Russian Doll; Schitt's Creek; Veep
+SER_L: Chernobyl*; Escape at Dannemora; Fosse/Verdon; Sharp Objects; When They See Us
+ACT_D: Billy Porter=Pose*; Jason Bateman=Ozark; Sterling K. Brown=This Is Us; Kit Harington=Game of Thrones; Bob Odenkirk=Better Call Saul; Milo Ventimiglia=This Is Us
+ACTR_D: Jodie Comer=Killing Eve*; Emilia Clarke=Game of Thrones; Viola Davis=How to Get Away with Murder; Laura Linney=Ozark; Mandy Moore=This Is Us; Sandra Oh=Killing Eve; Robin Wright=House of Cards
+ACT_C: Bill Hader=Barry*; Anthony Anderson=Black-ish; Don Cheadle=Black Monday; Ted Danson=The Good Place; Michael Douglas=The Kominsky Method; Eugene Levy=Schitt's Creek
+ACTR_C: Phoebe Waller-Bridge=Fleabag*; Christina Applegate=Dead to Me; Rachel Brosnahan=The Marvelous Mrs. Maisel; Julia Louis-Dreyfus=Veep; Natasha Lyonne=Russian Doll; Catherine O'Hara=Schitt's Creek
+ACT_L: Jharrel Jerome=When They See Us*; Mahershala Ali=True Detective; Benicio del Toro=Escape at Dannemora; Hugh Grant=A Very English Scandal; Jared Harris=Chernobyl; Sam Rockwell=Fosse/Verdon
+ACTR_L: Michelle Williams=Fosse/Verdon*; Amy Adams=Sharp Objects; Patricia Arquette=Escape at Dannemora; Aunjanue Ellis=When They See Us; Joey King=The Act; Niecy Nash=When They See Us
+SUPACT_D: Peter Dinklage=Game of Thrones*; Alfie Allen=Game of Thrones; Jonathan Banks=Better Call Saul; Nikolaj Coster-Waldau=Game of Thrones; Giancarlo Esposito=Better Call Saul; Michael Kelly=House of Cards; Chris Sullivan=This Is Us
+SUPACTR_D: Julia Garner=Ozark*; Gwendoline Christie=Game of Thrones; Lena Headey=Game of Thrones; Fiona Shaw=Killing Eve; Sophie Turner=Game of Thrones; Maisie Williams=Game of Thrones
+SUPACT_C: Tony Shalhoub=The Marvelous Mrs. Maisel*; Alan Arkin=The Kominsky Method; Anthony Carrigan=Barry; Tony Hale=Veep; Stephen Root=Barry; Henry Winkler=Barry
+SUPACTR_C: Alex Borstein=The Marvelous Mrs. Maisel*; Anna Chlumsky=Veep; Sian Clifford=Fleabag; Olivia Colman=Fleabag; Betty Gilpin=GLOW; Sarah Goldberg=Barry; Marin Hinkle=The Marvelous Mrs. Maisel; Kate McKinnon=Saturday Night Live
+SUPACT_L: Ben Whishaw=A Very English Scandal*; Asante Blackk=When They See Us; Paul Dano=Escape at Dannemora; John Leguizamo=When They See Us; Stellan Skarsgård=Chernobyl; Michael K. Williams=When They See Us
+SUPACTR_L: Patricia Arquette=The Act*; Marsha Stephanie Blake=When They See Us; Patricia Clarkson=Sharp Objects; Vera Farmiga=When They See Us; Margaret Qualley=Fosse/Verdon; Emily Watson=Chernobyl
+DIR_D: Jason Bateman (Reparations)=Ozark*; David Benioff, D. B. Weiss (The Iron Throne)=Game of Thrones; David Nutter (The Last of the Starks)=Game of Thrones; Miguel Sapochnik (The Long Night)=Game of Thrones; Daina Reid (Holly)=The Handmaid's Tale; Lisa Brühlmann (Desperate Times)=Killing Eve; Adam McKay (Celebration)=Succession
+DIR_C: Harry Bradbeer (Episode 1)=Fleabag*; Alec Berg (The Audition)=Barry; Bill Hader (ronny/lily)=Barry; Mark Cendrowski (The Stockholm Syndrome)=The Big Bang Theory; Amy Sherman-Palladino (All Alone)=The Marvelous Mrs. Maisel; Daniel Palladino (We're Going to the Catskills!)=The Marvelous Mrs. Maisel
+DIR_L: Johan Renck=Chernobyl*; Ben Stiller=Escape at Dannemora; Jessica Yu (Glory)=Fosse/Verdon; Thomas Kail (Who's Got the Pain)=Fosse/Verdon; Stephen Frears=A Very English Scandal; Ava DuVernay=When They See Us
+SCORE: Ramin Djawadi=Game of Thrones*; David Wingo=Barry; Adam Taylor=The Handmaid's Tale; Jeff Beal=House of Cards; Siddhartha Khosla=This Is Us
+SCORE_L: Hildur Guðnadóttir=Chernobyl*; Edward Shearmur=Escape at Dannemora; David Arnold=Good Omens; T Bone Burnett, Keefus Ciancia=True Detective; Kris Bowers=When They See Us
+THEME: Nicholas Britell=Succession*; Thomas Newman=Castle Rock; Rachel Bloom, Jack Dolgen, Adam Schlesinger=Crazy Ex-Girlfriend; David Arnold=Good Omens; Steven Price=Our Planet
+SONG: Antidepressants Are So Not a Big Deal=Crazy Ex-Girlfriend=Rachel Bloom, Adam Schlesinger, Jack Dolgen*; Holiday Party (I Did a Little Cocaine Tonight)=Documentary Now!=Eli Bolin, Seth Meyers, John Mulaney; Father & Son=Flight of the Conchords: Live in London=Flight of the Conchords; The Upper East Side=Saturday Night Live=Eli Brueggemann, Leslie Jones, Bryan Tucker; Beautiful Things Can Grow=Song of Parkland=Mark Sonnenblick, Ashley Paseltiner, Molly Reichard; This One's for You=The 72nd Annual Tony Awards=Sara Bareilles, Josh Groban, Shaina Taub
+
+@2006|58th|2005
+SER_D: 24*; Grey's Anatomy; House; The Sopranos; The West Wing
+SER_C: The Office*; Arrested Development; Curb Your Enthusiasm; Scrubs; Two and a Half Men
+SER_L: Elizabeth I*; Bleak House; Into the West; Sleeper Cell
+ACT_D: Kiefer Sutherland=24*; Peter Krause=Six Feet Under; Denis Leary=Rescue Me; Christopher Meloni=Law & Order: Special Victims Unit; Martin Sheen=The West Wing
+ACTR_D: Mariska Hargitay=Law & Order: Special Victims Unit*; Frances Conroy=Six Feet Under; Geena Davis=Commander in Chief; Allison Janney=The West Wing; Kyra Sedgwick=The Closer
+ACT_C: Tony Shalhoub=Monk*; Steve Carell=The Office; Larry David=Curb Your Enthusiasm; Kevin James=The King of Queens; Charlie Sheen=Two and a Half Men
+ACTR_C: Julia Louis-Dreyfus=The New Adventures of Old Christine*; Stockard Channing=Out of Practice; Jane Kaczmarek=Malcolm in the Middle; Lisa Kudrow=The Comeback; Debra Messing=Will & Grace
+ACT_L: Andre Braugher=Thief*; Charles Dance=Bleak House; Ben Kingsley=Mrs. Harris; Donald Sutherland=Human Trafficking; Jon Voight=Pope John Paul II
+ACTR_L: Helen Mirren=Elizabeth I*; Gillian Anderson=Bleak House; Kathy Bates=Ambulance Girl; Annette Bening=Mrs. Harris; Judy Davis=A Little Thing Called Murder
+SUPACT_D: Alan Alda=The West Wing*; Michael Imperioli=The Sopranos; Gregory Itzin=24; Oliver Platt=Huff; William Shatner=Boston Legal
+SUPACTR_D: Blythe Danner=Huff*; Candice Bergen=Boston Legal; Sandra Oh=Grey's Anatomy; Jean Smart=24; Chandra Wilson=Grey's Anatomy
+SUPACT_C: Jeremy Piven=Entourage*; Will Arnett=Arrested Development; Bryan Cranston=Malcolm in the Middle; Jon Cryer=Two and a Half Men; Sean Hayes=Will & Grace
+SUPACTR_C: Megan Mullally=Will & Grace*; Cheryl Hines=Curb Your Enthusiasm; Elizabeth Perkins=Weeds; Jaime Pressly=My Name Is Earl; Alfre Woodard=Desperate Housewives
+SUPACT_L: Jeremy Irons=Elizabeth I*; Robert Carlyle=Human Trafficking; Clifton Collins Jr.=Thief; Hugh Dancy=Elizabeth I; Denis Lawson=Bleak House
+SUPACTR_L: Kelly Macdonald=The Girl in the Café*; Ellen Burstyn=Mrs. Harris; Shirley Jones=Hidden Places; Cloris Leachman=Mrs. Harris; Alfre Woodard=The Water Is Wide
+DIR_D: Jon Cassar (Day 5: 7:00 a.m. – 8:00 a.m.)=24*; Rodrigo García (Pilot)=Big Love; Jack Bender (Live Together, Die Alone)=Lost; Alan Ball (Everyone's Waiting)=Six Feet Under; David Nutter (Join the Club)=The Sopranos; Tim Van Patten (Members Only)=The Sopranos; Mimi Leder (Election Day: Part I)=The West Wing
+DIR_C: Marc Buckland (Pilot)=My Name Is Earl*; Michael Patrick King (Valerie Does Another Classic Leno)=The Comeback; Robert B. Weide (The Christ Nail)=Curb Your Enthusiasm; Dan Attias (Oh, Mandy)=Entourage; Julian Farino (The Sundance Kids)=Entourage; Craig Zisk (Good Shit Lollipop)=Weeds
+DIR_L: Tom Hooper=Elizabeth I*; Justin Chadwick=Bleak House; Peter Markle=Flight 93; David Yates=The Girl in the Café; Kenny Ortega=High School Musical; Phyllis Nagy=Mrs. Harris
+SCORE: Sean Callery=24*; Richard Band=Masters of Horror; Jeff Beal=Rome; Joel Goldsmith=Stargate Atlantis; Christopher Lennertz=Supernatural
+SCORE_L: Geoff Zanelli=Into the West*; Bruce Broughton=The Dive from Clausen's Pier; Normand Corbeil=Human Trafficking; Paul Haslinger=Sleeper Cell; Jeff Beal=The Water Is Wide
+THEME: Edward Shearmur=Masters of Horror*; Amin Bhatia, Ari Posner=Get Ed; Chris Gerolmo=Over There; Ramin Djawadi=Prison Break; Jeff Beal=Rome
+SONG: Breaking Free=High School Musical=Jamie Houston*; A Wonderfully Normal Day=MADtv=Greg O'Connor, Jim Wise; Natasha's Song=Gideon's Daughter=Adrian Johnston, Stephen Poliakoff; Get'cha Head in the Game=High School Musical=Greg Cham, Ray Cham, Drew Seeley; That Baby of Mine=Once Upon a Mattress=Ken Welch, Mitzie Welch
+
+@2007|59th|2006
+SER_D: The Sopranos*; Boston Legal; Grey's Anatomy; Heroes; House
+SER_C: 30 Rock*; Entourage; The Office; Two and a Half Men; Ugly Betty
+SER_L: Broken Trail*; Prime Suspect: The Final Act; The Starter Wife
+ACT_D: James Spader=Boston Legal*; James Gandolfini=The Sopranos; Hugh Laurie=House; Denis Leary=Rescue Me; Kiefer Sutherland=24
+ACTR_D: Sally Field=Brothers & Sisters*; Patricia Arquette=Medium; Minnie Driver=The Riches; Edie Falco=The Sopranos; Mariska Hargitay=Law & Order: Special Victims Unit; Kyra Sedgwick=The Closer
+ACT_C: Ricky Gervais=Extras*; Alec Baldwin=30 Rock; Steve Carell=The Office; Tony Shalhoub=Monk; Charlie Sheen=Two and a Half Men
+ACTR_C: America Ferrera=Ugly Betty*; Tina Fey=30 Rock; Felicity Huffman=Desperate Housewives; Julia Louis-Dreyfus=The New Adventures of Old Christine; Mary-Louise Parker=Weeds
+ACT_L: Robert Duvall=Broken Trail*; Jim Broadbent=Longford; William H. Macy=Nightmares & Dreamscapes: From the Stories of Stephen King; Matthew Perry=The Ron Clark Story; Tom Selleck=Jesse Stone: Sea Change
+ACTR_L: Helen Mirren=Prime Suspect: The Final Act*; Queen Latifah=Life Support; Debra Messing=The Starter Wife; Mary-Louise Parker=The Robber Bride; Gena Rowlands=What If God Were the Sun?
+SUPACT_D: Terry O'Quinn=Lost*; Michael Emerson=Lost; Michael Imperioli=The Sopranos; T. R. Knight=Grey's Anatomy; Masi Oka=Heroes; William Shatner=Boston Legal
+SUPACTR_D: Katherine Heigl=Grey's Anatomy*; Lorraine Bracco=The Sopranos; Rachel Griffiths=Brothers & Sisters; Sandra Oh=Grey's Anatomy; Aida Turturro=The Sopranos; Chandra Wilson=Grey's Anatomy
+SUPACT_C: Jeremy Piven=Entourage*; Jon Cryer=Two and a Half Men; Kevin Dillon=Entourage; Neil Patrick Harris=How I Met Your Mother; Rainn Wilson=The Office
+SUPACTR_C: Jaime Pressly=My Name Is Earl*; Conchata Ferrell=Two and a Half Men; Jenna Fischer=The Office; Elizabeth Perkins=Weeds; Holland Taylor=Two and a Half Men; Vanessa Williams=Ugly Betty
+SUPACT_L: Thomas Haden Church=Broken Trail*; Edward Asner=The Christmas Card; Joe Mantegna=The Starter Wife; Aidan Quinn=Bury My Heart at Wounded Knee; August Schellenberg=Bury My Heart at Wounded Knee
+SUPACTR_L: Judy Davis=The Starter Wife*; Toni Collette=Tsunami: The Aftermath; Samantha Morton=Longford; Anna Paquin=Bury My Heart at Wounded Knee; Greta Scacchi=Broken Trail
+DIR_D: Alan Taylor (Kennedy and Heidi)=The Sopranos*; Félix Enríquez Alcalá (Exodus, Part 2)=Battlestar Galactica; Bill D'Elia (Son of the Defender)=Boston Legal; Peter Berg (Pilot)=Friday Night Lights; David Semel (Genesis)=Heroes; Jack Bender (Through the Looking Glass)=Lost; Thomas Schlamme (Pilot)=Studio 60 on the Sunset Strip
+DIR_C: Richard Shepard (Pilot)=Ugly Betty*; Scott Ellis (The Break-Up)=30 Rock; Julian Farino (One Day in the Valley)=Entourage; Ricky Gervais, Stephen Merchant (Orlando Bloom)=Extras; Ken Kwapis (Gay Witch Hunt)=The Office; Will Mackenzie (My Musical)=Scrubs
+DIR_L: Philip Martin=Prime Suspect: The Final Act*; Walter Hill=Broken Trail; Yves Simoneau=Bury My Heart at Wounded Knee; Susanna White=Jane Eyre; Bharat Nalluri=Tsunami: The Aftermath
+SCORE: George Fenton=Planet Earth*; John Keane=CSI: Crime Scene Investigation; Mark Snow=Ghost Whisperer; W. G. Snuffy Walden=Kidnapped; Jeff Beal=Rome; Sean Callery=24
+SCORE_L: Jeff Beal=Nightmares & Dreamscapes*; Todd Boekelheide=Boffo!; David Mansfield, Van Dyke Parks=Broken Trail; George S. Clinton=Bury My Heart at Wounded Knee; Joseph LoDuca=The Librarian; Robert Lane=Longford; John Cameron=The Path to 9/11
+THEME: Trevor Morris=The Tudors*; Rolfe Kent=Dexter; Simon Rogers=Hu$tle; Mark Williams, Jeff Lippencott=On the Lot; Jeff Richmond=30 Rock
+SONG: Dick in a Box=Saturday Night Live=Katreese Barnes, Asa Taccone, Jorma Taccone, Justin Timberlake, Andy Samberg, Akiva Schaffer*; My Drunken Irish Dad=Family Guy=Walter Murphy, Danny Smith; Merry Ex-Mas=MADtv=Greg O'Connor, Jim Wise, Bruce McCoy; Everything Comes Down to Poo=Scrubs=Robert Lopez, Jeff Marx, Debra Fordham; Guy Love=Scrubs=Paul F. Perry, Debra Fordham
+
+@2008|60th|2007
+SER_D: Mad Men*; Boston Legal; Damages; Dexter; House; Lost
+SER_C: 30 Rock*; Curb Your Enthusiasm; Entourage; The Office; Two and a Half Men
+SER_L: John Adams*; The Andromeda Strain; Cranford; Tin Man
+ACT_D: Bryan Cranston=Breaking Bad*; Gabriel Byrne=In Treatment; Michael C. Hall=Dexter; Jon Hamm=Mad Men; Hugh Laurie=House; James Spader=Boston Legal
+ACTR_D: Glenn Close=Damages*; Sally Field=Brothers & Sisters; Mariska Hargitay=Law & Order: Special Victims Unit; Holly Hunter=Saving Grace; Kyra Sedgwick=The Closer
+ACT_C: Alec Baldwin=30 Rock*; Steve Carell=The Office; Lee Pace=Pushing Daisies; Tony Shalhoub=Monk; Charlie Sheen=Two and a Half Men
+ACTR_C: Tina Fey=30 Rock*; Christina Applegate=Samantha Who?; America Ferrera=Ugly Betty; Julia Louis-Dreyfus=The New Adventures of Old Christine; Mary-Louise Parker=Weeds
+ACT_L: Paul Giamatti=John Adams*; Ralph Fiennes=Bernard and Doris; Ricky Gervais=Extras: The Extra Special Series Finale; Kevin Spacey=Recount; Tom Wilkinson=Recount
+ACTR_L: Laura Linney=John Adams*; Judi Dench=Cranford; Catherine Keener=An American Crime; Phylicia Rashad=A Raisin in the Sun; Susan Sarandon=Bernard and Doris
+SUPACT_D: Željko Ivanek=Damages*; Ted Danson=Damages; Michael Emerson=Lost; William Shatner=Boston Legal; John Slattery=Mad Men
+SUPACTR_D: Dianne Wiest=In Treatment*; Candice Bergen=Boston Legal; Rachel Griffiths=Brothers & Sisters; Sandra Oh=Grey's Anatomy; Chandra Wilson=Grey's Anatomy
+SUPACT_C: Jeremy Piven=Entourage*; Jon Cryer=Two and a Half Men; Kevin Dillon=Entourage; Neil Patrick Harris=How I Met Your Mother; Rainn Wilson=The Office
+SUPACTR_C: Jean Smart=Samantha Who?*; Kristin Chenoweth=Pushing Daisies; Amy Poehler=Saturday Night Live; Holland Taylor=Two and a Half Men; Vanessa Williams=Ugly Betty
+SUPACT_L: Tom Wilkinson=John Adams*; Bob Balaban=Recount; Stephen Dillane=John Adams; Denis Leary=Recount; David Morse=John Adams
+SUPACTR_L: Eileen Atkins=Cranford*; Laura Dern=Recount; Ashley Jensen=Extras: The Extra Special Series Finale; Audra McDonald=A Raisin in the Sun; Alfre Woodard=Pictures of Hollis Woods
+DIR_D: Greg Yaitanes (House's Head)=House*; Arlene Sanford (The Mighty Rogues)=Boston Legal; Vince Gilligan (Pilot)=Breaking Bad; Allen Coulter (Get Me a Lawyer)=Damages; Alan Taylor (Smoke Gets in Your Eyes)=Mad Men
+DIR_C: Barry Sonnenfeld (Pie-lette)=Pushing Daisies*; Michael Engler (Rosemary's Baby)=30 Rock; Dan Attias (No Cannes Do)=Entourage; James Bobin (Sally Returns)=Flight of the Conchords; Paul Feig (Goodbye, Toby)=The Office; Paul Lieberstein (Money)=The Office
+DIR_L: Jay Roach=Recount*; Bob Balaban=Bernard and Doris; Mikael Salomon=The Company; Ricky Gervais, Stephen Merchant=Extras: The Extra Special Series Finale; Tom Hooper=John Adams
+SCORE: Jim Dooley=Pushing Daisies*; Ron Jones=Family Guy; Jon Ehrlich, Jason Derlatka=House; Joey Newman=Little People, Big World; Michael Giacchino=Lost; Alf Clausen=The Simpsons
+SCORE_L: Jeff Beal=The Company*; Alex Wurman=Bernard and Doris; Lennie Niehaus=For One More Day; Robert Lane=John Adams; Laura Karpman=Masters of Science Fiction; Martin Phipps=Sense and Sensibility
+THEME: Russ Landau=Pirate Master*; Tree Adams=Canterbury's Law; Jeff Lippencott, Mark Williams=Kid Nation; Dan Povenmire, Jeff "Swampy" Marsh, Michael Hirano Culross, Carl Hill Williams, Michael Walker=Phineas and Ferb; Eric "Everlast" Schrody=Saving Grace
+SONG: I'm Fucking Matt Damon=Jimmy Kimmel Live!=Tony Barbieri, Sal Iacono, Wayne McClammy, Sarah Silverman, Dan Warner*; Inner City Pressure=Flight of the Conchords=Flight of the Conchords, James Bobin; The Most Beautiful Girl (In the Room)=Flight of the Conchords=Flight of the Conchords; Sad Fitty Cent=MADtv=Greg O'Connor, Jordan Peele, Jim Wise; I Ain't Got Rhythm=Phineas and Ferb=Danny Jacob, Robert F. Hughes, Jeff "Swampy" Marsh, Martin Olson, Dan Povenmire
+
+@2009|61st|2008
+SER_D: Mad Men*; Big Love; Breaking Bad; Damages; Dexter; House; Lost
+SER_C: 30 Rock*; Entourage; Family Guy; Flight of the Conchords; How I Met Your Mother; The Office; Weeds
+SER_L: Little Dorrit*; Generation Kill
+ACT_D: Bryan Cranston=Breaking Bad*; Simon Baker=The Mentalist; Gabriel Byrne=In Treatment; Michael C. Hall=Dexter; Jon Hamm=Mad Men; Hugh Laurie=House
+ACTR_D: Glenn Close=Damages*; Sally Field=Brothers & Sisters; Mariska Hargitay=Law & Order: Special Victims Unit; Holly Hunter=Saving Grace; Elisabeth Moss=Mad Men; Kyra Sedgwick=The Closer
+ACT_C: Alec Baldwin=30 Rock*; Steve Carell=The Office; Jemaine Clement=Flight of the Conchords; Jim Parsons=The Big Bang Theory; Tony Shalhoub=Monk; Charlie Sheen=Two and a Half Men
+ACTR_C: Toni Collette=United States of Tara*; Christina Applegate=Samantha Who?; Tina Fey=30 Rock; Julia Louis-Dreyfus=The New Adventures of Old Christine; Mary-Louise Parker=Weeds; Sarah Silverman=The Sarah Silverman Program
+ACT_L: Brendan Gleeson=Into the Storm*; Kevin Bacon=Taking Chance; Kenneth Branagh=Wallander: One Step Behind; Kevin Kline=Cyrano de Bergerac; Ian McKellen=King Lear; Kiefer Sutherland=24: Redemption
+ACTR_L: Jessica Lange=Grey Gardens*; Drew Barrymore=Grey Gardens; Shirley MacLaine=Coco Chanel; Sigourney Weaver=Prayers for Bobby; Chandra Wilson=Accidental Friendship
+SUPACT_D: Michael Emerson=Lost*; Christian Clemenson=Boston Legal; William Hurt=Damages; Aaron Paul=Breaking Bad; William Shatner=Boston Legal; John Slattery=Mad Men
+SUPACTR_D: Cherry Jones=24*; Rose Byrne=Damages; Hope Davis=In Treatment; Sandra Oh=Grey's Anatomy; Dianne Wiest=In Treatment; Chandra Wilson=Grey's Anatomy
+SUPACT_C: Jon Cryer=Two and a Half Men*; Kevin Dillon=Entourage; Neil Patrick Harris=How I Met Your Mother; Jack McBrayer=30 Rock; Tracy Morgan=30 Rock; Rainn Wilson=The Office
+SUPACTR_C: Kristin Chenoweth=Pushing Daisies*; Jane Krakowski=30 Rock; Elizabeth Perkins=Weeds; Amy Poehler=Saturday Night Live; Kristen Wiig=Saturday Night Live; Vanessa Williams=Ugly Betty
+SUPACT_L: Ken Howard=Grey Gardens*; Len Cariou=Into the Storm; Tom Courtenay=Little Dorrit; Bob Newhart=The Librarian: Curse of the Judas Chalice; Andy Serkis=Little Dorrit
+SUPACTR_L: Shohreh Aghdashloo=House of Saddam*; Marcia Gay Harden=The Courageous Heart of Irena Sendler; Janet McTeer=Into the Storm; Jeanne Tripplehorn=Grey Gardens; Cicely Tyson=Relative Stranger
+DIR_D: Rod Holcomb (And in the End...)=ER*; Michael Rymer (Daybreak, Part 2)=Battlestar Galactica; Bill D'Elia (Made in China/Last Call)=Boston Legal; Todd A. Kessler (Trust Me)=Damages; Phil Abraham (The Jet Set)=Mad Men
+DIR_C: Jeffrey Blitz (Stress Relief)=The Office*; Millicent Shelton (Apollo, Apollo)=30 Rock; Todd Holland (Generalissimo)=30 Rock; Beth McCarthy-Miller (Reunion)=30 Rock; Julian Farino (Tree Trippers)=Entourage; James Bobin (The Tough Brets)=Flight of the Conchords
+DIR_L: Dearbhla Walsh=Little Dorrit*; Susanna White (Bomb in the Garden)=Generation Kill; Michael Sucsy=Grey Gardens; Thaddeus O'Sullivan=Into the Storm; Ross Katz=Taking Chance; Philip Martin=Wallander: One Step Behind
+SCORE: Joseph LoDuca=Legend of the Seeker*; Robert Duncan=Castle; Mark Snow=Ghost Whisperer; Gabriel Yared=The No. 1 Ladies' Detective Agency; Alf Clausen=The Simpsons; Sean Callery=24
+SCORE_L: Howard Goodall=Into the Storm*; Rachel Portman=Grey Gardens; John Lunn=Little Dorrit; Jeff Beal=Loving Leah; Marcelo Zarvos=Taking Chance; Sean Callery=24: Redemption
+THEME: John Williams=Great Performances*; David Michael Frank=The Mole; Bob Thiele, Dave Kushner, Curtis Stigers, Kurt Sutter=Sons of Anarchy; Bill Sherman=Story Makers; Tim DeLaughter=United States of Tara
+SONG: Hugh Jackman Opening Number=The 81st Annual Academy Awards=John Kimbrough, William Ross, Rob Schrab, Dan Harmon, Ben Schwartz*; There Are Much Worse Things to Believe In=A Colbert Christmas: The Greatest Gift of All!=Adam Schlesinger, David Javerbaum; I Love Sports=The 2008 ESPY Awards=Katreese Barnes, Alex Baze, Dave Drabik, Jonathan Drubner, Rachel Hamilton, Steve Higgins, Kevin Miller, Justin Timberlake; Carol Brown=Flight of the Conchords=James Bobin, Flight of the Conchords; I Wish I Could Be Santa Claus=A Muppets Christmas: Letters to Santa=Paul Williams; Motherlover=Saturday Night Live=Drew Campbell, Asa Taccone, The Lonely Island, Justin Timberlake
+
+@2010|62nd|2009
+SER_D: Mad Men*; Breaking Bad; Dexter; The Good Wife; Lost; True Blood
+SER_C: Modern Family*; 30 Rock; Curb Your Enthusiasm; Glee; Nurse Jackie; The Office
+SER_L: The Pacific*; Return to Cranford
+ACT_D: Bryan Cranston=Breaking Bad*; Kyle Chandler=Friday Night Lights; Matthew Fox=Lost; Michael C. Hall=Dexter; Jon Hamm=Mad Men; Hugh Laurie=House
+ACTR_D: Kyra Sedgwick=The Closer*; Connie Britton=Friday Night Lights; Glenn Close=Damages; Mariska Hargitay=Law & Order: Special Victims Unit; January Jones=Mad Men; Julianna Margulies=The Good Wife
+ACT_C: Jim Parsons=The Big Bang Theory*; Alec Baldwin=30 Rock; Steve Carell=The Office; Larry David=Curb Your Enthusiasm; Matthew Morrison=Glee; Tony Shalhoub=Monk
+ACTR_C: Edie Falco=Nurse Jackie*; Toni Collette=United States of Tara; Tina Fey=30 Rock; Julia Louis-Dreyfus=The New Adventures of Old Christine; Lea Michele=Glee; Amy Poehler=Parks and Recreation
+ACT_L: Al Pacino=You Don't Know Jack*; Jeff Bridges=A Dog Year; Ian McKellen=The Prisoner; Dennis Quaid=The Special Relationship; Michael Sheen=The Special Relationship
+ACTR_L: Claire Danes=Temple Grandin*; Joan Allen=Georgia O'Keeffe; Hope Davis=The Special Relationship; Judi Dench=Return to Cranford; Maggie Smith=Capturing Mary
+SUPACT_D: Aaron Paul=Breaking Bad*; Andre Braugher=Men of a Certain Age; Michael Emerson=Lost; Terry O'Quinn=Lost; Martin Short=Damages; John Slattery=Mad Men
+SUPACTR_D: Archie Panjabi=The Good Wife*; Christine Baranski=The Good Wife; Rose Byrne=Damages; Sharon Gless=Burn Notice; Christina Hendricks=Mad Men; Elisabeth Moss=Mad Men
+SUPACT_C: Eric Stonestreet=Modern Family*; Ty Burrell=Modern Family; Chris Colfer=Glee; Jon Cryer=Two and a Half Men; Jesse Tyler Ferguson=Modern Family; Neil Patrick Harris=How I Met Your Mother
+SUPACTR_C: Jane Lynch=Glee*; Julie Bowen=Modern Family; Jane Krakowski=30 Rock; Holland Taylor=Two and a Half Men; Sofía Vergara=Modern Family; Kristen Wiig=Saturday Night Live
+SUPACT_L: David Strathairn=Temple Grandin*; Michael Gambon=Emma; John Goodman=You Don't Know Jack; Jonathan Pryce=Return to Cranford; Patrick Stewart=Hamlet
+SUPACTR_L: Julia Ormond=Temple Grandin*; Kathy Bates=Alice; Catherine O'Hara=Temple Grandin; Susan Sarandon=You Don't Know Jack; Brenda Vaccaro=You Don't Know Jack
+DIR_D: Steve Shill (The Getaway)=Dexter*; Michelle MacLaren (One Minute)=Breaking Bad; Jack Bender (The End)=Lost; Leslie Linka Glatter (Guy Walks Into an Advertising Agency)=Mad Men; Agnieszka Holland (Do You Know What It Means)=Treme
+DIR_C: Ryan Murphy (Pilot)=Glee*; Don Scardino (I Do Do)=30 Rock; Paris Barclay (Wheels)=Glee; Jason Winer (Pilot)=Modern Family; Allen Coulter (Pilot)=Nurse Jackie
+DIR_L: Mick Jackson=Temple Grandin*; Bob Balaban=Georgia O'Keeffe; David Nutter, Jeremy Podeswa (Iwo Jima)=The Pacific; Tim Van Patten (Okinawa)=The Pacific; Barry Levinson=You Don't Know Jack
+SCORE: Sean Callery=24*; Kristopher Carter, Michael Jelenic, Michael McCuistion, Lolita Ritmanis, James Tucker=Batman: The Brave and the Bold; Ramin Djawadi=FlashForward; Michael Giacchino=Lost; Adam Cohen, John Robert Wood=Psych
+SCORE_L: Alex Wurman=Temple Grandin*; Todd Boekelheide=Blessed Is the Match; Jeff Beal=Georgia O'Keeffe; Blake Neely, Geoff Zanelli, Hans Zimmer=The Pacific; Lawrence Shragge=When Love Is Not Enough; Marcelo Zarvos=You Don't Know Jack
+THEME: Lisa Coleman, Wendy Melvoin=Nurse Jackie*; Bear McCreary=Human Target; Jason Keaton, Oscar Owens=Justified; Joseph LoDuca=Legend of the Seeker; Edward Rogers=Warehouse 13
+SONG: When I'm Gone=Monk=Randy Newman*; Down's Syndrome Girl=Family Guy=Seth MacFarlane, Walter Murphy; Nothing Suits Me Like a Suit=How I Met Your Mother=Carter Bays, Craig Thomas; How Lovely to Be a Vegetable=Rescue Me=Brad Hatfield, Peter Tolan; Shy Ronnie=Saturday Night Live=Rick tha Rular, The Lonely Island; This City=Treme=Steve Earle
+
+@2011|63rd|2010
+SER_D: Mad Men*; Boardwalk Empire; Dexter; Friday Night Lights; Game of Thrones; The Good Wife
+SER_C: Modern Family*; 30 Rock; The Big Bang Theory; Glee; The Office; Parks and Recreation
+SER_L: Downton Abbey*; Cinema Verite; The Kennedys; Mildred Pierce; The Pillars of the Earth; Too Big to Fail
+ACT_D: Kyle Chandler=Friday Night Lights*; Steve Buscemi=Boardwalk Empire; Michael C. Hall=Dexter; Jon Hamm=Mad Men; Hugh Laurie=House; Timothy Olyphant=Justified
+ACTR_D: Julianna Margulies=The Good Wife*; Kathy Bates=Harry's Law; Connie Britton=Friday Night Lights; Mireille Enos=The Killing; Mariska Hargitay=Law & Order: Special Victims Unit; Elisabeth Moss=Mad Men
+ACT_C: Jim Parsons=The Big Bang Theory*; Alec Baldwin=30 Rock; Steve Carell=The Office; Louis C.K.=Louie; Johnny Galecki=The Big Bang Theory; Matt LeBlanc=Episodes
+ACTR_C: Melissa McCarthy=Mike & Molly*; Edie Falco=Nurse Jackie; Tina Fey=30 Rock; Laura Linney=The Big C; Martha Plimpton=Raising Hope; Amy Poehler=Parks and Recreation
+ACT_L: Barry Pepper=The Kennedys*; Idris Elba=Luther; Laurence Fishburne=Thurgood; William Hurt=Too Big to Fail; Greg Kinnear=The Kennedys; Édgar Ramírez=Carlos
+ACTR_L: Kate Winslet=Mildred Pierce*; Taraji P. Henson=Taken from Me: The Tiffany Rubin Story; Diane Lane=Cinema Verite; Jean Marsh=Upstairs Downstairs; Elizabeth McGovern=Downton Abbey
+SUPACT_D: Peter Dinklage=Game of Thrones*; Andre Braugher=Men of a Certain Age; Josh Charles=The Good Wife; Alan Cumming=The Good Wife; Walton Goggins=Justified; John Slattery=Mad Men
+SUPACTR_D: Margo Martindale=Justified*; Christine Baranski=The Good Wife; Michelle Forbes=The Killing; Christina Hendricks=Mad Men; Kelly Macdonald=Boardwalk Empire; Archie Panjabi=The Good Wife
+SUPACT_C: Ty Burrell=Modern Family*; Chris Colfer=Glee; Jon Cryer=Two and a Half Men; Jesse Tyler Ferguson=Modern Family; Ed O'Neill=Modern Family; Eric Stonestreet=Modern Family
+SUPACTR_C: Julie Bowen=Modern Family*; Jane Krakowski=30 Rock; Jane Lynch=Glee; Sofía Vergara=Modern Family; Betty White=Hot in Cleveland; Kristen Wiig=Saturday Night Live
+SUPACT_L: Guy Pearce=Mildred Pierce*; Paul Giamatti=Too Big to Fail; Brían F. O'Byrne=Mildred Pierce; Tom Wilkinson=The Kennedys; James Woods=Too Big to Fail
+SUPACTR_L: Maggie Smith=Downton Abbey*; Eileen Atkins=Upstairs Downstairs; Melissa Leo=Mildred Pierce; Mare Winningham=Mildred Pierce; Evan Rachel Wood=Mildred Pierce
+DIR_D: Martin Scorsese (Boardwalk Empire)=Boardwalk Empire*; Jeremy Podeswa (Anastasia)=Boardwalk Empire; Neil Jordan (The Poisoned Chalice)=The Borgias; Tim Van Patten (Winter Is Coming)=Game of Thrones; Patty Jenkins (Pilot)=The Killing
+DIR_C: Michael Spiller (Halloween)=Modern Family*; Beth McCarthy-Miller (Live Show)=30 Rock; Pamela Fryman (Subway Wars)=How I Met Your Mother; Steven Levitan (See You Next Fall)=Modern Family; Gail Mancuso (Slow Down Your Neighbors)=Modern Family
+DIR_L: Brian Percival=Downton Abbey*; Olivier Assayas=Carlos; Shari Springer Berman, Robert Pulcini=Cinema Verite; Todd Haynes=Mildred Pierce; Curtis Hanson=Too Big to Fail
+SCORE: Garth Neustadter=American Masters*; Walter Murphy=Family Guy; Ron Jones=Family Guy; Alf Clausen=The Simpsons; Jeff Richmond=30 Rock
+SCORE_L: Carter Burwell=Mildred Pierce*; Dan Jones=Any Human Heart; Trevor Morris=The Pillars of the Earth; David Arnold, Michael Price=Sherlock; Rob Mathes=Thurgood
+THEME: Trevor Morris=The Borgias*; Dan Jones=Any Human Heart; Jeff Danna, Mychael Danna=Camelot; Mark Thomas=Episodes; Sean Callery=The Kennedys; Carter Burwell=Mildred Pierce
+SONG: Justin Timberlake Monologue=Saturday Night Live=Katreese Barnes, Seth Meyers, John Mulaney, Justin Timberlake*; Christmastime Is Killing Us=Family Guy=Ron Jones, Seth MacFarlane, Danny Smith; An American Prayer - Hymn II?=Robert Klein: Unfair & Unbalanced=Robert Klein, Bob Stein; I Just Had Sex=Saturday Night Live=Jerrod Bettis, DJ Frank E, The Lonely Island; Jack Sparrow=Saturday Night Live=Mike Woods, The Lonely Island; 3-Way (The Golden Rule)=Saturday Night Live=The Lonely Island, Justin Timberlake
+
+@2012|64th|2011
+SER_D: Homeland*; Boardwalk Empire; Breaking Bad; Downton Abbey; Game of Thrones; Mad Men
+SER_C: Modern Family*; 30 Rock; The Big Bang Theory; Curb Your Enthusiasm; Girls; Veep
+SER_L: Game Change*; American Horror Story; Hatfields & McCoys; Hemingway & Gellhorn; Luther; Sherlock: A Scandal in Belgravia
+ACT_D: Damian Lewis=Homeland*; Hugh Bonneville=Downton Abbey; Steve Buscemi=Boardwalk Empire; Bryan Cranston=Breaking Bad; Michael C. Hall=Dexter; Jon Hamm=Mad Men
+ACTR_D: Claire Danes=Homeland*; Kathy Bates=Harry's Law; Glenn Close=Damages; Michelle Dockery=Downton Abbey; Julianna Margulies=The Good Wife; Elisabeth Moss=Mad Men
+ACT_C: Jon Cryer=Two and a Half Men*; Alec Baldwin=30 Rock; Louis C.K.=Louie; Don Cheadle=House of Lies; Larry David=Curb Your Enthusiasm; Jim Parsons=The Big Bang Theory
+ACTR_C: Julia Louis-Dreyfus=Veep*; Zooey Deschanel=New Girl; Lena Dunham=Girls; Edie Falco=Nurse Jackie; Tina Fey=30 Rock; Melissa McCarthy=Mike & Molly; Amy Poehler=Parks and Recreation
+ACT_L: Kevin Costner=Hatfields & McCoys*; Benedict Cumberbatch=Sherlock: A Scandal in Belgravia; Idris Elba=Luther; Woody Harrelson=Game Change; Clive Owen=Hemingway & Gellhorn; Bill Paxton=Hatfields & McCoys
+ACTR_L: Julianne Moore=Game Change*; Connie Britton=American Horror Story; Ashley Judd=Missing; Nicole Kidman=Hemingway & Gellhorn; Emma Thompson=The Song of Lunch
+SUPACT_D: Aaron Paul=Breaking Bad*; Jim Carter=Downton Abbey; Brendan Coyle=Downton Abbey; Peter Dinklage=Game of Thrones; Giancarlo Esposito=Breaking Bad; Jared Harris=Mad Men
+SUPACTR_D: Maggie Smith=Downton Abbey*; Christine Baranski=The Good Wife; Joanne Froggatt=Downton Abbey; Anna Gunn=Breaking Bad; Christina Hendricks=Mad Men; Archie Panjabi=The Good Wife
+SUPACT_C: Eric Stonestreet=Modern Family*; Ty Burrell=Modern Family; Jesse Tyler Ferguson=Modern Family; Max Greenfield=New Girl; Bill Hader=Saturday Night Live; Ed O'Neill=Modern Family
+SUPACTR_C: Julie Bowen=Modern Family*; Mayim Bialik=The Big Bang Theory; Kathryn Joosten=Desperate Housewives; Sofía Vergara=Modern Family; Merritt Wever=Nurse Jackie; Kristen Wiig=Saturday Night Live
+SUPACT_L: Tom Berenger=Hatfields & McCoys*; Martin Freeman=Sherlock: A Scandal in Belgravia; Ed Harris=Game Change; Denis O'Hare=American Horror Story; David Strathairn=Hemingway & Gellhorn
+SUPACTR_L: Jessica Lange=American Horror Story*; Frances Conroy=American Horror Story; Judy Davis=Page Eight; Sarah Paulson=Game Change; Mare Winningham=Hatfields & McCoys
+DIR_D: Tim Van Patten (To the Lost)=Boardwalk Empire*; Vince Gilligan (Face Off)=Breaking Bad; Brian Percival (Episode Seven)=Downton Abbey; Michael Cuesta (Pilot)=Homeland; Phil Abraham (The Other Woman)=Mad Men
+DIR_C: Steven Levitan (Baby on Board)=Modern Family*; Robert B. Weide (Palestinian Chicken)=Curb Your Enthusiasm; Lena Dunham (She Did)=Girls; Louis C.K. (Duckling)=Louie; Jason Winer (Virgin Territory)=Modern Family; Jake Kasdan (Pilot)=New Girl
+DIR_L: Jay Roach=Game Change*; Kevin Reynolds=Hatfields & McCoys; Philip Kaufman=Hemingway & Gellhorn; Sam Miller=Luther; Paul McGuigan=Sherlock: A Scandal in Belgravia
+SCORE: John Lunn=Downton Abbey*; Trevor Morris=The Borgias; Blake Neely=Pan Am; Chris P. Bacon, Marc Shaiman=Smash; Jeff Richmond=30 Rock
+SCORE_L: Javier Navarrete=Hemingway & Gellhorn*; Theodore Shapiro=Game Change; John Debney, Tony Morales=Hatfields & McCoys; Robert Duncan, Kim Planert=Missing; Michael Giacchino=Prep & Landing; David Arnold, Michael Price=Sherlock
+THEME: Paul Englishby=Page Eight*; Martin Phipps=Great Expectations; Gustavo Santaolalla=Hell on Wheels; Sean Callery=Homeland; Lisa Coleman, Wendy Melvoin=Touch
+SONG: It's Not Just for Gays Anymore=The 65th Annual Tony Awards=Adam Schlesinger, David Javerbaum*; The Heart of Christmas=The Heart of Christmas=Matthew West; Welcome Back to Hope=Raising Hope=Matthew W. Thompson; I Can't Believe I'm Hosting=Saturday Night Live=Eli Brueggemann, Seth Meyers, John Mulaney; Let Me Be Your Star=Smash=Marc Shaiman, Scott Wittman
+
+@2013|65th|2012
+SER_D: Breaking Bad*; Downton Abbey; Game of Thrones; Homeland; House of Cards; Mad Men
+SER_C: Modern Family*; 30 Rock; The Big Bang Theory; Girls; Louie; Veep
+SER_L: Behind the Candelabra*; American Horror Story: Asylum; The Bible; Phil Spector; Political Animals; Top of the Lake
+ACT_D: Jeff Daniels=The Newsroom*; Hugh Bonneville=Downton Abbey; Bryan Cranston=Breaking Bad; Jon Hamm=Mad Men; Damian Lewis=Homeland; Kevin Spacey=House of Cards
+ACTR_D: Claire Danes=Homeland*; Connie Britton=Nashville; Michelle Dockery=Downton Abbey; Vera Farmiga=Bates Motel; Elisabeth Moss=Mad Men; Kerry Washington=Scandal; Robin Wright=House of Cards
+ACT_C: Jim Parsons=The Big Bang Theory*; Alec Baldwin=30 Rock; Jason Bateman=Arrested Development; Louis C.K.=Louie; Don Cheadle=House of Lies; Matt LeBlanc=Episodes
+ACTR_C: Julia Louis-Dreyfus=Veep*; Laura Dern=Enlightened; Lena Dunham=Girls; Edie Falco=Nurse Jackie; Tina Fey=30 Rock; Amy Poehler=Parks and Recreation
+ACT_L: Michael Douglas=Behind the Candelabra*; Benedict Cumberbatch=Parade's End; Matt Damon=Behind the Candelabra; Toby Jones=The Girl; Al Pacino=Phil Spector
+ACTR_L: Laura Linney=The Big C: Hereafter*; Jessica Lange=American Horror Story: Asylum; Helen Mirren=Phil Spector; Elisabeth Moss=Top of the Lake; Sigourney Weaver=Political Animals
+SUPACT_D: Bobby Cannavale=Boardwalk Empire*; Jonathan Banks=Breaking Bad; Jim Carter=Downton Abbey; Peter Dinklage=Game of Thrones; Mandy Patinkin=Homeland; Aaron Paul=Breaking Bad
+SUPACTR_D: Anna Gunn=Breaking Bad*; Morena Baccarin=Homeland; Christine Baranski=The Good Wife; Emilia Clarke=Game of Thrones; Christina Hendricks=Mad Men; Maggie Smith=Downton Abbey
+SUPACT_C: Tony Hale=Veep*; Ty Burrell=Modern Family; Adam Driver=Girls; Jesse Tyler Ferguson=Modern Family; Bill Hader=Saturday Night Live; Ed O'Neill=Modern Family
+SUPACTR_C: Merritt Wever=Nurse Jackie*; Mayim Bialik=The Big Bang Theory; Julie Bowen=Modern Family; Anna Chlumsky=Veep; Jane Krakowski=30 Rock; Jane Lynch=Glee; Sofía Vergara=Modern Family
+SUPACT_L: James Cromwell=American Horror Story: Asylum*; Scott Bakula=Behind the Candelabra; John Benjamin Hickey=The Big C: Hereafter; Peter Mullan=Top of the Lake; Zachary Quinto=American Horror Story: Asylum
+SUPACTR_L: Ellen Burstyn=Political Animals*; Sarah Paulson=American Horror Story: Asylum; Charlotte Rampling=Restless; Imelda Staunton=The Girl; Alfre Woodard=Steel Magnolias
+DIR_D: David Fincher (Chapter 1)=House of Cards*; Tim Van Patten (Margate Sands)=Boardwalk Empire; Michelle MacLaren (Gliding Over All)=Breaking Bad; Jeremy Webb (Episode Four)=Downton Abbey; Lesli Linka Glatter (Q&A)=Homeland
+DIR_C: Gail Mancuso (Arrested)=Modern Family*; Beth McCarthy-Miller (Hogcock!/Last Lunch)=30 Rock; Paris Barclay (Diva)=Glee; Lena Dunham (On All Fours)=Girls; Louis C.K. (New Year's Eve)=Louie
+DIR_L: Steven Soderbergh=Behind the Candelabra*; Julian Jarrold=The Girl; David Mamet=Phil Spector; Allison Anders=Ring of Fire; Jane Campion, Garth Davis (Part 5)=Top of the Lake
+SCORE: John Lunn=Downton Abbey*; David Schwartz=Arrested Development; Trevor Morris=The Borgias; Jeff Beal=House of Cards; Robert Duncan=Last Resort; Charlie Mole=Mr Selfridge
+SCORE_L: Mychael Danna=World Without End*; Phillip Miller=The Girl; Ivor Guest, Robert Logan=Mea Maxima Culpa; Dirk Brossé=Parade's End; Lorne Balfe=Restless; Anton Sanko=Ring of Fire
+THEME: Bear McCreary=Da Vinci's Demons*; Nathan Barr=The Americans; Brian Keane=Copper; Sean Callery=Elementary; Nathan Barr=Hemlock Grove; Jeff Beal=House of Cards
+SONG: If I Had Time=The 66th Annual Tony Awards=Adam Schlesinger, David Javerbaum*; Rural Juror=30 Rock=Jeff Richmond, Tina Fey, Tracey Wigfield; Nothing in This World Will Ever Break My Heart Again=Nashville=Sarah Jane Buxton, Kate York; More or Less the Kind of Thing You May or May Not Possibly See on Broadway=The Neighbors=Alan Menken, Glenn Slater; I Heard Your Voice In a Dream=Smash=Andrew McMahon; Hang the Moon=Smash=Marc Shaiman, Scott Wittman
+
+@2014|66th|2013
+SER_D: Breaking Bad*; Downton Abbey; Game of Thrones; House of Cards; Mad Men; True Detective
+SER_C: Modern Family*; The Big Bang Theory; Louie; Orange Is the New Black; Silicon Valley; Veep
+SER_L: Fargo*; American Horror Story: Coven; Bonnie & Clyde; Luther; Treme; The White Queen
+ACT_D: Bryan Cranston=Breaking Bad*; Jeff Daniels=The Newsroom; Jon Hamm=Mad Men; Woody Harrelson=True Detective; Matthew McConaughey=True Detective; Kevin Spacey=House of Cards
+ACTR_D: Julianna Margulies=The Good Wife*; Lizzy Caplan=Masters of Sex; Claire Danes=Homeland; Michelle Dockery=Downton Abbey; Kerry Washington=Scandal; Robin Wright=House of Cards
+ACT_C: Jim Parsons=The Big Bang Theory*; Louis C.K.=Louie; Don Cheadle=House of Lies; Ricky Gervais=Derek; Matt LeBlanc=Episodes; William H. Macy=Shameless
+ACTR_C: Julia Louis-Dreyfus=Veep*; Lena Dunham=Girls; Edie Falco=Nurse Jackie; Melissa McCarthy=Mike & Molly; Amy Poehler=Parks and Recreation; Taylor Schilling=Orange Is the New Black
+ACT_L: Benedict Cumberbatch=Sherlock: His Last Vow*; Chiwetel Ejiofor=Dancing on the Edge; Idris Elba=Luther; Martin Freeman=Fargo; Mark Ruffalo=The Normal Heart; Billy Bob Thornton=Fargo
+ACTR_L: Jessica Lange=American Horror Story: Coven*; Helena Bonham Carter=Burton & Taylor; Minnie Driver=Return to Zero; Sarah Paulson=American Horror Story: Coven; Cicely Tyson=The Trip to Bountiful; Kristen Wiig=The Spoils of Babylon
+SUPACT_D: Aaron Paul=Breaking Bad*; Jim Carter=Downton Abbey; Josh Charles=The Good Wife; Peter Dinklage=Game of Thrones; Mandy Patinkin=Homeland; Jon Voight=Ray Donovan
+SUPACTR_D: Anna Gunn=Breaking Bad*; Christine Baranski=The Good Wife; Joanne Froggatt=Downton Abbey; Lena Headey=Game of Thrones; Christina Hendricks=Mad Men; Maggie Smith=Downton Abbey
+SUPACT_C: Ty Burrell=Modern Family*; Fred Armisen=Portlandia; Andre Braugher=Brooklyn Nine-Nine; Adam Driver=Girls; Jesse Tyler Ferguson=Modern Family; Tony Hale=Veep
+SUPACTR_C: Allison Janney=Mom*; Mayim Bialik=The Big Bang Theory; Julie Bowen=Modern Family; Anna Chlumsky=Veep; Kate McKinnon=Saturday Night Live; Kate Mulgrew=Orange Is the New Black
+SUPACT_L: Martin Freeman=Sherlock: His Last Vow*; Matt Bomer=The Normal Heart; Colin Hanks=Fargo; Joe Mantello=The Normal Heart; Alfred Molina=The Normal Heart; Jim Parsons=The Normal Heart
+SUPACTR_L: Kathy Bates=American Horror Story: Coven*; Angela Bassett=American Horror Story: Coven; Ellen Burstyn=Flowers in the Attic; Frances Conroy=American Horror Story: Coven; Julia Roberts=The Normal Heart; Allison Tolman=Fargo
+DIR_D: Cary Joji Fukunaga (Who Goes There)=True Detective*; Tim Van Patten (Farewell Daddy Blues)=Boardwalk Empire; Vince Gilligan (Felina)=Breaking Bad; David Evans (Episode One)=Downton Abbey; Neil Marshall (The Watchers on the Wall)=Game of Thrones; Carl Franklin (Chapter 14)=House of Cards
+DIR_C: Gail Mancuso (Las Vegas)=Modern Family*; Iain B. MacDonald (Episode Nine)=Episodes; Paris Barclay (100)=Glee; Louis C.K. (Elevator, Part 6)=Louie; Jodie Foster (Lesbian Request Denied)=Orange Is the New Black; Mike Judge (Minimum Viable Product)=Silicon Valley
+DIR_L: Colin Bucksey (Buridan's Ass)=Fargo*; Alfonso Gomez-Rejon (Bitchcraft)=American Horror Story: Coven; Adam Bernstein (The Crocodile's Dilemma)=Fargo; Stephen Frears=Muhammad Ali's Greatest Fight; Ryan Murphy=The Normal Heart; Nick Hurran=Sherlock: His Last Vow
+SCORE: Alan Silvestri=Cosmos: A Spacetime Odyssey*; John Lunn=Downton Abbey; Ramin Djawadi=Game of Thrones; Jeff Beal=House of Cards; T Bone Burnett=True Detective
+SCORE_L: David Arnold, Michael Price=Sherlock*; James S. Levine=American Horror Story: Coven; Ludovic Bource=Clear History; Jeff Russo=Fargo; Rob Mathes=Herblock; John Lunn=The White Queen
+THEME: Alan Silvestri=Cosmos: A Spacetime Odyssey*; Bear McCreary=Black Sails; Daniele Luppi=Magic City; Brian Tyler, Robert Lydecker=Sleepy Hollow; Andrew Feltenstein, John Nau=The Spoils of Babylon
+SONG: Bigger!=The 67th Annual Tony Awards=Tom Kitt, Lin-Manuel Miranda*; No Trouble=A Christmas Carol - The Concert=Bob Christenson, Alisa Hauser; Les Mis=Key & Peele=Joshua Funk, Rebecca Drysdale; Home for the Holiday (Twin Bed)=Saturday Night Live=Eli Bruggemann, Aidy Bryant, Chris Kelly, Kate McKinnon, Sarah Schneider; Merroway Cove=Sofia the First: The Floating Palace=John William Kavanaugh, Craig Gerber; Day Is Gone=Sons of Anarchy=Noah Gundersen, Kurt Sutter, Bob Thiele
+
+@2015|67th|2014
+SER_D: Game of Thrones*; Better Call Saul; Downton Abbey; Homeland; House of Cards; Mad Men; Orange Is the New Black
+SER_C: Veep*; Louie; Modern Family; Parks and Recreation; Silicon Valley; Transparent; Unbreakable Kimmy Schmidt
+SER_L: Olive Kitteridge*; American Crime; American Horror Story: Freak Show; The Honorable Woman; Wolf Hall
+ACT_D: Jon Hamm=Mad Men*; Kyle Chandler=Bloodline; Jeff Daniels=The Newsroom; Bob Odenkirk=Better Call Saul; Liev Schreiber=Ray Donovan; Kevin Spacey=House of Cards
+ACTR_D: Viola Davis=How to Get Away with Murder*; Claire Danes=Homeland; Taraji P. Henson=Empire; Tatiana Maslany=Orphan Black; Elisabeth Moss=Mad Men; Robin Wright=House of Cards
+ACT_C: Jeffrey Tambor=Transparent*; Anthony Anderson=Black-ish; Don Cheadle=House of Lies; Louis C.K.=Louie; Will Forte=The Last Man on Earth; Matt LeBlanc=Episodes; William H. Macy=Shameless
+ACTR_C: Julia Louis-Dreyfus=Veep*; Edie Falco=Nurse Jackie; Lisa Kudrow=The Comeback; Amy Poehler=Parks and Recreation; Amy Schumer=Inside Amy Schumer; Lily Tomlin=Grace and Frankie
+ACT_L: Richard Jenkins=Olive Kitteridge*; Adrien Brody=Houdini; Ricky Gervais=Derek: The Special; Timothy Hutton=American Crime; David Oyelowo=Nightingale; Mark Rylance=Wolf Hall
+ACTR_L: Frances McDormand=Olive Kitteridge*; Maggie Gyllenhaal=The Honorable Woman; Felicity Huffman=American Crime; Jessica Lange=American Horror Story: Freak Show; Queen Latifah=Bessie; Emma Thompson=Live from Lincoln Center
+SUPACT_D: Peter Dinklage=Game of Thrones*; Jonathan Banks=Better Call Saul; Jim Carter=Downton Abbey; Alan Cumming=The Good Wife; Michael Kelly=House of Cards; Ben Mendelsohn=Bloodline
+SUPACTR_D: Uzo Aduba=Orange Is the New Black*; Christine Baranski=The Good Wife; Emilia Clarke=Game of Thrones; Joanne Froggatt=Downton Abbey; Lena Headey=Game of Thrones; Christina Hendricks=Mad Men
+SUPACT_C: Tony Hale=Veep*; Andre Braugher=Brooklyn Nine-Nine; Tituss Burgess=Unbreakable Kimmy Schmidt; Ty Burrell=Modern Family; Adam Driver=Girls; Keegan-Michael Key=Key & Peele
+SUPACTR_C: Allison Janney=Mom*; Mayim Bialik=The Big Bang Theory; Julie Bowen=Modern Family; Anna Chlumsky=Veep; Gaby Hoffmann=Transparent; Jane Krakowski=Unbreakable Kimmy Schmidt; Kate McKinnon=Saturday Night Live; Niecy Nash=Getting On
+SUPACT_L: Bill Murray=Olive Kitteridge*; Richard Cabral=American Crime; Damian Lewis=Wolf Hall; Denis O'Hare=American Horror Story: Freak Show; Michael K. Williams=Bessie; Finn Wittrock=American Horror Story: Freak Show
+SUPACTR_L: Regina King=American Crime*; Angela Bassett=American Horror Story: Freak Show; Kathy Bates=American Horror Story: Freak Show; Zoe Kazan=Olive Kitteridge; Mo'Nique=Bessie; Sarah Paulson=American Horror Story: Freak Show
+DIR_D: David Nutter (Mother's Mercy)=Game of Thrones*; Tim Van Patten (Eldorado)=Boardwalk Empire; Jeremy Podeswa (Unbowed, Unbent, Unbroken)=Game of Thrones; Lesli Linka Glatter (From A to B and Back Again)=Homeland; Steven Soderbergh (Method and Madness)=The Knick
+DIR_C: Joey Soloway (Best New Girl)=Transparent*; Phil Lord, Christopher Miller (Alive in Tucson)=The Last Man on Earth; Louis C.K. (Sleepover)=Louie; Mike Judge (Sand Hill Shuffle)=Silicon Valley; Armando Iannucci (Testimony)=Veep
+DIR_L: Lisa Cholodenko=Olive Kitteridge*; Ryan Murphy (Monsters Among Us)=American Horror Story: Freak Show; Dee Rees=Bessie; Hugo Blick=The Honorable Woman; Uli Edel=Houdini; Tom Shankland=The Missing; Peter Kosminsky=Wolf Hall
+SCORE: Jeff Beal=House of Cards*; Duncan Thum=Chef's Table; Bear McCreary=Outlander; Maurizio Malagnini=The Paradise; Abel Korzeniowski=Penny Dreadful; Jeff Danna, Mychael Danna=Tyrant
+SCORE_L: Rachel Portman=Bessie*; Mac Quayle=American Horror Story: Freak Show; William Ross=Away and Back; Dominik Scherrer=The Missing; Kevin Kliesch=Sofia the First; Sean Callery=24: Live Another Day
+THEME: Dustin O'Halloran=Transparent*; Jeff Beal=The Dovekeepers; Daniele Luppi=Marco Polo; Abel Korzeniowski=Penny Dreadful; Bruce Broughton, John Debney=Texas Rising; Jeff Danna, Mychael Danna=Tyrant
+SONG: Girl You Don't Need Make Up=Inside Amy Schumer=Kyle Dunnigan, Jim Roach*; Kiss an Old Man=The Comedians=Robert Lopez, Kristen Anderson-Lopez; This Time=Glee=Darren Criss; You Gotta Believe=How Murray Saved Christmas=Walter Murphy, Mike Reiss; Moving Pictures=The Oscars=Kristen Anderson-Lopez, Robert Lopez; Come Join the Murder=Sons of Anarchy=Bob Thiele, Kurt Sutter, The White Buffalo
+
+@2016|68th|2015
+SER_D: Game of Thrones*; The Americans; Better Call Saul; Downton Abbey; Homeland; House of Cards; Mr. Robot
+SER_C: Veep*; Black-ish; Master of None; Modern Family; Silicon Valley; Transparent; Unbreakable Kimmy Schmidt
+SER_L: The People v. O. J. Simpson: American Crime Story*; American Crime; Fargo; The Night Manager; Roots
+ACT_D: Rami Malek=Mr. Robot*; Kyle Chandler=Bloodline; Bob Odenkirk=Better Call Saul; Matthew Rhys=The Americans; Liev Schreiber=Ray Donovan; Kevin Spacey=House of Cards
+ACTR_D: Tatiana Maslany=Orphan Black*; Claire Danes=Homeland; Viola Davis=How to Get Away with Murder; Taraji P. Henson=Empire; Keri Russell=The Americans; Robin Wright=House of Cards
+ACT_C: Jeffrey Tambor=Transparent*; Anthony Anderson=Black-ish; Aziz Ansari=Master of None; Will Forte=The Last Man on Earth; William H. Macy=Shameless; Thomas Middleditch=Silicon Valley
+ACTR_C: Julia Louis-Dreyfus=Veep*; Ellie Kemper=Unbreakable Kimmy Schmidt; Laurie Metcalf=Getting On; Tracee Ellis Ross=Black-ish; Amy Schumer=Inside Amy Schumer; Lily Tomlin=Grace and Frankie
+ACT_L: Courtney B. Vance=The People v. O. J. Simpson: American Crime Story*; Bryan Cranston=All the Way; Benedict Cumberbatch=Sherlock: The Abominable Bride; Idris Elba=Luther; Cuba Gooding Jr.=The People v. O. J. Simpson: American Crime Story; Tom Hiddleston=The Night Manager
+ACTR_L: Sarah Paulson=The People v. O. J. Simpson: American Crime Story*; Kirsten Dunst=Fargo; Felicity Huffman=American Crime; Audra McDonald=Lady Day at Emerson's Bar and Grill; Lili Taylor=American Crime; Kerry Washington=Confirmation
+SUPACT_D: Ben Mendelsohn=Bloodline*; Jonathan Banks=Better Call Saul; Peter Dinklage=Game of Thrones; Kit Harington=Game of Thrones; Michael Kelly=House of Cards; Jon Voight=Ray Donovan
+SUPACTR_D: Maggie Smith=Downton Abbey*; Emilia Clarke=Game of Thrones; Lena Headey=Game of Thrones; Maura Tierney=The Affair; Maisie Williams=Game of Thrones; Constance Zimmer=UnREAL
+SUPACT_C: Louie Anderson=Baskets*; Andre Braugher=Brooklyn Nine-Nine; Tituss Burgess=Unbreakable Kimmy Schmidt; Ty Burrell=Modern Family; Tony Hale=Veep; Keegan-Michael Key=Key & Peele; Matt Walsh=Veep
+SUPACTR_C: Kate McKinnon=Saturday Night Live*; Anna Chlumsky=Veep; Gaby Hoffmann=Transparent; Allison Janney=Mom; Judith Light=Transparent; Niecy Nash=Getting On
+SUPACT_L: Sterling K. Brown=The People v. O. J. Simpson: American Crime Story*; Hugh Laurie=The Night Manager; Jesse Plemons=Fargo; David Schwimmer=The People v. O. J. Simpson: American Crime Story; John Travolta=The People v. O. J. Simpson: American Crime Story; Bokeem Woodbine=Fargo
+SUPACTR_L: Regina King=American Crime*; Kathy Bates=American Horror Story: Hotel; Olivia Colman=The Night Manager; Melissa Leo=All the Way; Sarah Paulson=American Horror Story: Hotel; Jean Smart=Fargo
+DIR_D: Miguel Sapochnik (Battle of the Bastards)=Game of Thrones*; Michael Engler (Episode Nine)=Downton Abbey; Jack Bender (The Door)=Game of Thrones; Lesli Linka Glatter (The Tradition of Hospitality)=Homeland; Steven Soderbergh (This Is All We Are)=The Knick; David Hollander (Exsuscito)=Ray Donovan
+DIR_C: Joey Soloway (Man on the Land)=Transparent*; Aziz Ansari (Parents)=Master of None; Alec Berg (Daily Active Users)=Silicon Valley; Mike Judge (Founder Friendly)=Silicon Valley; David Mandel (Kissing Your Sister)=Veep; Chris Addison (Morning After)=Veep; Dale Stern (Mother)=Veep
+DIR_L: Susanne Bier (The Night Manager)=The Night Manager*; Jay Roach=All the Way; Noah Hawley (Before the Law)=Fargo; Ryan Murphy (From the Ashes of Tragedy)=The People v. O. J. Simpson: American Crime Story; Anthony Hemingway (Manna from Heaven)=The People v. O. J. Simpson: American Crime Story; John Singleton (The Race Card)=The People v. O. J. Simpson: American Crime Story
+SCORE: Mac Quayle=Mr. Robot*; Chris Bacon=Bates Motel; Duncan Thum=Chef's Table; Paul Leonard-Morgan=Limitless; Sean Callery=Minority Report; Abel Korzeniowski=Penny Dreadful
+SCORE_L: Victor Reyes=The Night Manager*; James Newton Howard=All the Way; David Lawrence=Descendants; Jeff Russo=Fargo; Jeff Beal=Jesse Stone: Lost in Paradise; Martin Phipps=War & Peace
+THEME: Sean Callery=Marvel's Jessica Jones*; Rachel Bloom, Adam Schlesinger=Crazy Ex-Girlfriend; Rodrigo Amarante=Narcos; Victor Reyes=The Night Manager; Johnny Klimek, Tom Tykwer=Sense8; Robert Duncan=The Whispers
+SONG: Til It Happens to You=The Hunting Ground=Diane Warren*; Settle for Me=Crazy Ex-Girlfriend=Adam Schlesinger, Rachel Bloom, Jack Dolgen; Good People=Empire=Jim Beanz; A New Season=Galavant=Alan Menken, Glenn Slater; Frozen Lullaby=Garfunkel and Oates: Trying to Be Special=Garfunkel & Oates
+
+@2017|69th|2016
+SER_D: The Handmaid's Tale*; Better Call Saul; The Crown; House of Cards; Stranger Things; This Is Us; Westworld
+SER_C: Veep*; Atlanta; Black-ish; Master of None; Modern Family; Silicon Valley; Unbreakable Kimmy Schmidt
+SER_L: Big Little Lies*; Fargo; Feud: Bette and Joan; Genius; The Night Of
+ACT_D: Sterling K. Brown=This Is Us*; Anthony Hopkins=Westworld; Bob Odenkirk=Better Call Saul; Matthew Rhys=The Americans; Liev Schreiber=Ray Donovan; Kevin Spacey=House of Cards; Milo Ventimiglia=This Is Us
+ACTR_D: Elisabeth Moss=The Handmaid's Tale*; Viola Davis=How to Get Away with Murder; Claire Foy=The Crown; Keri Russell=The Americans; Evan Rachel Wood=Westworld; Robin Wright=House of Cards
+ACT_C: Donald Glover=Atlanta*; Anthony Anderson=Black-ish; Aziz Ansari=Master of None; Zach Galifianakis=Baskets; William H. Macy=Shameless; Jeffrey Tambor=Transparent
+ACTR_C: Julia Louis-Dreyfus=Veep*; Pamela Adlon=Better Things; Jane Fonda=Grace and Frankie; Allison Janney=Mom; Ellie Kemper=Unbreakable Kimmy Schmidt; Tracee Ellis Ross=Black-ish; Lily Tomlin=Grace and Frankie
+ACT_L: Riz Ahmed=The Night Of*; Benedict Cumberbatch=Sherlock: The Lying Detective; Robert De Niro=The Wizard of Lies; Ewan McGregor=Fargo; Geoffrey Rush=Genius; John Turturro=The Night Of
+ACTR_L: Nicole Kidman=Big Little Lies*; Carrie Coon=Fargo; Felicity Huffman=American Crime; Jessica Lange=Feud: Bette and Joan; Susan Sarandon=Feud: Bette and Joan; Reese Witherspoon=Big Little Lies
+SUPACT_D: John Lithgow=The Crown*; Jonathan Banks=Better Call Saul; David Harbour=Stranger Things; Ron Cephas Jones=This Is Us; Michael Kelly=House of Cards; Mandy Patinkin=Homeland; Jeffrey Wright=Westworld
+SUPACTR_D: Ann Dowd=The Handmaid's Tale*; Uzo Aduba=Orange Is the New Black; Millie Bobby Brown=Stranger Things; Chrissy Metz=This Is Us; Thandie Newton=Westworld; Samira Wiley=The Handmaid's Tale
+SUPACT_C: Alec Baldwin=Saturday Night Live*; Louie Anderson=Baskets; Tituss Burgess=Unbreakable Kimmy Schmidt; Ty Burrell=Modern Family; Tony Hale=Veep; Matt Walsh=Veep
+SUPACTR_C: Kate McKinnon=Saturday Night Live*; Vanessa Bayer=Saturday Night Live; Anna Chlumsky=Veep; Kathryn Hahn=Transparent; Leslie Jones=Saturday Night Live; Judith Light=Transparent
+SUPACT_L: Alexander Skarsgård=Big Little Lies*; Bill Camp=The Night Of; Alfred Molina=Feud: Bette and Joan; David Thewlis=Fargo; Stanley Tucci=Feud: Bette and Joan; Michael K. Williams=The Night Of
+SUPACTR_L: Laura Dern=Big Little Lies*; Judy Davis=Feud: Bette and Joan; Jackie Hoffman=Feud: Bette and Joan; Regina King=American Crime; Michelle Pfeiffer=The Wizard of Lies; Shailene Woodley=Big Little Lies
+DIR_D: Reed Morano (Offred)=The Handmaid's Tale*; Vince Gilligan (Witness)=Better Call Saul; Stephen Daldry (Hyde Park Corner)=The Crown; Kate Dennis (The Bridge)=The Handmaid's Tale; Lesli Linka Glatter (America First)=Homeland; The Duffer Brothers (Chapter One: The Vanishing of Will Byers)=Stranger Things; Jonathan Nolan (The Bicameral Mind)=Westworld
+DIR_C: Donald Glover (B.A.N.)=Atlanta*; Jamie Babbit (Intellectual Property)=Silicon Valley; Mike Judge (Server Error)=Silicon Valley; Morgan Sackett (Blurb)=Veep; David Mandel (Groundbreaking)=Veep; Dale Stern (Justice)=Veep
+DIR_L: Jean-Marc Vallée=Big Little Lies*; Noah Hawley (The Law of Vacant Places)=Fargo; Ryan Murphy (And the Winner Is…)=Feud: Bette and Joan; Ron Howard (Einstein: Chapter One)=Genius; James Marsh (The Art of War)=The Night Of; Steven Zaillian (The Beach)=The Night Of
+SCORE: Jeff Beal=House of Cards*; Rupert Gregson-Williams=The Crown; Jacob Shea, Jasha Klebe=Planet Earth II; James Newton Howard=A Series of Unfortunate Events; Max Richter=Taboo; Martin Phipps, Ruth Barrett, Natalie Holt=Victoria
+SCORE_L: Jeff Russo=Fargo*; Mac Quayle=Feud: Bette and Joan; Jeremy Turner=Five Came Back; Gary Lionelli=O.J.: Made in America; Rael Jones=Suite Française; Patrick Jonsson=The White Helmets
+THEME: Michael Stein, Kyle Dixon=Stranger Things*; Mac Quayle=Feud: Bette and Joan; Hans Zimmer, Lorne Balfe=Genius; David Buckley=The Good Fight; Martin Phipps=Victoria; Ramin Djawadi=Westworld
+SONG: Letter to the Free=13th=Common, Robert Glasper, Karriem Riggins*; We Tapped That Ass=Crazy Ex-Girlfriend=Adam Schlesinger, Rachel Bloom, Jack Dolgen; Jing-A-Ling-A-Ling=Duck the Halls: A Mickey Mouse Christmas Special=Christopher Willis, Darrick Bachman, Paul Rudish; The Ballad of Claus Jorstad (Devil Stool)=Jimmy Kimmel Live!=Gary Greenberg, Jonathan Kimmel; Last Christmas=Saturday Night Live=Eli Brueggemann, Chance the Rapper, Will Stephen, Kenan Thompson; Hell No=Unbreakable Kimmy Schmidt=Jeff Richmond, Tina Fey, Sam Means
+
+@2018|70th|2017
+SER_D: Game of Thrones*; The Americans; The Crown; The Handmaid's Tale; Stranger Things; This Is Us; Westworld
+SER_C: The Marvelous Mrs. Maisel*; Atlanta; Barry; Black-ish; Curb Your Enthusiasm; GLOW; Silicon Valley; Unbreakable Kimmy Schmidt
+SER_L: The Assassination of Gianni Versace: American Crime Story*; The Alienist; Genius: Picasso; Godless; Patrick Melrose
+ACT_D: Matthew Rhys=The Americans*; Jason Bateman=Ozark; Sterling K. Brown=This Is Us; Ed Harris=Westworld; Milo Ventimiglia=This Is Us; Jeffrey Wright=Westworld
+ACTR_D: Claire Foy=The Crown*; Tatiana Maslany=Orphan Black; Elisabeth Moss=The Handmaid's Tale; Sandra Oh=Killing Eve; Keri Russell=The Americans; Evan Rachel Wood=Westworld
+ACT_C: Bill Hader=Barry*; Anthony Anderson=Black-ish; Ted Danson=The Good Place; Larry David=Curb Your Enthusiasm; Donald Glover=Atlanta; William H. Macy=Shameless
+ACTR_C: Rachel Brosnahan=The Marvelous Mrs. Maisel*; Pamela Adlon=Better Things; Allison Janney=Mom; Issa Rae=Insecure; Tracee Ellis Ross=Black-ish; Lily Tomlin=Grace and Frankie
+ACT_L: Darren Criss=The Assassination of Gianni Versace: American Crime Story*; Antonio Banderas=Genius: Picasso; Benedict Cumberbatch=Patrick Melrose; Jeff Daniels=The Looming Tower; John Legend=Jesus Christ Superstar Live in Concert; Jesse Plemons=Black Mirror: USS Callister
+ACTR_L: Regina King=Seven Seconds*; Jessica Biel=The Sinner; Laura Dern=The Tale; Michelle Dockery=Godless; Edie Falco=Law & Order True Crime: The Menendez Murders; Sarah Paulson=American Horror Story: Cult
+SUPACT_D: Peter Dinklage=Game of Thrones*; Nikolaj Coster-Waldau=Game of Thrones; Joseph Fiennes=The Handmaid's Tale; David Harbour=Stranger Things; Mandy Patinkin=Homeland; Matt Smith=The Crown
+SUPACTR_D: Thandiwe Newton=Westworld*; Alexis Bledel=The Handmaid's Tale; Millie Bobby Brown=Stranger Things; Ann Dowd=The Handmaid's Tale; Lena Headey=Game of Thrones; Vanessa Kirby=The Crown; Yvonne Strahovski=The Handmaid's Tale
+SUPACT_C: Henry Winkler=Barry*; Louie Anderson=Baskets; Alec Baldwin=Saturday Night Live; Tituss Burgess=Unbreakable Kimmy Schmidt; Brian Tyree Henry=Atlanta; Tony Shalhoub=The Marvelous Mrs. Maisel; Kenan Thompson=Saturday Night Live
+SUPACTR_C: Alex Borstein=The Marvelous Mrs. Maisel*; Zazie Beetz=Atlanta; Aidy Bryant=Saturday Night Live; Betty Gilpin=GLOW; Leslie Jones=Saturday Night Live; Kate McKinnon=Saturday Night Live; Laurie Metcalf=Roseanne; Megan Mullally=Will & Grace
+SUPACT_L: Jeff Daniels=Godless*; Brandon Victor Dixon=Jesus Christ Superstar Live in Concert; John Leguizamo=Waco; Ricky Martin=The Assassination of Gianni Versace: American Crime Story; Édgar Ramírez=The Assassination of Gianni Versace: American Crime Story; Michael Stuhlbarg=The Looming Tower; Finn Wittrock=The Assassination of Gianni Versace: American Crime Story
+SUPACTR_L: Merritt Wever=Godless*; Sara Bareilles=Jesus Christ Superstar Live in Concert; Penélope Cruz=The Assassination of Gianni Versace: American Crime Story; Judith Light=The Assassination of Gianni Versace: American Crime Story; Adina Porter=American Horror Story: Cult; Letitia Wright=Black Mirror: Black Museum
+DIR_D: Stephen Daldry (Paterfamilias)=The Crown*; Alan Taylor (Beyond the Wall)=Game of Thrones; Jeremy Podeswa (The Dragon and the Wolf)=Game of Thrones; Kari Skogland (After)=The Handmaid's Tale; Jason Bateman (The Toll)=Ozark; Daniel Sackheim (Tonight We Improvise)=Ozark; The Duffer Brothers (Chapter Nine: The Gate)=Stranger Things
+DIR_C: Amy Sherman-Palladino (Pilot)=The Marvelous Mrs. Maisel*; Donald Glover (FUBU)=Atlanta; Hiro Murai (Teddy Perkins)=Atlanta; Bill Hader (Chapter One: Make Your Mark)=Barry; Mark Cendrowski (The Bow Tie Asymmetry)=The Big Bang Theory; Jesse Peretz (Pilot)=GLOW; Mike Judge (Initial Coin Offering)=Silicon Valley
+DIR_L: Ryan Murphy (The Man Who Would Be Vogue)=The Assassination of Gianni Versace: American Crime Story*; Scott Frank=Godless; David Leveaux, Alex Rudzinski=Jesus Christ Superstar Live in Concert; Craig Zisk (9/11)=The Looming Tower; Barry Levinson=Paterno; Edward Berger=Patrick Melrose; David Lynch=Twin Peaks
+SCORE: Ramin Djawadi=Game of Thrones*; Sean Callery=Marvel's Jessica Jones; Mark Isham, Cindy O'Connor, Michael Simon=Once Upon a Time; W. G. Snuffy Walden, A. Patrick Rose=SEAL Team; Kevin Kiner=Star Wars Rebels; Ramin Djawadi=Westworld
+SCORE_L: Cyril Aufort=March of the Penguins 2*; Mychael Danna, Jeff Danna=Alias Grace; Harry Gregson-Williams=The Commuter; Cristobal Tapia de Veer=Black Mirror; Carlos Rafael Rivera=Godless; Daniel Pemberton=Black Mirror
+THEME: Carlos Rafael Rivera=Godless*; Mychael Danna=The Last Tycoon; John Paesano=Marvel's The Defenders; Jeff Beal=The Putin Interviews; Mike Olson, Bridget Kearney, Mike Calabrese, Rachael Price=Somebody Feed Phil; Chris Bacon=The Tick
+SONG: Come Back Barack=Saturday Night Live=Eli Brueggemann, Chris Redd, Will Stephen, Kenan Thompson*; Totally Gay=Big Mouth=Mark Rivers; In the Market for a Miracle=A Christmas Story Live!=Benj Pasek, Justin Paul; High Crimes and Misdemeanors=The Good Fight=Jonathan Coulton; Just Getting Started=If You're Not in the Obit, Eat Breakfast=Dave Grusin, Alan Bergman, Marilyn Bergman; The Buddy Song=Steve Martin & Martin Short: An Evening You Will Forget for the Rest of Your Life=Steve Martin
+
+@2020|72nd|2019
+SER_D: Succession*; Better Call Saul; The Crown; The Handmaid's Tale; Killing Eve; The Mandalorian; Ozark; Stranger Things
+SER_C: Schitt's Creek*; Curb Your Enthusiasm; Dead to Me; The Good Place; Insecure; The Kominsky Method; The Marvelous Mrs. Maisel; What We Do in the Shadows
+SER_L: Watchmen*; Little Fires Everywhere; Mrs. America; Unbelievable; Unorthodox
+ACT_D: Jeremy Strong=Succession*; Jason Bateman=Ozark; Sterling K. Brown=This Is Us; Steve Carell=The Morning Show; Brian Cox=Succession; Billy Porter=Pose
+ACTR_D: Zendaya=Euphoria*; Jennifer Aniston=The Morning Show; Olivia Colman=The Crown; Jodie Comer=Killing Eve; Laura Linney=Ozark; Sandra Oh=Killing Eve
+ACT_C: Eugene Levy=Schitt's Creek*; Anthony Anderson=Black-ish; Don Cheadle=Black Monday; Ted Danson=The Good Place; Michael Douglas=The Kominsky Method; Ramy Youssef=Ramy
+ACTR_C: Catherine O'Hara=Schitt's Creek*; Christina Applegate=Dead to Me; Rachel Brosnahan=The Marvelous Mrs. Maisel; Linda Cardellini=Dead to Me; Issa Rae=Insecure; Tracee Ellis Ross=Black-ish
+ACT_L: Mark Ruffalo=I Know This Much Is True*; Jeremy Irons=Watchmen; Hugh Jackman=Bad Education; Paul Mescal=Normal People; Jeremy Pope=Hollywood
+ACTR_L: Regina King=Watchmen*; Cate Blanchett=Mrs. America; Shira Haas=Unorthodox; Octavia Spencer=Self Made; Kerry Washington=Little Fires Everywhere
+SUPACT_D: Billy Crudup=The Morning Show*; Nicholas Braun=Succession; Kieran Culkin=Succession; Mark Duplass=The Morning Show; Giancarlo Esposito=Better Call Saul; Matthew Macfadyen=Succession; Bradley Whitford=The Handmaid's Tale; Jeffrey Wright=Westworld
+SUPACTR_D: Julia Garner=Ozark*; Helena Bonham Carter=The Crown; Laura Dern=Big Little Lies; Thandie Newton=Westworld; Fiona Shaw=Killing Eve; Sarah Snook=Succession; Meryl Streep=Big Little Lies; Samira Wiley=The Handmaid's Tale
+SUPACT_C: Dan Levy=Schitt's Creek*; Mahershala Ali=Ramy; Alan Arkin=The Kominsky Method; Andre Braugher=Brooklyn Nine-Nine; Sterling K. Brown=The Marvelous Mrs. Maisel; William Jackson Harper=The Good Place; Tony Shalhoub=The Marvelous Mrs. Maisel; Kenan Thompson=Saturday Night Live
+SUPACTR_C: Annie Murphy=Schitt's Creek*; Alex Borstein=The Marvelous Mrs. Maisel; D'Arcy Carden=The Good Place; Betty Gilpin=GLOW; Marin Hinkle=The Marvelous Mrs. Maisel; Kate McKinnon=Saturday Night Live; Yvonne Orji=Insecure; Cecily Strong=Saturday Night Live
+SUPACT_L: Yahya Abdul-Mateen II=Watchmen*; Jovan Adepo=Watchmen; Tituss Burgess=Unbreakable Kimmy Schmidt: Kimmy vs the Reverend; Louis Gossett Jr.=Watchmen; Dylan McDermott=Hollywood; Jim Parsons=Hollywood
+SUPACTR_L: Uzo Aduba=Mrs. America*; Toni Collette=Unbelievable; Margo Martindale=Mrs. America; Jean Smart=Watchmen; Holland Taylor=Hollywood; Tracey Ullman=Mrs. America
+DIR_D: Andrij Parekh (Hunting)=Succession*; Benjamin Caron (Aberfan)=The Crown; Jessica Hobbs (Cri de Coeur)=The Crown; Lesli Linka Glatter (Prisoners of War)=Homeland; Mimi Leder (The Interview)=The Morning Show; Alik Sakharov (Fire Pink)=Ozark; Ben Semanoff (Su Casa Es Mi Casa)=Ozark; Mark Mylod (This Is Not for Tears)=Succession
+DIR_C: Andrew Cividino, Dan Levy (Happy Ending)=Schitt's Creek*; Matt Shakman (The Great)=The Great; Amy Sherman-Palladino (It's Comedy or Cabbage)=The Marvelous Mrs. Maisel; Daniel Palladino (Marvelous Radio)=The Marvelous Mrs. Maisel; Gail Mancuso (Finale, Part 2)=Modern Family; Ramy Youssef (Miakhalifa.mov)=Ramy; James Burrows (We Love Lucy)=Will & Grace
+DIR_L: Maria Schrader (Part 1)=Unorthodox*; Lynn Shelton (Find a Way)=Little Fires Everywhere; Lenny Abrahamson (Episode 5)=Normal People; Nicole Kassell (It's Summer and We're Running Out of Ice)=Watchmen; Steph Green (Little Fear of Lightning)=Watchmen; Stephen Williams (This Extraordinary Being)=Watchmen
+SCORE: Ludwig Göransson=The Mandalorian*; Martin Phipps=The Crown; Labrinth=Euphoria; Danny Bensi, Saunder Jurriaans=Ozark; Nicholas Britell=Succession
+SCORE_L: Trent Reznor, Atticus Ross=Watchmen*; Nathan Barr=Hollywood; Mark Isham, Isabella Summers=Little Fires Everywhere; Kris Bowers=Mrs. America; Antonio Gambale=Unorthodox
+THEME: Nathan Barr=Hollywood*; Nathan Barr=Carnival Row; Ólafur Arnalds=Defending Jacob; Antonio Gambale=Unorthodox; Laura Karpman=Why We Hate; RZA=Wu-Tang: An American Saga
+SONG: All for Us=Euphoria=Labrinth*; Letter to My Godfather=The Black Godfather=Chad Hugo, Pharrell Williams; Eat Shit, Bob=Last Week Tonight with John Oliver=David Dabbon, Joanna Rothkopf, Jill Twiss, Seena Vali; Build It Up=Little Fires Everywhere=Ingrid Michaelson; One Less Angel=The Marvelous Mrs. Maisel=Thomas Mizer, Curtis Moore; Memorized=This Is Us=Taylor Goldsmith, Siddhartha Khosla; The Way It Used to Be=Watchmen=Trent Reznor, Atticus Ross
+
+@2021|73rd|2020
+SER_D: The Crown*; The Boys; Bridgerton; The Handmaid's Tale; Lovecraft Country; The Mandalorian; Pose; This Is Us
+SER_C: Ted Lasso*; Black-ish; Cobra Kai; Emily in Paris; The Flight Attendant; Hacks; The Kominsky Method; PEN15
+SER_L: The Queen's Gambit*; I May Destroy You; Mare of Easttown; The Underground Railroad; WandaVision
+ACT_D: Josh O'Connor=The Crown*; Sterling K. Brown=This Is Us; Jonathan Majors=Lovecraft Country; Regé-Jean Page=Bridgerton; Billy Porter=Pose; Matthew Rhys=Perry Mason
+ACTR_D: Olivia Colman=The Crown*; Uzo Aduba=In Treatment; Emma Corrin=The Crown; Elisabeth Moss=The Handmaid's Tale; Michaela Jaé Rodriguez=Pose; Jurnee Smollett=Lovecraft Country
+ACT_C: Jason Sudeikis=Ted Lasso*; Anthony Anderson=Black-ish; Michael Douglas=The Kominsky Method; William H. Macy=Shameless; Kenan Thompson=Kenan
+ACTR_C: Jean Smart=Hacks*; Aidy Bryant=Shrill; Kaley Cuoco=The Flight Attendant; Allison Janney=Mom; Tracee Ellis Ross=Black-ish
+ACT_L: Ewan McGregor=Halston*; Paul Bettany=WandaVision; Hugh Grant=The Undoing; Lin-Manuel Miranda=Hamilton; Leslie Odom Jr.=Hamilton
+ACTR_L: Kate Winslet=Mare of Easttown*; Michaela Coel=I May Destroy You; Cynthia Erivo=Genius: Aretha; Elizabeth Olsen=WandaVision; Anya Taylor-Joy=The Queen's Gambit
+SUPACT_D: Tobias Menzies=The Crown*; Giancarlo Esposito=The Mandalorian; O-T Fagbenle=The Handmaid's Tale; John Lithgow=Perry Mason; Max Minghella=The Handmaid's Tale; Chris Sullivan=This Is Us; Bradley Whitford=The Handmaid's Tale; Michael K. Williams=Lovecraft Country
+SUPACTR_D: Gillian Anderson=The Crown*; Helena Bonham Carter=The Crown; Madeline Brewer=The Handmaid's Tale; Ann Dowd=The Handmaid's Tale; Aunjanue Ellis=Lovecraft Country; Emerald Fennell=The Crown; Yvonne Strahovski=The Handmaid's Tale; Samira Wiley=The Handmaid's Tale
+SUPACT_C: Brett Goldstein=Ted Lasso*; Carl Clemons-Hopkins=Hacks; Brendan Hunt=Ted Lasso; Nick Mohammed=Ted Lasso; Paul Reiser=The Kominsky Method; Jeremy Swift=Ted Lasso; Kenan Thompson=Saturday Night Live; Bowen Yang=Saturday Night Live
+SUPACTR_C: Hannah Waddingham=Ted Lasso*; Aidy Bryant=Saturday Night Live; Hannah Einbinder=Hacks; Kate McKinnon=Saturday Night Live; Rosie Perez=The Flight Attendant; Cecily Strong=Saturday Night Live; Juno Temple=Ted Lasso
+SUPACT_L: Evan Peters=Mare of Easttown*; Thomas Brodie-Sangster=The Queen's Gambit; Daveed Diggs=Hamilton; Paapa Essiedu=I May Destroy You; Jonathan Groff=Hamilton; Anthony Ramos=Hamilton
+SUPACTR_L: Julianne Nicholson=Mare of Easttown*; Renée Elise Goldsberry=Hamilton; Kathryn Hahn=WandaVision; Moses Ingram=The Queen's Gambit; Jean Smart=Mare of Easttown; Phillipa Soo=Hamilton
+DIR_D: Jessica Hobbs (War)=The Crown*; Julie Anne Robinson (Diamond of the First Water)=Bridgerton; Benjamin Caron (Fairytale)=The Crown; Liz Garbus (The Wilderness)=The Handmaid's Tale; Jon Favreau (Chapter 9: The Marshal)=The Mandalorian; Steven Canals (Series Finale)=Pose
+DIR_C: Lucia Aniello (There Is No Line)=Hacks*; James Burrows (Pilot)=B Positive; Susanna Fogel (In Case of Emergency)=The Flight Attendant; James Widdoes (Scooby-Doo Checks and Salisbury Steak)=Mom; Zach Braff (Biscuits)=Ted Lasso; MJ Delaney (The Hope That Kills You)=Ted Lasso; Declan Lowney (Make Rebecca Great Again)=Ted Lasso
+DIR_L: Scott Frank=The Queen's Gambit*; Thomas Kail=Hamilton; Sam Miller, Michaela Coel (Ego Death)=I May Destroy You; Sam Miller (Eyes Eyes Eyes Eyes)=I May Destroy You; Craig Zobel=Mare of Easttown; Barry Jenkins=The Underground Railroad; Matt Shakman=WandaVision
+SCORE: Ludwig Göransson=The Mandalorian*; Kris Bowers=Bridgerton; Martin Phipps=The Crown; Adam Taylor=The Handmaid's Tale; Laura Karpman, Raphael Saadiq=Lovecraft Country; Siddhartha Khosla=This Is Us
+SCORE_L: Carlos Rafael Rivera=The Queen's Gambit*; Jeff Russo=Fargo; Jeff Russo, Zoë Keating=Oslo; Nicholas Britell=The Underground Railroad; Christophe Beck=WandaVision
+THEME: Blake Neely=The Flight Attendant*; Michael Abels=Allen v. Farrow; Kris Bowers, Michael Dean Parsons=Bridgerton; Tom Howe, Marcus Mumford=Ted Lasso; Kristen Anderson-Lopez, Robert Lopez=WandaVision
+SONG: Agatha All Along=WandaVision=Kristen Anderson-Lopez, Robert Lopez*; Comedy=Bo Burnham: Inside=Bo Burnham; Never Truly Vanish=The Boys=Christopher Lennertz, Michael Saltzman; I Can't Remember Love=The Queen's Gambit=Anna Hauss, Robert Weinröder, William Horberg; The End Titles=Soundtrack of Our Lives=Marc Shaiman; Crimson Love=Zoey's Extraordinary Playlist=Andrew Hey, Harvey Mason Jr., Lindsey Rosin, Austin Winsberg
+
+@2022|74th|2021
+SER_D: Succession*; Better Call Saul; Euphoria; Ozark; Severance; Squid Game; Stranger Things; Yellowjackets
+SER_C: Ted Lasso*; Abbott Elementary; Barry; Curb Your Enthusiasm; Hacks; The Marvelous Mrs. Maisel; Only Murders in the Building; What We Do in the Shadows
+SER_L: The White Lotus*; Dopesick; The Dropout; Inventing Anna; Pam & Tommy
+ACT_D: Lee Jung-jae=Squid Game*; Jason Bateman=Ozark; Brian Cox=Succession; Bob Odenkirk=Better Call Saul; Adam Scott=Severance; Jeremy Strong=Succession
+ACTR_D: Zendaya=Euphoria*; Jodie Comer=Killing Eve; Laura Linney=Ozark; Melanie Lynskey=Yellowjackets; Sandra Oh=Killing Eve; Reese Witherspoon=The Morning Show
+ACT_C: Jason Sudeikis=Ted Lasso*; Donald Glover=Atlanta; Bill Hader=Barry; Nicholas Hoult=The Great; Steve Martin=Only Murders in the Building; Martin Short=Only Murders in the Building
+ACTR_C: Jean Smart=Hacks*; Rachel Brosnahan=The Marvelous Mrs. Maisel; Quinta Brunson=Abbott Elementary; Kaley Cuoco=The Flight Attendant; Elle Fanning=The Great; Issa Rae=Insecure
+ACT_L: Michael Keaton=Dopesick*; Colin Firth=The Staircase; Andrew Garfield=Under the Banner of Heaven; Oscar Isaac=Scenes from a Marriage; Himesh Patel=Station Eleven; Sebastian Stan=Pam & Tommy
+ACTR_L: Amanda Seyfried=The Dropout*; Toni Collette=The Staircase; Julia Garner=Inventing Anna; Lily James=Pam & Tommy; Sarah Paulson=Impeachment: American Crime Story; Margaret Qualley=Maid
+SUPACT_D: Matthew Macfadyen=Succession*; Nicholas Braun=Succession; Billy Crudup=The Morning Show; Kieran Culkin=Succession; O Yeong-su=Squid Game; Park Hae-soo=Squid Game; John Turturro=Severance; Christopher Walken=Severance
+SUPACTR_D: Julia Garner=Ozark*; Patricia Arquette=Severance; Jung Ho-yeon=Squid Game; Christina Ricci=Yellowjackets; Rhea Seehorn=Better Call Saul; J. Smith-Cameron=Succession; Sarah Snook=Succession; Sydney Sweeney=Euphoria
+SUPACT_C: Brett Goldstein=Ted Lasso*; Anthony Carrigan=Barry; Toheeb Jimoh=Ted Lasso; Nick Mohammed=Ted Lasso; Tony Shalhoub=The Marvelous Mrs. Maisel; Tyler James Williams=Abbott Elementary; Henry Winkler=Barry; Bowen Yang=Saturday Night Live
+SUPACTR_C: Sheryl Lee Ralph=Abbott Elementary*; Alex Borstein=The Marvelous Mrs. Maisel; Hannah Einbinder=Hacks; Janelle James=Abbott Elementary; Kate McKinnon=Saturday Night Live; Sarah Niles=Ted Lasso; Juno Temple=Ted Lasso; Hannah Waddingham=Ted Lasso
+SUPACT_L: Murray Bartlett=The White Lotus*; Jake Lacy=The White Lotus; Will Poulter=Dopesick; Seth Rogen=Pam & Tommy; Peter Sarsgaard=Dopesick; Michael Stuhlbarg=Dopesick; Steve Zahn=The White Lotus
+SUPACTR_L: Jennifer Coolidge=The White Lotus*; Connie Britton=The White Lotus; Alexandra Daddario=The White Lotus; Kaitlyn Dever=Dopesick; Natasha Rothwell=The White Lotus; Sydney Sweeney=The White Lotus; Mare Winningham=Dopesick
+DIR_D: Hwang Dong-hyuk (Red Light, Green Light)=Squid Game*; Jason Bateman (A Hard Way to Go)=Ozark; Ben Stiller (The We We Are)=Severance; Mark Mylod (All the Bells Say)=Succession; Cathy Yan (The Disruption)=Succession; Lorene Scafaria (Too Much Birthday)=Succession; Karyn Kusama (Pilot)=Yellowjackets
+DIR_C: MJ Delaney (No Weddings and a Funeral)=Ted Lasso*; Hiro Murai (New Jazz)=Atlanta; Bill Hader (710N)=Barry; Lucia Aniello (There Will Be Blood)=Hacks; Mary Lou Belli (Baby Daddy Groundhog Day)=The Ms. Pat Show; Cherien Dabis (The Boy from 6B)=Only Murders in the Building; Jamie Babbit (True Crime)=Only Murders in the Building
+DIR_L: Mike White=The White Lotus*; Danny Strong (The People vs. Purdue Pharma)=Dopesick; Michael Showalter (Green Juice)=The Dropout; Francesca Gregorini (Iron Sisters)=The Dropout; John Wells (Sky Blue)=Maid; Hiro Murai (Wheel of Fire)=Station Eleven
+SCORE: Theodore Shapiro=Severance*; Blake Neely=The Flight Attendant; Natalie Holt=Loki; Siddhartha Khosla=Only Murders in the Building; Christopher Willis=Schmigadoon!; Nicholas Britell=Succession
+SCORE_L: Cristobal Tapia de Veer=The White Lotus*; Brian Tyler, Breton Vivian=1883; Hesham Nazih=Moon Knight; Dan Romer=Station Eleven; Nathan Barr=A Very British Scandal
+THEME: Cristobal Tapia de Veer=The White Lotus*; Natalie Holt=Loki; Siddhartha Khosla=Only Murders in the Building; Theodore Shapiro=Severance; Jung Jae-il=Squid Game
+SONG: Corn Puddin'=Schmigadoon!=Cinco Paul*; I'm Tired=Euphoria=Labrinth, Sam Levinson, Zendaya; Elliot's Song=Euphoria=Labrinth, Muz, Zendaya; Maybe Monica=The Marvelous Mrs. Maisel=Thomas Mizer, Curtis Moore; The Forever Now=This Is Us=Taylor Goldsmith, Siddhartha Khosla
+
+@2023|75th|2022
+SER_D: Succession*; Andor; Better Call Saul; The Crown; House of the Dragon; The Last of Us; The White Lotus; Yellowjackets
+SER_C: The Bear*; Abbott Elementary; Barry; Jury Duty; The Marvelous Mrs. Maisel; Only Murders in the Building; Ted Lasso; Wednesday
+SER_L: Beef*; Dahmer – Monster: The Jeffrey Dahmer Story; Daisy Jones & the Six; Fleishman Is in Trouble; Obi-Wan Kenobi
+ACT_D: Kieran Culkin=Succession*; Jeff Bridges=The Old Man; Brian Cox=Succession; Bob Odenkirk=Better Call Saul; Pedro Pascal=The Last of Us; Jeremy Strong=Succession
+ACTR_D: Sarah Snook=Succession*; Sharon Horgan=Bad Sisters; Melanie Lynskey=Yellowjackets; Elisabeth Moss=The Handmaid's Tale; Bella Ramsey=The Last of Us; Keri Russell=The Diplomat
+ACT_C: Jeremy Allen White=The Bear*; Bill Hader=Barry; Jason Segel=Shrinking; Martin Short=Only Murders in the Building; Jason Sudeikis=Ted Lasso
+ACTR_C: Quinta Brunson=Abbott Elementary*; Christina Applegate=Dead to Me; Rachel Brosnahan=The Marvelous Mrs. Maisel; Natasha Lyonne=Poker Face; Jenna Ortega=Wednesday
+ACT_L: Steven Yeun=Beef*; Taron Egerton=Black Bird; Kumail Nanjiani=Welcome to Chippendales; Evan Peters=Dahmer – Monster: The Jeffrey Dahmer Story; Daniel Radcliffe=Weird: The Al Yankovic Story; Michael Shannon=George & Tammy
+ACTR_L: Ali Wong=Beef*; Lizzy Caplan=Fleishman Is in Trouble; Jessica Chastain=George & Tammy; Dominique Fishback=Swarm; Kathryn Hahn=Tiny Beautiful Things; Riley Keough=Daisy Jones & the Six
+SUPACT_D: Matthew Macfadyen=Succession*; F. Murray Abraham=The White Lotus; Nicholas Braun=Succession; Michael Imperioli=The White Lotus; Theo James=The White Lotus; Alan Ruck=Succession; Will Sharpe=The White Lotus; Alexander Skarsgård=Succession
+SUPACTR_D: Jennifer Coolidge=The White Lotus*; Elizabeth Debicki=The Crown; Meghann Fahy=The White Lotus; Sabrina Impacciatore=The White Lotus; Aubrey Plaza=The White Lotus; Rhea Seehorn=Better Call Saul; J. Smith-Cameron=Succession; Simona Tabasco=The White Lotus
+SUPACT_C: Ebon Moss-Bachrach=The Bear*; Anthony Carrigan=Barry; Phil Dunster=Ted Lasso; Brett Goldstein=Ted Lasso; James Marsden=Jury Duty; Tyler James Williams=Abbott Elementary; Henry Winkler=Barry
+SUPACTR_C: Ayo Edebiri=The Bear*; Alex Borstein=The Marvelous Mrs. Maisel; Janelle James=Abbott Elementary; Sheryl Lee Ralph=Abbott Elementary; Juno Temple=Ted Lasso; Hannah Waddingham=Ted Lasso; Jessica Williams=Shrinking
+SUPACT_L: Paul Walter Hauser=Black Bird*; Murray Bartlett=Welcome to Chippendales; Richard Jenkins=Dahmer – Monster: The Jeffrey Dahmer Story; Joseph Lee=Beef; Ray Liotta=Black Bird; Young Mazino=Beef; Jesse Plemons=Love & Death
+SUPACTR_L: Niecy Nash-Betts=Dahmer – Monster: The Jeffrey Dahmer Story*; Annaleigh Ashford=Welcome to Chippendales; Maria Bello=Beef; Claire Danes=Fleishman Is in Trouble; Juliette Lewis=Welcome to Chippendales; Camila Morrone=Daisy Jones & the Six; Merritt Wever=Tiny Beautiful Things
+DIR_D: Mark Mylod (Connor's Wedding)=Succession*; Benjamin Caron (Rix Road)=Andor; Dearbhla Walsh (The Prick)=Bad Sisters; Peter Hoar (Long, Long Time)=The Last of Us; Andrij Parekh (America Decides)=Succession; Lorene Scafaria (Living+)=Succession; Mike White (Arrivederci)=The White Lotus
+DIR_C: Christopher Storer (Review)=The Bear*; Bill Hader (wow)=Barry; Amy Sherman-Palladino (Four Minutes)=The Marvelous Mrs. Maisel; Mary Lou Belli (Don't Touch My Hair)=The Ms. Pat Show; Declan Lowney (So Long, Farewell)=Ted Lasso; Tim Burton (Wednesday's Child Is Full of Woe)=Wednesday
+DIR_L: Lee Sung Jin (Figures of Light)=Beef*; Jake Schreier (The Great Fabricator)=Beef; Carl Franklin (Bad Meat)=Dahmer – Monster: The Jeffrey Dahmer Story; Paris Barclay (Silenced)=Dahmer – Monster: The Jeffrey Dahmer Story; Jonathan Dayton, Valerie Faris (Me-Time)=Fleishman Is in Trouble; Dan Trachtenberg (Prey)=Prey
+SCORE: Cristobal Tapia de Veer=The White Lotus*; Nicholas Britell=Andor; Gustavo Santaolalla=The Last of Us; Nicholas Britell=Succession; Danny Elfman, Chris Bacon=Wednesday
+SCORE_L: Leo Birenberg, Zach Robinson=Weird: The Al Yankovic Story*; John Debney=Hocus Pocus 2; Laura Karpman=Ms. Marvel; Sarah Schachner=Prey; Ariel Marx=A Small Light
+THEME: Danny Elfman=Wednesday*; Nicholas Britell=Andor; Holly Amber Church=Guillermo del Toro's Cabinet of Curiosities; Howard Shore=The Lord of the Rings: The Rings of Power; Laura Karpman=Ms. Marvel
+SONG: A Beautiful Game=Ted Lasso=Ed Sheeran, Foy Vance, Max Martin*; Marriage Is a Dungeon=Ginny & Georgia=Lili Haydn, Ben Bromfield; All About Me=The L Word: Generation Q=Heather McIntosh, Taura Stinson, Allyson Newman; Your Personal Trash Man Can=The Marvelous Mrs. Maisel=Curtis Moore, Thomas Mizer; Fought & Lost=Ted Lasso=Tom Howe, Jamie Hartman, Sam Ryder; Now You Know=Weird: The Al Yankovic Story="Weird Al" Yankovic
+
+@2024|76th|2023
+SER_D: Shōgun*; The Crown; Fallout; The Gilded Age; The Morning Show; Mr. & Mrs. Smith; Slow Horses; 3 Body Problem
+SER_C: Hacks*; Abbott Elementary; The Bear; Curb Your Enthusiasm; Only Murders in the Building; Palm Royale; Reservation Dogs; What We Do in the Shadows
+SER_L: Baby Reindeer*; Fargo; Lessons in Chemistry; Ripley; True Detective: Night Country
+ACT_D: Hiroyuki Sanada=Shōgun*; Idris Elba=Hijack; Donald Glover=Mr. & Mrs. Smith; Walton Goggins=Fallout; Gary Oldman=Slow Horses; Dominic West=The Crown
+ACTR_D: Anna Sawai=Shōgun*; Jennifer Aniston=The Morning Show; Carrie Coon=The Gilded Age; Maya Erskine=Mr. & Mrs. Smith; Imelda Staunton=The Crown; Reese Witherspoon=The Morning Show
+ACT_C: Jeremy Allen White=The Bear*; Matt Berry=What We Do in the Shadows; Larry David=Curb Your Enthusiasm; Steve Martin=Only Murders in the Building; Martin Short=Only Murders in the Building; D'Pharaoh Woon-A-Tai=Reservation Dogs
+ACTR_C: Jean Smart=Hacks*; Quinta Brunson=Abbott Elementary; Ayo Edebiri=The Bear; Selena Gomez=Only Murders in the Building; Maya Rudolph=Loot; Kristen Wiig=Palm Royale
+ACT_L: Richard Gadd=Baby Reindeer*; Matt Bomer=Fellow Travelers; Jon Hamm=Fargo; Tom Hollander=Feud: Capote vs. The Swans; Andrew Scott=Ripley
+ACTR_L: Jodie Foster=True Detective: Night Country*; Brie Larson=Lessons in Chemistry; Juno Temple=Fargo; Sofía Vergara=Griselda; Naomi Watts=Feud: Capote vs. The Swans
+SUPACT_D: Billy Crudup=The Morning Show*; Tadanobu Asano=Shōgun; Mark Duplass=The Morning Show; Jon Hamm=The Morning Show; Takehiro Hira=Shōgun; Jack Lowden=Slow Horses; Jonathan Pryce=The Crown
+SUPACTR_D: Elizabeth Debicki=The Crown*; Christine Baranski=The Gilded Age; Nicole Beharie=The Morning Show; Greta Lee=The Morning Show; Lesley Manville=The Crown; Karen Pittman=The Morning Show; Holland Taylor=The Morning Show
+SUPACT_C: Ebon Moss-Bachrach=The Bear*; Lionel Boyce=The Bear; Paul W. Downs=Hacks; Paul Rudd=Only Murders in the Building; Tyler James Williams=Abbott Elementary; Bowen Yang=Saturday Night Live
+SUPACTR_C: Liza Colón-Zayas=The Bear*; Carol Burnett=Palm Royale; Hannah Einbinder=Hacks; Janelle James=Abbott Elementary; Sheryl Lee Ralph=Abbott Elementary; Meryl Streep=Only Murders in the Building
+SUPACT_L: Lamorne Morris=Fargo*; Jonathan Bailey=Fellow Travelers; Robert Downey Jr.=The Sympathizer; Tom Goodman-Hill=Baby Reindeer; John Hawkes=True Detective: Night Country; Lewis Pullman=Lessons in Chemistry; Treat Williams=Feud: Capote vs. The Swans
+SUPACTR_L: Jessica Gunning=Baby Reindeer*; Dakota Fanning=Ripley; Lily Gladstone=Under the Bridge; Aja Naomi King=Lessons in Chemistry; Diane Lane=Feud: Capote vs. The Swans; Nava Mau=Baby Reindeer; Kali Reis=True Detective: Night Country
+DIR_D: Frederick E. O. Toye (Crimson Sky)=Shōgun*; Stephen Daldry (Sleep, Dearie Sleep)=The Crown; Mimi Leder (The Overview Effect)=The Morning Show; Hiro Murai (First Date)=Mr. & Mrs. Smith; Saul Metzstein (Strange Games)=Slow Horses; Salli Richardson-Whitfield (Beat L.A.)=Winning Time: The Rise of the Lakers Dynasty
+DIR_C: Christopher Storer (Fishes)=The Bear*; Randall Einhorn (Party)=Abbott Elementary; Ramy Youssef (Honeydew)=The Bear; Guy Ritchie (Refined Aggression)=The Gentlemen; Lucia Aniello (Bulletproof)=Hacks; Mary Lou Belli (I'm the Pappy)=The Ms. Pat Show
+DIR_L: Steven Zaillian=Ripley*; Weronika Tofilska (Episode 4)=Baby Reindeer; Noah Hawley (The Tragedy of the Commons)=Fargo; Gus Van Sant (Pilot)=Feud: Capote vs. The Swans; Millicent Shelton (Poirot)=Lessons in Chemistry; Issa López=True Detective: Night Country
+SCORE: Siddhartha Khosla=Only Murders in the Building*; Martin Phipps=The Crown; David Fleming=Mr. & Mrs. Smith; Jeff Toyne=Palm Royale; Atticus Ross, Leopold Ross, Nick Chuba=Shōgun; Atli Örvarsson=Silo; Daniel Pemberton, Toydrum=Slow Horses
+SCORE_L: Carlos Rafael Rivera=Lessons in Chemistry*; James Newton Howard=All the Light We Cannot See; Jeff Russo=Fargo; Chanda Dancy=Lawmen: Bass Reeves; Kara Talve, Hans Zimmer=The Tattooist of Auschwitz
+THEME: Jeff Toyne=Palm Royale*; Thomas Newman=Feud: Capote vs. The Swans; Carlos Rafael Rivera=Lessons in Chemistry; Blake Neely=Masters of the Air; Atticus Ross, Leopold Ross, Nick Chuba=Shōgun
+SONG: Which of the Pickwick Triplets Did It?=Only Murders in the Building=Benj Pasek, Justin Paul, Marc Shaiman, Scott Wittman*; The Medium Time=Girls5eva=Sara Bareilles; Maya Rudolph Mother's Day Monologue=Saturday Night Live=Eli Brueggemann, Mike DiCenzo, Jake Nordwind, Maya Rudolph, Auguste White; Love Will Survive=The Tattooist of Auschwitz=Walter Afanasieff, Kara Talve, Hans Zimmer, Charlie Midnight; No Use=True Detective: Night Country=John Hawkes
+
+@2025|77th|2024
+SER_D: The Pitt*; Andor; The Diplomat; The Last of Us; Paradise; Severance; Slow Horses; The White Lotus
+SER_C: The Studio*; Abbott Elementary; The Bear; Hacks; Nobody Wants This; Only Murders in the Building; Shrinking; What We Do in the Shadows
+SER_L: Adolescence*; Black Mirror; Dying for Sex; Monsters: The Lyle and Erik Menendez Story; The Penguin
+ACT_D: Noah Wyle=The Pitt*; Sterling K. Brown=Paradise; Gary Oldman=Slow Horses; Pedro Pascal=The Last of Us; Adam Scott=Severance
+ACTR_D: Britt Lower=Severance*; Kathy Bates=Matlock; Sharon Horgan=Bad Sisters; Bella Ramsey=The Last of Us; Keri Russell=The Diplomat
+ACT_C: Seth Rogen=The Studio*; Adam Brody=Nobody Wants This; Jason Segel=Shrinking; Martin Short=Only Murders in the Building; Jeremy Allen White=The Bear
+ACTR_C: Jean Smart=Hacks*; Uzo Aduba=The Residence; Kristen Bell=Nobody Wants This; Quinta Brunson=Abbott Elementary; Ayo Edebiri=The Bear
+ACT_L: Stephen Graham=Adolescence*; Colin Farrell=The Penguin; Jake Gyllenhaal=Presumed Innocent; Brian Tyree Henry=Dope Thief; Cooper Koch=Monsters: The Lyle and Erik Menendez Story
+ACTR_L: Cristin Milioti=The Penguin*; Cate Blanchett=Disclaimer; Meghann Fahy=Sirens; Rashida Jones=Black Mirror; Michelle Williams=Dying for Sex
+SUPACT_D: Tramell Tillman=Severance*; Zach Cherry=Severance; Walton Goggins=The White Lotus; Jason Isaacs=The White Lotus; James Marsden=Paradise; Sam Rockwell=The White Lotus; John Turturro=Severance
+SUPACTR_D: Katherine LaNasa=The Pitt*; Patricia Arquette=Severance; Carrie Coon=The White Lotus; Julianne Nicholson=Paradise; Parker Posey=The White Lotus; Natasha Rothwell=The White Lotus; Aimee Lou Wood=The White Lotus
+SUPACT_C: Jeff Hiller=Somebody Somewhere*; Ike Barinholtz=The Studio; Colman Domingo=The Four Seasons; Harrison Ford=Shrinking; Ebon Moss-Bachrach=The Bear; Michael Urie=Shrinking; Bowen Yang=Saturday Night Live
+SUPACTR_C: Hannah Einbinder=Hacks*; Liza Colón-Zayas=The Bear; Kathryn Hahn=The Studio; Janelle James=Abbott Elementary; Catherine O'Hara=The Studio; Sheryl Lee Ralph=Abbott Elementary; Jessica Williams=Shrinking
+SUPACT_L: Owen Cooper=Adolescence*; Javier Bardem=Monsters: The Lyle and Erik Menendez Story; Bill Camp=Presumed Innocent; Rob Delaney=Dying for Sex; Peter Sarsgaard=Presumed Innocent; Ashley Walters=Adolescence
+SUPACTR_L: Erin Doherty=Adolescence*; Ruth Negga=Presumed Innocent; Deirdre O'Connell=The Penguin; Chloë Sevigny=Monsters: The Lyle and Erik Menendez Story; Jenny Slate=Dying for Sex; Christine Tremarco=Adolescence
+DIR_D: Adam Randall (Hello Goodbye)=Slow Horses*; Janus Metz (Who Are You?)=Andor; Amanda Marsalis (6:00 P.M.)=The Pitt; John Wells (7:00 A.M.)=The Pitt; Jessica Lee Gagné (Chikhai Bardo)=Severance; Ben Stiller (Cold Harbor)=Severance; Mike White (Amor Fati)=The White Lotus
+DIR_C: Seth Rogen, Evan Goldberg (The Oner)=The Studio*; Ayo Edebiri (Napkins)=The Bear; Lucia Aniello (A Slippery Slope)=Hacks; James Burrows (Here's to You, Mrs. Schneiderman)=Mid-Century Modern; Nathan Fielder (Pilot's Code)=The Rehearsal
+DIR_L: Philip Barantini=Adolescence*; Shannon Murphy (It's Not That Serious)=Dying for Sex; Helen Shaver (Cent'Anni)=The Penguin; Jennifer Getzinger (A Great or Little Thing)=The Penguin; Nicole Kassell (Exile)=Sirens; Lesli Linka Glatter=Zero Day
+SCORE: Theodore Shapiro=Severance*; Brandon Roberts=Andor; Sherri Chung=Based on a True Story; Leo Birenberg, Zach Robinson=Cobra Kai; Antonio Sánchez=The Studio; Cristobal Tapia de Veer=The White Lotus
+SCORE_L: Mick Giacchino=The Penguin*; Ariel Marx=Black Mirror; Daniel Pemberton=Black Mirror; Ariel Marx=Dying for Sex; Thomas Newman, Julia Newman=Monsters: The Lyle and Erik Menendez Story; Kathryn Bostic=The Supremes at Earl's All-You-Can-Eat
+THEME: Cristobal Tapia de Veer=The White Lotus*; Carlos Rafael Rivera, Scott Frank=Dept. Q; Volker Bertelmann=Dune: Prophecy; Kamasi Washington=Lazarus; Mark Mothersbaugh=The Residence; Dominic Lewis, Hamilton Leithauser=Your Friends & Neighbors
+SONG: Need Someone=The Pitt=Andrew Bird, Gavin Brivik*; Let's Put the Christ Back in Christmas=The Boys=Christopher Lennertz; The Ballad of the Witches' Road=Agatha All Along=Kristen Anderson-Lopez, Robert Lopez; We Are the Ghor (Planetary Anthem)=Andor=Nicholas Britell, Tony Gilroy; Adam Sandler's Song: 50 Years=SNL50: The Anniversary Special=Adam Sandler, Dan Bulla; Harper and Will Go West=Will & Harper=Sean Douglas, Kristen Wiig, Josh Greenbaum
+
+@2026|78th|2025
+SER_D: The Diplomat; The Gilded Age; A Knight of the Seven Kingdoms; Paradise; The Pitt*; Pluribus; Slow Horses; Your Friends & Neighbors
+SER_C: Abbott Elementary; The Bear; Hacks; Margo's Got Money Troubles; Nobody Wants This; Only Murders in the Building; Shrinking; Widow's Bay*
+SER_L: The Beast in Me; All Her Fault; Beef; DTF St. Louis*; Love Story: John F. Kennedy Jr. and Carolyn Bessette
+ACT_D: Sterling K. Brown=Paradise; Gary Oldman=Slow Horses; Mark Ruffalo=Task; Rufus Sewell=The Diplomat; Noah Wyle=The Pitt*
+ACTR_D: Carrie Coon=The Gilded Age; Chase Infiniti=The Testaments; Keri Russell=The Diplomat; Rhea Seehorn=Pluribus*; Zendaya=Euphoria
+ACT_C: Yahya Abdul-Mateen II=Wonder Man; Matthew Rhys=Widow's Bay*; Steve Carell=Rooster; Jason Segel=Shrinking; Martin Short=Only Murders in the Building
+ACTR_C: Quinta Brunson=Abbott Elementary; Ayo Edebiri=The Bear; Elle Fanning=Margo's Got Money Troubles; Lisa Kudrow=The Comeback; Jean Smart=Hacks*
+ACT_L: Oscar Isaac=Beef; Matthew Rhys=The Beast in Me*; Charlie Hunnam=Monster: The Ed Gein Story; Jason Bateman=Black Rabbit; Riz Ahmed=Bait
+ACTR_L: Carey Mulligan=Beef; Claire Danes=The Beast in Me; Sally Field=Remarkably Bright Creatures*; Sarah Pidgeon=Love Story: John F. Kennedy Jr. and Carolyn Bessette; Sarah Snook=All Her Fault
+SUPACT_D: Patrick Ball=The Pitt; Shawn Hatosy=The Pitt; Gerran Howell=The Pitt; Billy Crudup=The Morning Show; Jack Lowden=Slow Horses; Tom Pelphrey=Task*; Carlos Manuel Vesga=Pluribus
+SUPACTR_D: Taylor Dearden=The Pitt; Fiona Dourif=The Pitt; Katherine LaNasa=The Pitt; Sepideh Moafi=The Pitt; Julianne Nicholson=Paradise; Karolina Wydra=Pluribus; Allison Janney=The Diplomat*
+SUPACT_C: Colman Domingo=The Four Seasons; Paul W. Downs=Hacks; Harrison Ford=Shrinking; Michael Urie=Shrinking; Nick Offerman=Margo's Got Money Troubles; Stephen Root=Widow's Bay*; Tyler James Williams=Abbott Elementary
+SUPACTR_C: Janelle James=Abbott Elementary; Dale Dickey=Widow's Bay; Kate O'Flynn=Widow's Bay*; Hannah Einbinder=Hacks; Megan Stalter=Hacks; Jessica Williams=Shrinking; Michelle Pfeiffer=Margo's Got Money Troubles
+SUPACT_L: Jason Bateman=DTF St. Louis; Richard Gadd=Half Man; David Harbour=DTF St. Louis*; Richard Jenkins=DTF St. Louis; Charles Melton=Beef; Nick Offerman=Death by Lightning
+SUPACTR_L: Linda Cardellini=DTF St. Louis*; Dakota Fanning=All Her Fault; Laurie Metcalf=Monster: The Ed Gein Story; Joy Sunday=DTF St. Louis; Youn Yuh-jung=Beef; Constance Zimmer=Love Story: John F. Kennedy Jr. and Carolyn Bessette
+DIR_D: Salli Richardson-Whitfield (The Gilded Age)=The Gilded Age; Salli Richardson-Whitfield=Task; Hanelle M. Culpepper=Paradise; Noah Wyle=The Pitt; Vince Gilligan=Pluribus; Saul Metzstein (Scars)=Slow Horses*
+DIR_C: Randall Einhorn=Abbott Elementary; Christopher Storer=The Bear; Andrew DeYoung=The Chair Company; Lucia Aniello=Hacks; Mary Lou Belli=The Ms. Pat Show; Hiro Murai (Welcome to Widow's Bay!)=Widow's Bay*
+DIR_L: Jake Schreier (It Will Stay This Way and You Will Obey)=Beef; Lee Sung Jin (Oh, the Comfort, the Inexpressible Comfort)=Beef; Jason Bateman (The Black Rabbits)=Black Rabbit; Steven Conrad=DTF St. Louis*
+SCORE: Dan Romer=A Knight of the Seven Kingdoms; Jeff Toyne=Palm Royale; Dave Porter=Pluribus; Daniel Pemberton, Toydrum=Slow Horses; Kris Bowers, Michael Dean Parsons=Spider-Noir; David Fleming=Widow's Bay*
+SONG: Raise Him Up=The Boys=Christopher Lennertz, Daveed Diggs; Mis Figuritas=Hacks=Carlos Rafael Rivera, David Stal; Need Someone=The Pitt=Gavin Brivik, Andrew Bird*; Christian Woman=South Park=Trey Parker; The Devil You Know=Spider-Noir=Warren Oak Felder, Sebastian Kole, Daniel Pemberton; The Dead Dance=Wednesday=Lady Gaga, Andrew Watt, Henry Russell Walter
+
+@2027|79th|2026

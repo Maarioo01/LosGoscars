@@ -273,6 +273,8 @@ SUPACTRESS: Nagore Aranburu=Los domingos*; Elvira Mínguez=La cena; Miryam Galle
 SCORE: Kangding Ray=Sirāt*; Carla F. Benedicto=El talento; Iván Palomares=Leo & Lou; Julio de la Rosa=Los Tigres; Aránzazu Calleja=Maspalomas
 SONG: Flores para Antonio=Flores para Antonio=Alba Flores & Sílvia Pérez Cruz*; La Arepera=¡Caigan las rosas blancas!=Paloma Peñarrubia Ruiz; Hasta que me quede sin voz=Hasta que me quede sin voz=Leiva; Y mientras tanto, canto=La cena=Víctor Manuel; Caminar el tiempo=Parecido a un asesinato=Blanca Paloma Ramos, Jose Pablo Polo & Luis Ivars
 
+@2027|41st|2026
+
 #EN
 Todo sobre mi madre | All About My Mother
 Solas | Alone

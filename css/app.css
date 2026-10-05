@@ -19,6 +19,8 @@
   color-scheme: dark;
 }
 :root[data-award="goyas"] { --accent: #ee8a5b; --accent-ink: #1e0d05; --accent-soft: rgba(238, 138, 91, 0.15); }
+:root[data-award="emmys"] { --accent: #5cb8f0; --accent-ink: #04141f; --accent-soft: rgba(92, 184, 240, 0.15); }
+:root[data-award="globes"] { --accent: #b497f2; --accent-ink: #120a24; --accent-soft: rgba(180, 151, 242, 0.16); }
 
 @media (prefers-color-scheme: light) {
   :root {
@@ -37,6 +39,8 @@
     color-scheme: light;
   }
   :root[data-award="goyas"] { --accent: #b2461b; --accent-ink: #ffffff; --accent-soft: rgba(178, 70, 27, 0.1); }
+  :root[data-award="emmys"] { --accent: #0e6fa8; --accent-ink: #ffffff; --accent-soft: rgba(14, 111, 168, 0.1); }
+  :root[data-award="globes"] { --accent: #7a4fd0; --accent-ink: #ffffff; --accent-soft: rgba(122, 79, 208, 0.1); }
 }
 
 * { box-sizing: border-box; }
@@ -324,3 +328,10 @@ code { background: var(--surface-2); padding: 1px 6px; border-radius: 6px; font-
   .film { grid-template-columns: 92px 1fr auto; }
   .poster { width: 92px; }
 }
+
+/* award switch inside Films / Series */
+.seg { display: flex; padding: 3px; gap: 3px; margin-bottom: 12px; background: var(--surface); border: 1px solid var(--line, rgba(128,128,128,.25)); border-radius: 12px; }
+.seg-i { flex: 1; text-align: center; padding: 9px 8px; border-radius: 9px; color: var(--muted); font-weight: 600; text-decoration: none; }
+.seg-i.active { background: var(--accent); color: var(--accent-ink); }
+.year-card.upcoming { opacity: .75; border-style: dashed; }
+.yc-win { overflow-wrap: anywhere; }

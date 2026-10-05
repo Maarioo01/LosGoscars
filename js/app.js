@@ -7,15 +7,14 @@
   // constants
   // ------------------------------------------------------------------------------------------
   var AW = {
-    oscars: { name: 'Oscars', long: 'Academy Awards', tab: 'oscars' },
-    goyas: { name: 'Goyas', long: 'Goya Awards', tab: 'goyas' },
+    oscars: { name: 'Oscars', long: 'Academy Awards', group: 'films', kind: 'film' },
+    goyas: { name: 'Goyas', long: 'Goya Awards', group: 'films', kind: 'film' },
+    emmys: { name: 'Emmys', long: 'Primetime Emmy Awards', group: 'series', kind: 'tv' },
+    globes: { name: 'Globes', long: 'Golden Globe Awards', group: 'series', kind: 'tv' },
   };
-  var CAT_ORDER = ['PIC', 'DIR', 'ACTOR', 'ACTRESS', 'SUPACTOR', 'SUPACTRESS', 'SCORE', 'SONG'];
-  var CAT_LABEL = {
-    oscars: { PIC: 'Best Picture', DIR: 'Best Director', ACTOR: 'Best Actor', ACTRESS: 'Best Actress', SUPACTOR: 'Best Supporting Actor', SUPACTRESS: 'Best Supporting Actress', SCORE: 'Best Original Score', SONG: 'Best Original Song' },
-    goyas: { PIC: 'Best Film', DIR: 'Best Director', ACTOR: 'Best Leading Actor', ACTRESS: 'Best Leading Actress', SUPACTOR: 'Best Supporting Actor', SUPACTRESS: 'Best Supporting Actress', SCORE: 'Best Original Score', SONG: 'Best Original Song' },
-  };
-  var CAT_SHORT = { PIC: 'Picture', DIR: 'Director', ACTOR: 'Actor', ACTRESS: 'Actress', SUPACTOR: 'Supp. Actor', SUPACTRESS: 'Supp. Actress', SCORE: 'Score', SONG: 'Song' };
+  var GROUPS = { films: ['oscars', 'goyas'], series: ['emmys', 'globes'] };
+  var AWARDS = ['oscars', 'goyas', 'emmys', 'globes'];
+  var CATS = {}; // award -> {order:[k], def:{k:{k,label,short,t,main,music}}}
   var STAR_PATH = 'M12 2.5l2.7 5.5 6 .9-4.4 4.2 1 6-5.3-2.8-5.3 2.8 1-6L3.3 8.9l6-.9z';
   var CHECK = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>';
   var NOTE_ICON = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/></svg>';
@@ -61,21 +60,30 @@
   // ------------------------------------------------------------------------------------------
   var DATA = {};
   var FILMS = {};
-  var ALL = { oscars: [], goyas: [] };
-  var BY_TITLE = { oscars: new Map(), goyas: new Map() };
-  FA.data = { DATA: DATA, FILMS: FILMS, ALL: ALL }; // handy for debugging in the console
+  var ALL = { oscars: [], goyas: [], emmys: [], globes: [] };
+  var BY_TITLE = { oscars: new Map(), goyas: new Map(), emmys: new Map(), globes: new Map() };
+  var UIDS = {};   // user-data id -> latest record (a TV series shares one id across years and awards)
+  var BY_UID = {}; // user-data id -> all records
+  FA.data = { DATA: DATA, FILMS: FILMS, ALL: ALL, UIDS: UIDS, CATS: CATS }; // handy for debugging in the console
 
   function indexData(award, data) {
     DATA[award] = data;
+    var cm = { order: [], def: {} };
+    data.cats.forEach(function (c) { cm.order.push(c.k); cm.def[c.k] = c; });
+    CATS[award] = cm;
     data.years.sort(function (a, b) { return a.year - b.year; });
     data.years.forEach(function (y) {
       y.films.forEach(function (f) {
         f.award = award;
+        f.kind = data.kind;
+        f.uid = f.sid || f.id;
         f.cy = y.year;
         f.ceremony = y.ceremony;
         f.wins = f.noms.filter(function (n) { return n.w; }).length;
         FILMS[f.id] = f;
         ALL[award].push(f);
+        if (!UIDS[f.uid] || f.cy >= UIDS[f.uid].cy) UIDS[f.uid] = f;
+        (BY_UID[f.uid] = BY_UID[f.uid] || []).push(f);
         [f.title, f.titleEn].forEach(function (t) {
           if (!t) return;
           var k = tmdb.norm(t);
@@ -86,7 +94,7 @@
     });
   }
   function loadData() {
-    return Promise.all(['oscars', 'goyas'].map(function (k) {
+    return Promise.all(AWARDS.map(function (k) {
       return fetch('data/' + k + '.json').then(function (r) {
         if (!r.ok) throw new Error('Could not load data/' + k + '.json (' + r.status + ')');
         return r.json();
@@ -95,12 +103,24 @@
   }
   function yearObj(f) { return DATA[f.award].years.filter(function (y) { return y.year === f.cy; })[0]; }
   function ceremonyName(award, y) { return y.ceremony + ' ' + AW[award].long; }
-  function label(f, c) { return CAT_LABEL[f.award][c]; }
+  function label(f, c) { return CATS[f.award].def[c].label; }
+  function shortLabel(f, c) { return CATS[f.award].def[c].short; }
+  function isMain(f, c) { return !!CATS[f.award].def[c].main; }
+  function uidOf(id) { return FILMS[id] ? FILMS[id].uid : id; }
+  function seasonLabel(fy) { return 'Season ' + fy + '–' + String(fy + 1).slice(2); }
+  function noun(award, n) { return AW[award].kind === 'tv' ? (n === 1 ? 'series' : 'series') : (n === 1 ? 'film' : 'films'); }
+  function mainName(award) { return AW[award].kind === 'tv' ? 'Series' : CATS[award].def[CATS[award].order[0]].label; }
+  function uniq(list) { var seen = {}, out = []; list.forEach(function (f) { if (!seen[f.uid]) { seen[f.uid] = 1; out.push(f); } }); return out; }
 
-  // the same film in the other award (e.g. a Spanish film at both the Goyas and the Oscars)
+  // the same title in the sibling award (Oscars <-> Goyas, Emmys <-> Globes), or elsewhere for a series
   function crossFilms(f) {
-    var other = f.award === 'oscars' ? 'goyas' : 'oscars';
     var seen = {}, out = [];
+    if (f.kind === 'tv') {
+      (BY_UID[f.uid] || []).forEach(function (g) { if (g.id !== f.id) out.push(g); });
+      out.sort(function (a, b) { return b.cy - a.cy || a.award.localeCompare(b.award); });
+      return out;
+    }
+    var other = f.award === 'oscars' ? 'goyas' : 'oscars';
     [f.title, f.titleEn].forEach(function (t) {
       if (!t) return;
       (BY_TITLE[other].get(tmdb.norm(t)) || []).forEach(function (g) {
@@ -112,7 +132,7 @@
 
   function winnersOf(award, y) {
     var out = [];
-    CAT_ORDER.forEach(function (c) {
+    CATS[award].order.forEach(function (c) {
       y.films.forEach(function (f) {
         f.noms.forEach(function (n) { if (n.c === c && n.w) out.push({ c: c, film: f, nom: n }); });
       });
@@ -120,21 +140,21 @@
     return out;
   }
 
-  function seenCount(films) { return films.filter(function (f) { return store.isSeen(f.id); }).length; }
+  function seenCount(films) { return uniq(films).filter(function (f) { return store.isSeen(f.uid); }).length; }
   function pct(a, b) { return b ? Math.round((a / b) * 100) : 0; }
 
   // ------------------------------------------------------------------------------------------
   // small renderers
   // ------------------------------------------------------------------------------------------
   function posterHTML(f, size) {
-    var e = tmdb.cached(f.id);
+    var e = tmdb.cached(f.uid);
     var src = e && e.p ? tmdb.img(e.p, size || 'w185') : '';
     return '<span class="ph" style="--h:' + hue(f.title) + '"><span>' + esc(initials(f.title)) + '</span></span>' +
       (src ? '<img src="' + esc(src) + '" alt="" loading="lazy" decoding="async">' : '');
   }
 
   function tmdbScoreHTML(f) {
-    var e = tmdb.cached(f.id);
+    var e = tmdb.cached(f.uid);
     if (e && e.r) return '★ <b>' + e.r.toFixed(1) + '</b> TMDB';
     if (e && e.i) return '★ <b>–</b> TMDB';
     if (!tmdb.hasKey() || (e && e.m)) return '';
@@ -143,23 +163,25 @@
 
   function badgesHTML(f) {
     var out = [];
-    var wins = f.noms.filter(function (n) { return n.w && n.c !== 'PIC'; });
-    if (f.pic === 'winner') out.push('<span class="badge win">🏆 ' + esc(label(f, 'PIC')) + '</span>');
-    else if (f.pic === 'nominee') out.push('<span class="badge nom">' + esc(label(f, 'PIC')) + ' nominee</span>');
+    var mains = f.noms.filter(function (n) { return isMain(f, n.c); });
+    var wins = f.noms.filter(function (n) { return n.w && !isMain(f, n.c); });
+    var mw = mains.filter(function (n) { return n.w; });
+    if (mw.length) mw.slice(0, 2).forEach(function (n) { out.push('<span class="badge win">🏆 ' + esc(f.kind === 'tv' ? shortLabel(f, n.c) + ' series' : label(f, n.c)) + '</span>'); });
+    else if (mains.length) out.push('<span class="badge nom">' + esc(f.kind === 'tv' ? shortLabel(f, mains[0].c) + ' series' : label(f, mains[0].c)) + ' nominee</span>');
     if (wins.length) {
-      var max = f.pic ? 2 : 3;
+      var max = mains.length ? 2 : 3;
       var shown = {};
       wins.forEach(function (n) {
         if (Object.keys(shown).length >= max || shown[n.c]) return;
         shown[n.c] = 1;
-        out.push('<span class="badge win">🏆 ' + esc(CAT_SHORT[n.c]) + '</span>');
+        out.push('<span class="badge win">🏆 ' + esc(shortLabel(f, n.c)) + '</span>');
       });
       var rest = wins.length - Object.keys(shown).length;
       if (rest > 0) out.push('<span class="badge win">+' + rest + '</span>');
-    } else if (!f.pic) {
+    } else if (!mains.length) {
       var cats = [];
       f.noms.forEach(function (n) { if (cats.indexOf(n.c) < 0) cats.push(n.c); });
-      cats.slice(0, 3).forEach(function (c) { out.push('<span class="badge nom">' + esc(CAT_SHORT[c]) + '</span>'); });
+      cats.slice(0, 3).forEach(function (c) { out.push('<span class="badge nom">' + esc(shortLabel(f, c)) + '</span>'); });
       if (cats.length > 3) out.push('<span class="badge nom">+' + (cats.length - 3) + '</span>');
     }
     return out.join('');
@@ -173,16 +195,17 @@
 
   function filmRow(f, opts) {
     opts = opts || {};
-    var u = store.get(f.id);
+    var u = store.get(f.uid);
     var seen = !!u.s;
     var note = u.n || '';
     var open = openNotes.has(f.id);
     var sub = [];
     if (opts.context) sub.push(opts.context);
     if (f.titleEn) sub.push(f.titleEn);
-    sub.push(f.year);
-    if (f.director) sub.push('Dir. ' + f.director);
-    var e = tmdb.cached(f.id);
+    if (f.kind === 'tv') sub.push(seasonLabel(f.year));
+    else sub.push(f.year);
+    if (f.director) sub.push((f.kind === 'tv' ? 'By ' : 'Dir. ') + f.director);
+    var e = tmdb.cached(f.uid);
     return '<li class="film' + (seen ? ' is-seen' : '') + '" data-id="' + f.id + '">' +
       '<a class="poster" href="#/film/' + f.id + '" tabindex="-1" aria-hidden="true" data-p="' + esc(e && e.p || '') + '">' + posterHTML(f) + '</a>' +
       '<div class="film-body">' +
@@ -216,33 +239,48 @@
   // ------------------------------------------------------------------------------------------
   // views — each returns {title, back, award, tab, html, after}
   // ------------------------------------------------------------------------------------------
+  function awardSwitch(award) {
+    var g = GROUPS[AW[award].group];
+    return '<div class="seg" role="group" aria-label="Award">' + g.map(function (k) {
+      return '<a class="seg-i' + (k === award ? ' active' : '') + '" data-award="' + k + '" href="#/' + k + '"' + (k === award ? ' aria-current="page"' : '') + '>' + esc(AW[k].name) + '</a>';
+    }).join('') + '</div>';
+  }
+
   function viewYears(award) {
     store.setPref('award', award);
+    store.setPref('award.' + AW[award].group, award);
     var A = DATA[award];
+    var tv = AW[award].kind === 'tv';
     var years = A.years.slice().reverse();
-    var films = ALL[award];
+    var films = uniq(ALL[award]);
     var seen = seenCount(films);
-    var winners = films.filter(function (f) { return f.pic === 'winner'; });
+    var winners = uniq(ALL[award].filter(function (f) { return f.pic === 'winner'; }));
     var winSeen = seenCount(winners);
     var cards = years.map(function (y) {
-      var w = y.films.filter(function (f) { return f.pic === 'winner'; });
+      var yw = y.films.filter(function (f) { return f.pic === 'winner'; });
+      if (y.upcoming) {
+        return '<a class="year-card upcoming" href="#/' + award + '/' + y.year + '">' +
+          '<div class="yc-top"><span class="yc-year">' + y.year + '</span><span class="yc-ord">' + esc(y.ceremony) + '</span></div>' +
+          '<div class="yc-win muted">Coming up · not announced yet</div></a>';
+      }
       var s = seenCount(y.films);
       return '<a class="year-card" href="#/' + award + '/' + y.year + '">' +
         '<div class="yc-top"><span class="yc-year">' + y.year + '</span><span class="yc-ord">' + esc(y.ceremony) + '</span></div>' +
-        '<div class="yc-win">🏆 ' + esc(w.map(function (f) { return f.title; }).join(' / ') || '—') + '</div>' +
+        '<div class="yc-win">🏆 ' + esc(yw.map(function (f) { return f.title; }).join(' · ') || '—') + '</div>' +
         '<div class="yc-prog"><div class="bar"><i style="width:' + pct(s, y.films.length) + '%"></i></div>' +
         '<span>' + s + ' / ' + y.films.length + ' seen</span></div></a>';
     }).join('');
     return {
-      title: AW[award].name, award: award, tab: award,
+      title: AW[award].name, award: award, tab: AW[award].group,
       html:
+        awardSwitch(award) +
         '<div class="searchbar"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>' +
-        '<input id="q" class="field" type="search" placeholder="Search ' + AW[award].name + ': title, director, actor…" autocomplete="off" autocapitalize="off" enterkeyhint="search"></div>' +
+        '<input id="q" class="field" type="search" placeholder="Search ' + AW[award].name + ': title, ' + (tv ? 'actor, director…' : 'director, actor…') + '" autocomplete="off" autocapitalize="off" enterkeyhint="search"></div>' +
         '<div id="results" hidden></div>' +
         '<div id="years-wrap">' +
           '<div class="summary">' +
-            '<div class="card"><b>' + seen + '<span> / ' + films.length + '</span></b><span>films seen</span></div>' +
-            '<div class="card"><b>' + winSeen + '<span> / ' + winners.length + '</span></b><span>' + esc(CAT_LABEL[award].PIC) + ' winners seen</span></div>' +
+            '<div class="card"><b>' + seen + '<span> / ' + films.length + '</span></b><span>' + (tv ? 'series' : 'films') + ' seen</span></div>' +
+            '<div class="card"><b>' + winSeen + '<span> / ' + winners.length + '</span></b><span>' + esc(mainName(award)) + ' winners seen</span></div>' +
           '</div>' +
           '<div class="year-grid">' + cards + '</div>' +
         '</div>',
@@ -265,7 +303,7 @@
         box.innerHTML = res.length
           ? '<p class="muted small">' + plural(res.length, 'result') + (res.length >= 60 ? ' (showing first 60)' : '') + '</p><ul class="film-list">' +
             res.map(function (f) { return filmRow(f, { context: f.cy + ' ceremony' }); }).join('') + '</ul>'
-          : '<p class="empty">No films match “' + esc(input.value) + '”.</p>';
+          : '<p class="empty">Nothing matches “' + esc(input.value) + '”.</p>';
         observePosters();
       }, 160);
     });
@@ -286,15 +324,15 @@
 
   function sortFilms(list, sort) {
     var l = list.slice();
-    function tm(f) { var e = tmdb.cached(f.id); return e && e.r || 0; }
+    function tm(f) { var e = tmdb.cached(f.uid); return e && e.r || 0; }
     if (sort === 'tmdb') l.sort(function (a, b) { return tm(b) - tm(a); });
-    else if (sort === 'mine') l.sort(function (a, b) { return store.rating(b.id) - store.rating(a.id); });
+    else if (sort === 'mine') l.sort(function (a, b) { return store.rating(b.uid) - store.rating(a.uid); });
     else if (sort === 'title') l.sort(function (a, b) { return a.title.localeCompare(b.title); });
     return l;
   }
   function filterFilms(list, filter) {
-    if (filter === 'unseen') return list.filter(function (f) { return !store.isSeen(f.id); });
-    if (filter === 'seen') return list.filter(function (f) { return store.isSeen(f.id); });
+    if (filter === 'unseen') return list.filter(function (f) { return !store.isSeen(f.uid); });
+    if (filter === 'seen') return list.filter(function (f) { return store.isSeen(f.uid); });
     return list;
   }
 
@@ -309,22 +347,23 @@
     var wins = winnersOf(award, y);
     var winHTML = wins.map(function (w) {
       var who = w.nom.p ? esc(w.nom.p) + ' — ' : '';
-      if (w.c === 'SONG') who = '“' + esc(w.nom.p) + '” — ';
-      return '<div><small>' + esc(CAT_LABEL[award][w.c]) + '</small><span>' + who +
+      if (CATS[award].def[w.c].t === 'song') who = '“' + esc(w.nom.p) + '” — ';
+      return '<div><small>' + esc(CATS[award].def[w.c].label) + '</small><span>' + who +
         '<a href="#/film/' + w.film.id + '">' + esc(w.film.title) + '</a></span></div>';
     }).join('');
     var s = seenCount(y.films);
     return {
-      title: y.year + ' · ' + AW[award].name, back: '#/' + award, award: award, tab: award,
+      title: y.year + ' · ' + AW[award].name, back: '#/' + award, award: award, tab: AW[award].group,
       html:
         '<div class="year-head">' +
           '<a class="nav" href="' + (older ? '#/' + award + '/' + older.year : '#') + '" aria-label="' + (older ? 'Previous ceremony, ' + older.year : 'No earlier ceremony') + '"' + (older ? '' : ' aria-disabled="true"') + '><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></a>' +
-          '<div><h2>' + esc(ceremonyName(award, y)) + '</h2><div class="muted small">Films of ' + y.filmYear + ' · ' + plural(y.films.length, 'film') + '</div></div>' +
+          '<div><h2>' + esc(ceremonyName(award, y)) + '</h2><div class="muted small">' + (AW[award].kind === 'tv' ? seasonLabel(y.filmYear) + ' · ' + y.films.length + ' series' : 'Films of ' + y.filmYear + ' · ' + plural(y.films.length, 'film')) + '</div></div>' +
           '<a class="nav" href="' + (newer ? '#/' + award + '/' + newer.year : '#') + '" aria-label="' + (newer ? 'Next ceremony, ' + newer.year : 'No later ceremony') + '"' + (newer ? '' : ' aria-disabled="true"') + '><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></a>' +
         '</div>' +
-        '<div class="prog-line"><div class="bar"><i id="yprog" style="width:' + pct(s, y.films.length) + '%"></i></div><span id="ytxt">' + s + ' / ' + y.films.length + ' seen</span></div>' +
-        '<details class="winners"><summary>Winners of the night</summary><div class="winners-list">' + winHTML + '</div></details>' +
-        '<div class="controls"><div class="chips" role="group" aria-label="Filter">' +
+        (y.upcoming ? '<p class="empty">🕑 This ceremony hasn\'t happened yet. The nominees will be added here once they are announced.</p>' : '') +
+        '<div class="prog-line"' + (y.upcoming ? ' hidden' : '') + '><div class="bar"><i id="yprog" style="width:' + pct(s, y.films.length) + '%"></i></div><span id="ytxt">' + s + ' / ' + y.films.length + ' seen</span></div>' +
+        '<details class="winners"' + (y.upcoming ? ' hidden' : '') + '><summary>Winners of the night</summary><div class="winners-list">' + winHTML + '</div></details>' +
+        '<div class="controls"' + (y.upcoming ? ' hidden' : '') + '><div class="chips" role="group" aria-label="Filter">' +
           ['all', 'unseen', 'seen'].map(function (k) { return '<button type="button" class="chip" data-filter="' + k + '" aria-pressed="false">' + { all: 'All', unseen: 'Not seen', seen: 'Seen' }[k] + '</button>'; }).join('') +
         '</div><select class="field" id="sort" aria-label="Sort">' +
           '<option value="awards">Awards order</option><option value="tmdb">TMDB rating</option><option value="mine">My rating</option><option value="title">Title A–Z</option></select></div>' +
@@ -339,7 +378,7 @@
   function refreshList() {
     if (!ctxYear) return;
     var list = document.getElementById('film-list');
-    if (!list) return;
+    if (!list || ctxYear.year.upcoming) return;
     var filter = store.getPref('filter', 'all');
     var sort = store.getPref('sort', 'awards');
     Array.prototype.forEach.call($app.querySelectorAll('[data-filter]'), function (b) {
@@ -365,63 +404,68 @@
     var f = FILMS[id];
     if (!f) return notFound('That film is not in the list.');
     var y = yearObj(f);
-    var u = store.get(id);
-    var e = tmdb.cached(id);
+    var u = store.get(f.uid);
+    var e = tmdb.cached(f.uid);
     var award = f.award;
+    var tv = f.kind === 'tv';
+    var def = CATS[award].def;
 
     var noms = f.noms.slice().sort(function (a, b) {
-      return CAT_ORDER.indexOf(a.c) - CAT_ORDER.indexOf(b.c) || (b.w ? 1 : 0) - (a.w ? 1 : 0);
+      return CATS[award].order.indexOf(a.c) - CATS[award].order.indexOf(b.c) || (b.w ? 1 : 0) - (a.w ? 1 : 0);
     });
     var nomRows = noms.map(function (n) {
       var who = '';
-      if (n.c === 'SONG') who = '<b>“' + esc(n.p) + '”</b>' + (n.by ? '<small>' + esc(n.by) + '</small>' : '');
+      if (def[n.c].t === 'song') who = '<b>“' + esc(n.p) + '”</b>' + (n.by ? '<small>' + esc(n.by) + '</small>' : '');
       else if (n.p) who = '<b>' + esc(n.p) + '</b>';
       return '<div class="nom-row' + (n.w ? ' won' : '') + '"><div class="cat">' + esc(label(f, n.c)) + '</div><div class="who">' + who + '</div>' +
         '<span class="res">' + (n.w ? '🏆 Winner' : 'Nominee') + '</span></div>';
     }).join('');
 
-    // music block: score + song nominations, and what won that night
+    // music block: score / theme / song nominations, and what won that night
     var music = '';
-    var scoreNoms = noms.filter(function (n) { return n.c === 'SCORE'; });
-    var songNoms = noms.filter(function (n) { return n.c === 'SONG'; });
-    if (scoreNoms.length || songNoms.length) {
+    var musicNoms = noms.filter(function (n) { return def[n.c].music; });
+    if (musicNoms.length) {
       var allW = winnersOf(award, y);
-      var wScore = allW.filter(function (w) { return w.c === 'SCORE'; })[0];
-      var wSong = allW.filter(function (w) { return w.c === 'SONG'; })[0];
-      var parts = '';
-      scoreNoms.forEach(function (n) {
-        parts += '<div class="line"><small>Original score</small><b>' + esc(n.p) + '</b> <span class="tag">' + (n.w ? '🏆 won' : 'nominated') + '</span></div>';
+      var parts = '', night = '';
+      var small = { SCORE: 'Original score', SCORE_L: 'Original score (limited / movie)', THEME: 'Main title theme', SONG: 'Original song' };
+      musicNoms.forEach(function (n) {
+        var isSong = def[n.c].t === 'song';
+        parts += '<div class="line"><small>' + esc(small[n.c] || def[n.c].label) + '</small><b>' + (isSong ? '“' + esc(n.p) + '”' : esc(n.p)) + '</b>' +
+          (isSong && n.by ? ' <span class="muted">· ' + esc(n.by) + '</span>' : '') + ' <span class="tag">' + (n.w ? '🏆 won' : 'nominated') + '</span></div>';
       });
-      songNoms.forEach(function (n) {
-        parts += '<div class="line"><small>Original song</small><b>“' + esc(n.p) + '”</b>' + (n.by ? ' <span class="muted">· ' + esc(n.by) + '</span>' : '') +
-          ' <span class="tag">' + (n.w ? '🏆 won' : 'nominated') + '</span></div>';
+      var done = {};
+      musicNoms.forEach(function (n) {
+        if (done[n.c]) return; done[n.c] = 1;
+        var w = allW.filter(function (x) { return x.c === n.c; })[0];
+        if (!w || w.film.id === f.id) return;
+        var isSong = def[n.c].t === 'song';
+        night += '<div class="muted">' + esc((small[n.c] || def[n.c].label).replace(/^Original /, '')) + ' winner: <b>' + (isSong ? '“' + esc(w.nom.p) + '”' : esc(w.nom.p)) + '</b> — <a href="#/film/' + w.film.id + '" style="color:var(--accent)">' + esc(w.film.title) + '</a></div>';
       });
-      var night = '';
-      if (wScore && wScore.film.id !== f.id) night += '<div>Score winner: <b>' + esc(wScore.nom.p) + '</b> — <a href="#/film/' + wScore.film.id + '" style="color:var(--accent)">' + esc(wScore.film.title) + '</a></div>';
-      if (wSong && wSong.film.id !== f.id) night += '<div>Song winner: <b>“' + esc(wSong.nom.p) + '”</b> — <a href="#/film/' + wSong.film.id + '" style="color:var(--accent)">' + esc(wSong.film.title) + '</a></div>';
-      music = '<h3>Music</h3><div class="card music-card">' + parts +
-        (night ? '<div class="small muted">' + night.replace(/<div>/g, '<div class="muted">') + '</div>' : '') + '</div>';
+      music = '<h3>Music</h3><div class="card music-card">' + parts + (night ? '<div class="small muted">' + night + '</div>' : '') + '</div>';
     }
 
     var cross = crossFilms(f).map(function (g) {
-      return '<a class="badge nom" href="#/film/' + g.id + '">Also at the ' + esc(AW[g.award].name) + ' ' + g.cy + ' · ' + plural(g.noms.length, 'nomination') + '</a>';
+      var won = g.noms.filter(function (n) { return n.w; }).length;
+      return '<a class="badge nom" href="#/film/' + g.id + '">' + (tv ? esc(AW[g.award].name) + ' ' + g.cy + ' · ' + g.noms.length + (won ? ' (' + won + ' won)' : '')
+        : 'Also at the ' + esc(AW[g.award].name) + ' ' + g.cy + ' · ' + plural(g.noms.length, 'nomination')) + '</a>';
     }).join('');
 
     var chips = '<a class="badge ' + (f.pic === 'winner' ? 'win' : 'nom') + '" href="#/' + award + '/' + f.cy + '">' +
-      (f.pic === 'winner' ? '🏆 ' : '') + esc(ceremonyName(award, y)) + '</a>' + cross;
+      (f.pic === 'winner' ? '🏆 ' : '') + esc(ceremonyName(award, y)) + '</a>' +
+      (tv && cross ? '<div class="small muted" style="width:100%;margin-top:6px">Other nominations of this series</div>' : '') + cross;
 
     var hint = tmdb.hasKey() ? '' :
       '<div class="hint" style="margin-top:16px">Add your free TMDB key in <a href="#/settings">Settings</a> to get posters, public ratings, synopsis, cast and where to watch.</div>';
 
     return {
-      title: f.title, back: '#/' + award + '/' + f.cy, award: award, tab: award,
+      title: f.title, back: '#/' + award + '/' + f.cy, award: award, tab: AW[award].group,
       html:
         '<div id="detail" data-id="' + f.id + '">' +
         '<div class="hero"><a class="poster" id="d-poster" tabindex="-1" aria-hidden="true" data-p="' + esc(e && e.p || '') + '">' + posterHTML(f, 'w342') + '</a>' +
           '<div><h2>' + esc(f.title) + '</h2>' +
           (f.titleEn ? '<div class="muted">' + esc(f.titleEn) + '</div>' : '') +
-          '<div class="meta" id="d-meta">' + f.year + '</div>' +
-          '<div class="dir" id="d-dir">' + (f.director ? '<small>Director</small>' + esc(f.director) : '') + '</div></div></div>' +
+          '<div class="meta" id="d-meta">' + (tv ? seasonLabel(f.year) : f.year) + '</div>' +
+          '<div class="dir" id="d-dir">' + (f.director ? '<small>' + (tv ? 'Created by' : 'Director') + '</small>' + esc(f.director) : '') + '</div></div></div>' +
         '<div class="head-chips">' + chips + '</div>' +
         '<div class="card score-card">' +
           '<div class="cell"><small>TMDB rating</small><div class="big" id="d-tmdb">' + (e && e.r ? e.r.toFixed(1) + '<em> / 10</em>' : '<em>' + (tmdb.hasKey() ? '…' : '–') + '</em>') + '</div>' +
@@ -430,7 +474,7 @@
           '<div class="cell full"><label class="seen-big"><input type="checkbox" data-act="seen"' + (u.s ? ' checked' : '') + '><span class="box">' + CHECK + '</span><span>I\'ve seen it</span></label></div>' +
         '</div>' +
         hint +
-        '<h3>Nominations · ' + esc(String(f.wins ? f.wins + ' won, ' : '')) + plural(f.noms.length, 'nomination') + '</h3>' +
+        '<h3>' + esc(AW[award].name) + ' ' + f.cy + ' · ' + esc(String(f.wins ? f.wins + ' won, ' : '')) + plural(f.noms.length, 'nomination') + '</h3>' +
         '<div class="noms">' + nomRows + '</div>' +
         music +
         '<div id="d-info"><h3>About</h3>' + (tmdb.hasKey() ? '<div class="skeleton"></div><div class="skeleton" style="width:80%"></div><div class="skeleton" style="width:60%"></div>' : '<p class="muted small">No TMDB key set.</p>') + '</div>' +
@@ -449,15 +493,19 @@
       if (!root || root.dataset.id !== f.id) return;
       var info = document.getElementById('d-info');
       if (!d) {
-        info.innerHTML = '<h3>About</h3><p class="muted small">Couldn\'t find this film on TMDB. Use “Fix the match” below to paste its TMDB link.</p>';
+        info.innerHTML = '<h3>About</h3><p class="muted small">Couldn\'t find this title on TMDB. Use “Fix the match” below to paste its TMDB link.</p>';
         return;
       }
-      var meta = [f.year];
-      if (d.rt) meta.push(Math.floor(d.rt / 60) + 'h ' + (d.rt % 60) + 'm');
+      var tv = f.kind === 'tv';
+      var meta = [tv ? seasonLabel(f.year) : f.year];
+      if (tv) {
+        if (d.seasons) meta.push(plural(d.seasons, 'season') + (d.eps ? ' · ' + d.eps + ' eps' : ''));
+        if (d.rt) meta.push('~' + d.rt + ' min');
+      } else if (d.rt) meta.push(Math.floor(d.rt / 60) + 'h ' + (d.rt % 60) + 'm');
       if (d.g.length) meta.push(d.g.slice(0, 3).join(', '));
       document.getElementById('d-meta').textContent = meta.join(' · ');
       if (!f.director && d.dir.length) {
-        document.getElementById('d-dir').innerHTML = '<small>Director</small>' + esc(d.dir.join(', '));
+        document.getElementById('d-dir').innerHTML = '<small>' + (tv ? 'Created by' : 'Director') + '</small>' + esc(d.dir.join(', '));
       }
       if (d.r) {
         document.getElementById('d-tmdb').innerHTML = d.r.toFixed(1) + '<em> / 10</em>';
@@ -469,7 +517,8 @@
       }
       var lang = '';
       try { lang = d.lang ? new Intl.DisplayNames(['en'], { type: 'language' }).of(d.lang) : ''; } catch (e) { lang = d.lang; }
-      var pills = [lang].concat(d.c.slice(0, 3)).concat(d.g).filter(Boolean);
+      var tvInfo = tv ? [d.rd ? (d.rd.slice(0, 4) + (d.status === 'Ended' && d.last ? '–' + d.last.slice(0, 4) : '–')) : '', d.status].concat(d.nets || []) : [];
+      var pills = tvInfo.concat([lang]).concat(d.c.slice(0, 3)).concat(d.g).filter(Boolean);
       var html = '<h3>About</h3>' +
         (d.tag ? '<p class="tagline">' + esc(d.tag) + '</p>' : '') +
         '<p class="prose">' + (d.ov ? esc(d.ov) : '<span class="muted">No synopsis available.</span>') + '</p>' +
@@ -480,13 +529,13 @@
         }).join('') + '</ul>';
       }
       html += '<div id="d-prov"></div>' +
-        '<h3>Links</h3><div class="linkrow"><a href="https://www.themoviedb.org/movie/' + d.id + '" target="_blank" rel="noopener">TMDB</a>' +
+        '<h3>Links</h3><div class="linkrow"><a href="https://www.themoviedb.org/' + (tv ? 'tv' : 'movie') + '/' + d.id + '" target="_blank" rel="noopener">TMDB</a>' +
         (d.imdb ? '<a href="https://www.imdb.com/title/' + esc(d.imdb) + '/" target="_blank" rel="noopener">IMDb</a>' : '') + '</div>' +
-        '<p class="attrib">Film data from TMDB. This product uses the TMDB API but is not endorsed or certified by TMDB.</p>';
+        '<p class="attrib">Data from TMDB. This product uses the TMDB API but is not endorsed or certified by TMDB.</p>';
       info.innerHTML = html;
 
       var region = store.getRegion();
-      tmdb.providers(d.id, region).then(function (p) {
+      tmdb.providers(d.id, region, f.kind).then(function (p) {
         var box = document.getElementById('d-prov');
         if (!box || !document.getElementById('detail') || document.getElementById('detail').dataset.id !== f.id) return;
         var rows = [];
@@ -510,31 +559,32 @@
   function viewMine() {
     var mode = store.getPref('mine', 'seen');
     var all = store.all();
-    var ids = Object.keys(all).filter(function (id) { return FILMS[id]; });
+    var ids = Object.keys(all).filter(function (id) { return UIDS[id]; });
     var seen = ids.filter(function (id) { return all[id].s; });
     var rated = ids.filter(function (id) { return all[id].r; });
     var avg = rated.length ? rated.reduce(function (a, id) { return a + all[id].r; }, 0) / rated.length : 0;
     var shown = ids.filter(function (id) {
       return mode === 'seen' ? all[id].s : mode === 'rated' ? all[id].r : all[id].n;
     }).sort(function (a, b) { return (all[b].t || 0) - (all[a].t || 0); });
-    var prog = ['oscars', 'goyas'].map(function (a) {
-      var w = ALL[a].filter(function (f) { return f.pic === 'winner'; });
-      var s = seenCount(w);
-      return '<div class="card"><b>' + s + '<span> / ' + w.length + '</span></b><span>' + AW[a].name + ' ' + esc(CAT_LABEL[a].PIC.replace('Best ', '')) + ' winners</span><div class="bar" style="margin-top:8px"><i style="width:' + pct(s, w.length) + '%"></i></div></div>';
+    var prog = AWARDS.map(function (a) {
+      var w = uniq(ALL[a].filter(function (f) { return f.pic === 'winner'; }));
+      var sn = seenCount(w);
+      return '<div class="card"><b>' + sn + '<span> / ' + w.length + '</span></b><span>' + AW[a].name + ' ' + esc(mainName(a).replace('Best ', '')) + ' winners</span><div class="bar" style="margin-top:8px"><i style="width:' + pct(sn, w.length) + '%"></i></div></div>';
     }).join('');
+    var nSeries = seen.filter(function (id) { return UIDS[id].kind === 'tv'; }).length;
     var tabs = [['seen', 'Seen'], ['rated', 'Rated'], ['noted', 'Commented']].map(function (t) {
       return '<button type="button" class="chip" data-mine="' + t[0] + '" aria-pressed="' + (mode === t[0]) + '">' + t[1] + '</button>';
     }).join('');
     return {
-      title: 'My films', tab: 'mine', award: store.getPref('award', 'oscars'),
+      title: 'My list', tab: 'mine', award: store.getPref('award', 'oscars'),
       html:
-        '<div class="summary"><div class="card"><b>' + seen.length + '</b><span>films seen</span></div>' +
+        '<div class="summary"><div class="card"><b>' + seen.length + '</b><span>seen · ' + (seen.length - nSeries) + ' films, ' + nSeries + ' series</span></div>' +
         '<div class="card"><b>' + (rated.length ? avg.toFixed(1) : '–') + '<span> / 5</span></b><span>average of ' + plural(rated.length, 'rating') + '</span></div></div>' +
         '<div class="summary">' + prog + '</div>' +
         '<div class="controls"><div class="chips">' + tabs + '</div></div>' +
         (shown.length
-          ? '<ul class="film-list">' + shown.map(function (id) { var f = FILMS[id]; return filmRow(f, { context: AW[f.award].name + ' ' + f.cy }); }).join('') + '</ul>'
-          : '<p class="empty">Nothing here yet. Tick “Seen”, rate or comment on a film and it shows up here.</p>'),
+          ? '<ul class="film-list">' + shown.map(function (id) { var f = UIDS[id]; return filmRow(f, { context: AW[f.award].name + ' ' + f.cy }); }).join('') + '</ul>'
+          : '<p class="empty">Nothing here yet. Tick “Seen”, rate or comment on a film or series and it shows up here.</p>'),
       after: function () { observePosters(); },
     };
   }
@@ -556,7 +606,7 @@
           '<div class="status" id="key-status" role="status"></div>' +
           '<div><label for="region">Where to watch: region</label><select id="region" class="field" data-act="region">' +
             Object.keys(REGIONS).map(function (c) { return '<option value="' + c + '"' + (c === region ? ' selected' : '') + '>' + REGIONS[c] + '</option>'; }).join('') + '</select></div>' +
-          '<div><div class="small muted">Posters load as you scroll. To fetch everything in one go (~900 films, a few minutes):</div>' +
+          '<div><div class="small muted">Posters load as you scroll. To fetch everything in one go (' + Object.keys(UIDS).length.toLocaleString('en-US') + ' titles, several minutes):</div>' +
           '<div class="btn-row"><button class="btn" type="button" data-act="preload"' + (key ? '' : ' disabled') + '>Load all posters &amp; ratings</button>' +
           '<button class="btn" type="button" data-act="cancel-preload" id="cancel-preload" hidden>Stop</button>' +
           '<button class="btn danger" type="button" data-act="clear-cache">Clear TMDB cache</button></div>' +
@@ -577,10 +627,12 @@
 
         '<h3>About</h3>' +
         '<div class="card small muted" style="display:grid;gap:6px">' +
-          '<div>Oscars: ' + DATA.oscars.years[0].year + '–' + DATA.oscars.years[DATA.oscars.years.length - 1].year + ' ceremonies · ' + ALL.oscars.length + ' films</div>' +
-          '<div>Goyas: ' + DATA.goyas.years[0].year + '–' + DATA.goyas.years[DATA.goyas.years.length - 1].year + ' ceremonies · ' + ALL.goyas.length + ' films</div>' +
-          '<div>Categories: Picture/Film, Director, the four acting awards, Original Score and Original Song.</div>' +
-          '<div>Ceremony year = year the awards were held (the films are from the year before).</div>' +
+          AWARDS.map(function (k) {
+            var ys = DATA[k].years.filter(function (y) { return !y.upcoming; });
+            return '<div>' + AW[k].name + ': ' + ys[0].year + '–' + ys[ys.length - 1].year + ' ceremonies · ' + uniq(ALL[k]).length + (AW[k].kind === 'tv' ? ' series' : ' films') + '</div>';
+          }).join('') +
+          '<div>Films: Picture, Director, the four acting awards, Original Score and Song. Series (Emmys): series, lead and supporting acting, directing, music. Series (Globes): series and acting.</div>' +
+          '<div>Ceremony year = year the awards were held. For the Emmys it is the year the TV season ended (the 2023 Emmys, held in January 2024, are listed under 2023).</div>' +
           '<div style="margin-top:6px">This product uses the TMDB API but is not endorsed or certified by TMDB. Streaming availability by JustWatch.</div>' +
         '</div>',
     };
@@ -611,7 +663,7 @@
   function patchRow(li) {
     var f = FILMS[li.dataset.id];
     if (!f) return;
-    var e = tmdb.cached(f.id);
+    var e = tmdb.cached(f.uid);
     var pz = li.querySelector('.poster');
     var p = (e && e.p) || '';
     if (pz && pz.dataset.p !== p) { pz.dataset.p = p; pz.innerHTML = posterHTML(f); }
@@ -628,11 +680,11 @@
   tmdb.on(function (type, id) {
     if (type === 'film') {
       Array.prototype.forEach.call($app.querySelectorAll('.film[data-id]'), function (li) {
-        if (!id || li.dataset.id === id) patchRow(li);
+        if (!id || uidOf(li.dataset.id) === id) patchRow(li);
       });
       var d = document.getElementById('detail');
-      if (d && (!id || d.dataset.id === id)) {
-        var e = tmdb.cached(d.dataset.id);
+      if (d && (!id || uidOf(d.dataset.id) === id)) {
+        var e = tmdb.cached(uidOf(d.dataset.id));
         var t = document.getElementById('d-tmdb');
         if (t && e && e.r) t.innerHTML = e.r.toFixed(1) + '<em> / 10</em>';
       }
@@ -671,9 +723,10 @@
     var out;
     if (!p.length) { history.replaceState({ d: depth() }, '', '#/' + store.getPref('award', 'oscars')); p = parseHash(); }
     try {
-      if ((p[0] === 'oscars' || p[0] === 'goyas') && p.length === 1) out = viewYears(p[0]);
-      else if ((p[0] === 'oscars' || p[0] === 'goyas') && p.length >= 2) out = viewYear(p[0], parseInt(p[1], 10));
+      if (AW[p[0]] && p.length === 1) out = viewYears(p[0]);
+      else if (AW[p[0]] && p.length >= 2) out = viewYear(p[0], parseInt(p[1], 10));
       else if (p[0] === 'film' && p[1]) out = viewFilm(p[1]);
+      else if (p[0] === 'films' || p[0] === 'series') out = viewYears(store.getPref('award.' + p[0], GROUPS[p[0]][0]));
       else if (p[0] === 'mine') out = viewMine();
       else if (p[0] === 'settings') out = viewSettings();
       else out = notFound();
@@ -687,6 +740,7 @@
     if (out.back) { $back.hidden = false; $back.dataset.parent = out.back; $back.setAttribute('href', out.back); }
     else $back.hidden = true;
     Array.prototype.forEach.call(document.querySelectorAll('#tabbar [data-tab]'), function (a) {
+      if (GROUPS[a.dataset.tab]) a.setAttribute('href', '#/' + store.getPref('award.' + a.dataset.tab, GROUPS[a.dataset.tab][0]));
       var on = a.dataset.tab === out.tab;
       a.classList.toggle('active', on);
       if (on) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current');
@@ -719,7 +773,7 @@
 
   var noteTimers = {};
   function saveNote(id, value) {
-    store.set(id, { n: value });
+    store.set(uidOf(id), { n: value });
     var saved = document.getElementById('d-saved');
     if (saved && document.getElementById('detail') && document.getElementById('detail').dataset.id === id) saved.textContent = 'Saved on this phone ✓';
   }
@@ -752,7 +806,7 @@
     var act = t.dataset.act;
     if (act === 'seen') {
       var holder = t.closest('[data-id]');
-      store.set(holder.dataset.id, { s: t.checked ? 1 : 0 });
+      store.set(uidOf(holder.dataset.id), { s: t.checked ? 1 : 0 });
       holder.classList.toggle('is-seen', t.checked);
       refreshProgress();
     } else if (t.id === 'sort') {
@@ -820,9 +874,9 @@
       var rect = t.getBoundingClientRect();
       var half = e.clientX && e.clientX - rect.left < rect.width / 2;
       var v = half ? n - 0.5 : n;
-      var cur = store.rating(holder.dataset.id);
+      var cur = store.rating(uidOf(holder.dataset.id));
       if (v === cur) v = 0;
-      store.set(holder.dataset.id, { r: v });
+      store.set(uidOf(holder.dataset.id), { r: v });
       document.getElementById('d-stars').innerHTML = starsHTML(v);
       document.getElementById('d-mine').textContent = v ? fmtRating(v) + ' / 5 · tap again to clear' : 'Tap left half of a star for ½';
       return;
@@ -843,7 +897,7 @@
       if (snip) snip.hidden = open;
       if (!open) {
         // closing: refresh label + snippet
-        var note = store.note(id);
+        var note = store.note(uidOf(id));
         t.classList.toggle('has', !!note);
         t.lastChild.textContent = note ? 'Comment' : 'Add comment';
         if (snip) { if (note) snip.textContent = '“' + note + '”'; else snip.remove(); }
@@ -875,13 +929,13 @@
       wrap.hidden = false; t.disabled = true;
       document.getElementById('cancel-preload').hidden = false;
       txt.textContent = 'Starting…';
-      tmdb.preload(ALL.oscars.concat(ALL.goyas), function (done, total) {
+      tmdb.preload(Object.keys(UIDS).map(function (k) { return UIDS[k]; }), function (done, total) {
         var b = document.getElementById('preload-bar'), x = document.getElementById('preload-text');
         if (b) b.style.width = pct(done, total) + '%';
         if (x) x.textContent = done + ' / ' + total;
       }).then(function (r) {
         var x = document.getElementById('preload-text');
-        if (x) x.textContent = r.cancelled ? 'Stopped at ' + r.done + ' / ' + r.total + '.' : r.blocked ? 'Stopped: TMDB key problem.' : r.total ? 'Done ✓ ' + r.done + ' films loaded.' : 'Everything is already loaded ✓';
+        if (x) x.textContent = r.cancelled ? 'Stopped at ' + r.done + ' / ' + r.total + '.' : r.blocked ? 'Stopped: TMDB key problem.' : r.total ? 'Done ✓ ' + r.done + ' titles loaded.' : 'Everything is already loaded ✓';
         var c = document.getElementById('cancel-preload'); if (c) c.hidden = true;
         var pb = $app.querySelector('[data-act="preload"]'); if (pb) pb.disabled = false;
       });

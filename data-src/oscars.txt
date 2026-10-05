@@ -273,6 +273,8 @@ SUPACTRESS: Amy Madigan=Weapons*; Elle Fanning=Sentimental Value; Inga Ibsdotter
 SCORE: Ludwig Göransson=Sinners*; Jerskin Fendrix=Bugonia; Alexandre Desplat=Frankenstein; Max Richter=Hamnet; Jonny Greenwood=One Battle After Another
 SONG: Golden=KPop Demon Hunters=Ejae, Mark Sonnenblick, Joong Gyu Kwak, Yu Han Lee, Hee Dong Nam, Jeong Hoon Seo & Teddy Park*; Dear Me=Diane Warren: Relentless=Diane Warren; I Lied to You=Sinners=Ludwig Göransson & Raphael Saadiq; Sweet Dreams of Joy=Viva Verdi!=Nicholas Pike; Train Dreams=Train Dreams=Nick Cave & Bryce Dessner
 
+@2027|99th|2026
+
 #DIRECTORS
 The Green Mile | Frank Darabont
 The Straight Story | David Lynch
